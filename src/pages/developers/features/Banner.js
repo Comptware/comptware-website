@@ -1,9 +1,6 @@
 import React from "react";
-import Image from "next/image";
 
-import BannerImage from "assets/images/banner-image.png";
 import Button from "components/general/button/Button";
-import ArrowRight from "assets/icons/Arrow/arrow-right-white.svg";
 
 const Banner = () => {
   return (
@@ -22,7 +19,7 @@ const Banner = () => {
       </p>
       <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2">
         <a
-         href="https://docs.getbani.com/bani-pop/"
+          href="https://docs.getbani.com/bani-pop/"
           target="_blank"
           rel="noreferrer"
         >

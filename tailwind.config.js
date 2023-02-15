@@ -51,7 +51,7 @@ module.exports = {
           lineHeight: "1.5",
         },
       ],
-      "2xl": ["26px"],
+      "2xl": ["24px"],
       "22px": ["22px"],
       "xl-alt": ["20px"],
       xl: ["18px"],
@@ -165,13 +165,9 @@ module.exports = {
         "-60px": "-60px",
       },
       backgroundImage: {
-        "card-pattern": "url('/src/assets/icons/shapes-pattern.svg')",
-        "bani-fade-bg": "url('/src/assets/logos/bani-fade-bg.svg')",
-        "fintech-img": "url('/src/assets/icons/fintech-img.svg')",
-        "digital-creators-img":
-          "url('/src/assets/images/digital-creators-img.png')",
-        "e-commerce-img": "url('/src/assets/icons/e-commerce-img.svg')",
-        "company-banner": "url('/src/assets/images/company-banner.png')",
+        
+        "company-banner": "url('../assets/images/company-banner.jpeg')",
+        "mission-image": "url('../assets/images/mission-image.jpeg')",
       },
       keyframes: {
         slide: {
