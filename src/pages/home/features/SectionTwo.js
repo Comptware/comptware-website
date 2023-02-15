@@ -72,7 +72,7 @@ const SectionTwo = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-start items-start w-full h-fit gap-y-14 md:py-24 bg-grey-dull">
+    <div className="flex flex-col justify-start items-start w-full h-fit gap-y-14 md:py-24 bg-grey-dull mt-8">
       <div className="flex flex-col md:flex-row justify-start items-start gap-x-10 md:items-center w-full px-5 md:px-[5%] lg:px-[8%]">
         <p className="bani-heading text-black-light helv-medium pl-10">
           Who we work with
