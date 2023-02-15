@@ -1,5 +1,5 @@
 import React from "react";
-import DashboardLayout from "components/Layout";
+import DashboardLayout from "components/layout";
 
 import Banner from "./Banner";
 import SectionOne from "./SectionOne";
