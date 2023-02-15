@@ -2,7 +2,7 @@ import React from "react";
 
 const SectionOne = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start w-full h-fit gap-8 mb-[150px]">
+    <div className="flex flex-col md:flex-row justify-between items-start w-full h-fit gap-8 mb-[60px] md:mb-[150px]">
       <h2 className="text-blue helv-medium bani-heading-alt w-full md:w-[35%] text-left md:pt-2">
         Our Mission
       </h2>

@@ -9,8 +9,9 @@ const DevelopersList = () => {
       <Banner />
       <div className="flex flex-col justify-start items-center h-fit w-full px-5 md:px-[5%] lg:px-[8%]">
         <SectionOne />
-        <SectionTwo/>
+       
       </div>
+      <SectionTwo/>
     </div>
   );
 };

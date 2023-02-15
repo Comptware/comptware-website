@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       <Header />
       <section className="w-full flex flex-row flex-grow max-w-9xl mx-auto ">
         <main
-          className={`website-content w-full pt-[100px] md:pt-6 md:mt-[80px] flex flex-col flex-grow bg-grey-whitesmoke md:bg-white`}
+          className={`website-content w-full pt-[100px] md:pt-[14px] md:mt-[80px] flex flex-col flex-grow bg-grey-whitesmoke md:bg-white`}
         >
           {children}
         </main>
