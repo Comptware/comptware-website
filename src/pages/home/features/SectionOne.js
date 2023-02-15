@@ -80,16 +80,12 @@ const SectionOne = () => {
         <div className=" h-[800px] flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 pt-[70px]">
           <Sticky
             className="w-full transition-all duration-[0.5s] ease-in-out"
-            // topOffset={-200}
             bottomOffset={-450}
             stickyClassName="transition-all duration-[0.5s] ease-in-out"
             boundaryElement=".sticky-boundary"
             hideOnBoundaryHit={false}
           >
-            <div
-              // ref={parallax.ref}
-              className="mt-[50px] flex flex-col justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4"
-            >
+            <div className="mt-[50px] flex flex-col justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4">
               <p className="text-black-light font-semibold leading-none bani-base pb-4 pt-20">
                 COLLECT PAYMENTS ANYWHERE
               </p>
