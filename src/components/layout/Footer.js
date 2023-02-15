@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import LogoWhite from "assets/logos/logo-white.svg";
 import TwitterIcon from "assets/icons/Socials/twitter.svg";
-import LinkedinIcon from "assets/icons/Socials/linkedin.svg";
+import LinkedinIcon from "assets/icons/Socials/linked-in.svg";
 import InstagramIcon from "assets/icons/Socials/instagram.svg";
 import FacebookIcon from "assets/icons/Socials/facebook.svg";
 
