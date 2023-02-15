@@ -104,7 +104,7 @@ const SectionTwo = () => {
             delay: 2000,
             disableOnInteraction: false,
           }}
-          speed={5000}
+          speed={4000}
           modules={[Autoplay, Pagination, Navigation]}
         >
           {businessTypes.map((item) => (
