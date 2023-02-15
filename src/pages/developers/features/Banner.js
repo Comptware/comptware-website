@@ -13,7 +13,7 @@ const Banner = () => {
         Integrate Bani on your platforms
       </h1>
       <p className="text-grey-text font-light bani-title mb-5 md:mb-14 text-center">
-        Welcome, Engineer! Get started integrating Bani's collections and payout
+        Welcome, Engineer! Get started integrating Bani&apos;s collections and payout
         services on your platform. Install the free plugins or start building
         something yourself with our API resource.
       </p>
