@@ -612,3 +612,19 @@ div::-webkit-scrollbar-thumb {
 
   background: #ffffff;
 }
+
+.animate-fadein {
+  animation: fadein 0.5s linear forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+
+  to {
+    transform:1;
+    transform: scale(1);
+  }
+}

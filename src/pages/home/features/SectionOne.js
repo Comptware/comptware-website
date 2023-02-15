@@ -22,9 +22,19 @@ const paymentTypes = [
   },
 ];
 const SectionOne = () => {
-  const [activePaymentType, setActivePaymentType] = useState(paymentTypes[0]);
-
   const sectionRef = useRef(null);
+  const [activePaymentType, setActivePaymentType] = useState(paymentTypes[0]);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window?.innerWidth);
+    function handleResize() {
+      setWidth(window?.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const changeNavbarBg = () => {
     const paymentTypesLength = paymentTypes.length + 1;
@@ -81,7 +91,7 @@ const SectionOne = () => {
           <Sticky
             className="hidden md:block w-full transition-all duration-[0.5s] ease-in-out"
             bottomOffset={-450}
-            stickyClassName="transition-all duration-[0.5s] ease-in-out"
+            stickyClassName="hidden md:block transition-all duration-[0.5s] ease-in-out"
             boundaryElement=".sticky-boundary"
             hideOnBoundaryHit={false}
           >
@@ -108,13 +118,30 @@ const SectionOne = () => {
 
           <div className="flex flex-col justify-center items-center md:items-end w-full min-h-[55vh] md:pt-0">
             <Sticky
-              className="w-full transition-all duration-[0.5s] ease-in-out"
-              topOffset={-100}
+              className="w-full transition-all md:duration-[0.5s] ease-in-out"
+              topOffset={width > 767 ? -100 : 0}
               bottomOffset={-450}
-              stickyClassName="bg-red mt-[150px] md:mt-24 transition-all duration-[0.5s] ease-in-out"
+              stickyClassName="md:mt-24 transition-all duration-[0.5s] ease-in-out"
               boundaryElement=".sticky-boundary"
               hideOnBoundaryHit={false}
             >
+              <div className="flex flex-col md:hidden justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4">
+                <p className="text-black-light font-semibold leading-none bani-base pb-2 pt-10">
+                  COLLECT PAYMENTS ANYWHERE
+                </p>
+
+                <div className="flex w-full justify-center ">
+                  {paymentTypes.map(({ title }) =>
+                    activePaymentType?.title == title ? (
+                      <span
+                        className={`text-black-light helv-medium tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out animate-fadein`}
+                      >
+                        {activePaymentType?.title}
+                      </span>
+                    ) : null
+                  )}
+                </div>
+              </div>
               <div className="flex flex-col justify-between items-center w-full min-h-[55vh] bg-grey-dull rounded-[40px] pb-8">
                 <div className="h-[60%]"></div>
                 <p className="font-light bani-title-2 text-black px-8">
