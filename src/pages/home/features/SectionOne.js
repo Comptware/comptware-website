@@ -134,6 +134,7 @@ const SectionOne = () => {
                   {paymentTypes.map(({ title }) =>
                     activePaymentType?.title == title ? (
                       <span
+                        key={title}
                         className={`text-black-light helv-medium tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out animate-fadein`}
                       >
                         {activePaymentType?.title}
