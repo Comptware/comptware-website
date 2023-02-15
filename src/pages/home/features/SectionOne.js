@@ -79,7 +79,7 @@ const SectionOne = () => {
         </div>
         <div className=" h-[800px] flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 pt-[70px]">
           <Sticky
-            className="w-full transition-all duration-[0.5s] ease-in-out"
+            className="hidden md:block w-full transition-all duration-[0.5s] ease-in-out"
             bottomOffset={-450}
             stickyClassName="transition-all duration-[0.5s] ease-in-out"
             boundaryElement=".sticky-boundary"
@@ -111,7 +111,7 @@ const SectionOne = () => {
               className="w-full transition-all duration-[0.5s] ease-in-out"
               topOffset={-100}
               bottomOffset={-450}
-              stickyClassName="mt-24 transition-all duration-[0.5s] ease-in-out"
+              stickyClassName="bg-red mt-[150px] md:mt-24 transition-all duration-[0.5s] ease-in-out"
               boundaryElement=".sticky-boundary"
               hideOnBoundaryHit={false}
             >
