@@ -37,12 +37,12 @@ const SectionThree = () => {
   
 
   return (
-    <div className="flex flex-col justify-start items-start w-full h-fit gap-y-8 md:py-[110px] bg-black relative overflow-hidden">
+    <div className="flex flex-col justify-start items-start w-full h-fit md:gap-y-8 py-14 md:py-[110px] bg-black relative overflow-hidden">
       <div className="blue-black-fade-gradient absolute top-[-280px] left-[-280px] min-h-[450px] min-w-[500px] rounded-full" />
       <div className="blue-black-fade-gradient absolute bottom-[-280px] right-[-280px] min-h-[450px] min-w-[500px] rounded-full" />
 
-      <div className="flex flex-col items-center justify-start w-full py-3 px-5 gap-y-20">
-        <div className="flex justify-between flex-wrap items-center py-3 gap-2 md:w-[75%] lg:w-[60%]">
+      <div className="flex flex-col items-center justify-start w-full py-3 px-5 md:gap-y-20">
+        <div className="flex justify-between items-center py-3 md:w-[80%] overflow-x-scroll scale-[0.5] sm:scale-[0.6] md:scale-[0.7] lg:scale-[1]">
           {clients.map(({ icon, title }, i) => {
             return (
               <button
@@ -56,7 +56,7 @@ const SectionThree = () => {
           })}
         </div>
 
-        <div className="md:w-[75%] lg:w-[60%]">
+        <div className="w-[85%] md:w-[75%] lg:w-[60%]">
           <Swiper
             ref={sliderRef}
             spaceBetween={20}

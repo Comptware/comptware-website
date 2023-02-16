@@ -7,7 +7,7 @@ import ArrowRight from "assets/icons/Arrow/arrow-right-white.svg";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-10 md:space-y-0 w-full h-fit min-h-[500px] max-h-[700px] md:space-x-8 website-banner px-5 md:px-[5%] lg:px-[8%] relative bg-grey-whitesmoke md:bg-white z-20">
+    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-10 md:space-y-0 w-full h-fit min-h-[500px] max-h-[700px] md:space-x-8 website-banner px-5 md:px-[5%] lg:px-[8%] relative bg-white z-20">
       <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left md:basis-[60%] w-full h-fit z-[5] !ml-0 !mt-0">
         <h1 className="text-blue-gradient bani-heading mb-3 md:mb-5 ">
           Collect and reconcile <br /> payments easily

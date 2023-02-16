@@ -10,14 +10,14 @@ const devItems = [
     body: "Get started, install our free plugins on your platform",
     icon: <WoocommerceVector />,
     type: "WooCommerce",
-    href: "/",
+    href: "https://wordpress.org/plugins/bani-payments-for-woocommerce/",
   },
   {
     title: "API Documentation",
     body: "Start building custom solutions with our collections and payout infrastructure.",
     icon: <ApiVector />,
     type: "Start Coding",
-    href: "/",
+    href: "https://docs.getbani.com/bani-pop/",
   },
 ];
 const SectionOne = () => {

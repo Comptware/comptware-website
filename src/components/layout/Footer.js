@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import LogoWhite from "assets/logos/logo-white.svg";
@@ -8,6 +8,18 @@ import InstagramIcon from "assets/icons/Socials/instagram.svg";
 import FacebookIcon from "assets/icons/Socials/facebook.svg";
 
 const Footer = () => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window?.innerWidth);
+    function handleResize() {
+      setWidth(window?.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const footerLinks = [
     {
       title: "Company",
@@ -15,6 +27,8 @@ const Footer = () => {
         { title: "What drives us", link: "/company/what-drives-us" },
         { title: "Work with us", link: "/company/Work-with-us" },
         { title: "FAQ", link: "/company/faq" },
+        width < 640 && { title: "Newsroom", link: "/what-is-latest" },
+        width < 640 && { title: "Say hello", link: "/hey-there" },
       ],
     },
 
@@ -68,7 +82,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-between items-start w-full transition-all duration-150 ease-in-out text-white bani-base">
             {footerLinks.map(({ title, links, socials }, i) => (
               <div
-                className="flex flex-col justify-start flex-grow items-start gap-y-12"
+                className={`justify-start flex-grow items-start gap-y-12 ${ title === "." ? "hidden sm:flex flex-col" : "flex flex-col"}`}
                 key={title + i}
               >
                 <p
@@ -80,8 +94,8 @@ const Footer = () => {
                 </p>
                 {links && (
                   <ul className=" flex flex-col justify-start items-start gap-y-5 text-grey-white bani-base-alt font-light">
-                    {links.map((lnk) => (
-                      <li className="whitespace-nowrap" key={lnk.title}>
+                    {links.map((lnk, i) => (
+                      <li className="whitespace-nowrap" key={lnk.title + i}>
                         {lnk.url ? (
                           <a
                             href={lnk.url}
@@ -91,11 +105,11 @@ const Footer = () => {
                           >
                             {lnk.title}
                           </a>
-                        ) : (
+                        ) : lnk.link ? (
                           <Link href={lnk.link} className="w-full">
                             {lnk.title}
                           </Link>
-                        )}
+                        ) : null}
                       </li>
                     ))}
                   </ul>
@@ -103,8 +117,13 @@ const Footer = () => {
 
                 {socials && (
                   <div className=" flex justify-end items-center w-fit space-x-3 transition-all duration-150 ease-in-out text-white">
-                    {socials.map(({ url, icon }) => (
-                      <a key={url} href={url} target="_blank" rel="noreferrer">
+                    {socials.map(({ url, icon }, i) => (
+                      <a
+                        key={url + i}
+                        href={url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         {icon}
                       </a>
                     ))}

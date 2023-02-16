@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 import ArrowDownIcon from "assets/icons/Arrow/arrow-down-grey.svg";
+import ArrowRight from "assets/icons/Arrow/arrow-right-blue.svg";
 import Logo from "assets/logos/faint-black.svg";
 import DigitalCreatorsIcon from "assets/icons/header/brush.svg";
 import FintechIcon from "assets/icons/header/coin.svg";
@@ -22,6 +23,7 @@ const Header = () => {
     {
       title: "Use case",
       link: "/usecase/fintech",
+      notPage: true,
       links: [
         {
           name: "Fintechs/Neobanks",
@@ -57,18 +59,15 @@ const Header = () => {
       links: [
         {
           name: "API Documentation",
-          link: "/usecase/fintech",
-          icon: <FintechIcon className="scale-[0.7]" />,
+          href: "https://docs.getbani.com/bani-pop/",
         },
         {
           name: "Woocommerce Plugin",
-          link: "/usecase/e-commerce",
-          icon: <EcommerceIcon className="scale-[0.7]" />,
+          href: "https://wordpress.org/plugins/bani-payments-for-woocommerce/",
         },
         {
           name: "Javascript Widget",
-          link: "/usecase/digital-creators",
-          icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
+          href: "https://docs.getbani.com/bani-pop/",
         },
       ],
     },
@@ -175,19 +174,18 @@ const Header = () => {
 
         {/* Mobile side nav */}
         <div
-          className={`flex flex-col justify-start items-start md:hidden bg-white py-24 pl-10 pr-20 fixed top-0 right-0 left-0 bottom-0 h-screen w-full transition-all duration-150 ease-in-out ${
+          className={`flex flex-col justify-start items-start md:hidden bg-white py-24 px-10 fixed top-0 right-0 left-0 bottom-0 h-screen w-full transition-all duration-150 ease-in-out ${
             sidenavOpen ? "translate-x-0 flex" : "-translate-x-[150%]"
           }`}
         >
-          {headerLinks.map(({ title, link, links }) => (
+          {headerLinks.map(({ title, link, links, notPage }) => (
             <div
               className={`relative w-full mb-6 ${
                 links ? "border-b-1/2 border-grey-bordercolor" : ""
               }`}
               key={title}
             >
-              <Link
-                href={links ? "#" : link}
+              <div
                 className={`flex justify-start items-center hover:text-blue text-grey-text text-base font-light space-x-14 mb-6 ${
                   pathIsNotBase && link.includes(pathname) && "!text-blue"
                 }`}
@@ -195,33 +193,60 @@ const Header = () => {
                   setActiveNav(activeNav ? "" : title);
                 }}
               >
-                <span className="text-current whitespace-nowrap">{title}</span>
+                <Link href={notPage ? "#" : link}>
+                  <span className="text-current whitespace-nowrap">
+                    {title}
+                  </span>
+                </Link>
+
                 {links && (
-                  <ArrowDownIcon className="text-blue h-[14px] w-[14px] stroke-current" />
+                  <div>
+                    <ArrowDownIcon className="text-blue stroke-current" />
+                  </div>
                 )}
-              </Link>
+              </div>
               {links &&
                 activeNav === title &&
-                links?.map(({ name, link, icon }) => (
-                  <Link
-                    href={link}
-                    key={name}
-                    className={`flex justify-start items-center p-4 hover:text-blue text-grey-text text-base font-light whitespace-nowrap ${
-                      pathIsNotBase &&
-                      link.includes(pathname) &&
-                      "!text-blue !stroke-blue"
-                    }`}
-                    onClick={() => {
-                      setActiveNav("");
-                      setSidenavOpen(false);
-                    }}
-                  >
-                    {icon}
-                    <span className="text-current whitespace-nowrap pl-5">
-                      {name}
-                    </span>
-                  </Link>
-                ))}
+                links?.map(({ name, link, icon, href }) =>
+                  link ? (
+                    <Link
+                      href={link}
+                      key={name}
+                      className={`flex justify-start items-center p-4 hover:text-blue text-grey-text text-base font-light whitespace-nowrap ${
+                        pathIsNotBase &&
+                        link.includes(pathname) &&
+                        "!text-blue !stroke-blue"
+                      }`}
+                      onClick={() => {
+                        setActiveNav("");
+                        setSidenavOpen(false);
+                      }}
+                    >
+                      {icon}
+                      <span className="text-current whitespace-nowrap pl-5">
+                        {name}
+                      </span>
+                    </Link>
+                  ) : href ? (
+                    <a
+                      href={href}
+                      key={name}
+                      className={`flex justify-between items-center p-4 hover:text-blue text-grey-text text-base font-light whitespace-nowrap gap-5`}
+                      onClick={() => {
+                        setActiveNav("");
+                        setSidenavOpen(false);
+                      }}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="text-current whitespace-nowrap pl-5">
+                        {name}
+                      </span>
+
+                      <ArrowRight className="scale-[0.7]" />
+                    </a>
+                  ) : null
+                )}
             </div>
           ))}
         </div>

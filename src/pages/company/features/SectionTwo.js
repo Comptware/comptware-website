@@ -5,7 +5,7 @@ import Button from "components/general/button/Button";
 
 const SectionTwo = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start w-full h-fit gap-8 mb-[150px] bg-grey-dull ">
+    <div className="flex flex-col md:flex-row justify-between items-start w-full h-fit gap-8 mb-[150px] md:bg-grey-dull ">
       <div className=" w-full md:w-[35%] text-left ">
         <div className="bg-mission-image bg-cover h-[300px] sm:h-[500px] w-full bg-no-repeat bg-left sm:bg-center" />
       </div>
@@ -17,7 +17,7 @@ const SectionTwo = () => {
           Come be part of the rockstar and diverse team of people building a new
           payments highway connecting more trade globally.
         </p>
-        <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2">
+        <div className="flex justify-center md:justify-between items-center w-full">
           <Link href="company/all-openings" target="_blank" rel="noreferrer">
             <Button
               text="View avaialable roles "

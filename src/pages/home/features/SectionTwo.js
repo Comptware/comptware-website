@@ -72,24 +72,27 @@ const SectionTwo = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-start items-start w-full h-fit gap-y-14 md:py-24 bg-grey-dull mt-8">
-      <div className="flex flex-col md:flex-row justify-start items-start gap-x-10 md:items-center w-full px-5 md:px-[5%] lg:px-[8%]">
-        <p className="bani-heading text-black-light helv-medium pl-10">
+    <div className="flex flex-col justify-start items-start w-full h-fit gap-y-10 md:gap-y-14 py-14 md:py-24 bg-grey-dull mt-8">
+      <div className="flex flex-col md:flex-row justify-start items-start gap-8 md:gap-10 md:items-center w-full px-5 md:px-[5%] lg:px-[8%]">
+        <p className="text-base sm:text-xl md:text-[36px] lg:text-[40px] text-black-light helv-medium md:pl-10 uppercase md:normal-case whitespace-nowrap ">
           Who we work with
         </p>
 
-        <div className="flex justify-start items-center gap-x-4 scale-[0.75]">
+
+        <div className="flex justify-start items-center gap-x-4 w-full ml-[-10px] md:ml-0">
           <button
             onClick={handlePrev}
-            className={``}
+            className={`scale-[0.75]`}
             style={{ opacity: activeSlideIndex <= 1 ? 0.15 : 1 }}
           >
             <ArrowRight className="rotate-[180deg]" />
           </button>
 
-          <button className="works-slide-right" onClick={handleNext}>
+          <button className="works-slide-right scale-[0.75]" onClick={handleNext}>
             <ArrowRight />
           </button>
+
+          <div className="clients-swiper-pagination flex md:hidden justify-end items-center ml-auto pl-3 gap-[-3px]" />
         </div>
       </div>
 
@@ -97,7 +100,25 @@ const SectionTwo = () => {
         <Swiper
           ref={sliderRef}
           spaceBetween={20}
-          slidesPerView={3.7}
+          slidesPerView={1}
+          breakpoints={{
+            // when window width is >= 640px
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 1.7,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2.7,
+            },
+
+            // when window width is >= 768px
+            1024: {
+              slidesPerView: 3.7,
+            },
+          }}
           onSlideChange={(e) => setActiveSlideIndex(e.activeIndex)}
           className="!pb-4"
           autoplay={{
@@ -106,17 +127,14 @@ const SectionTwo = () => {
           }}
           speed={4000}
           modules={[Autoplay, Pagination, Navigation]}
+          pagination={{ clickable: true, el: ".clients-swiper-pagination" }}
         >
           {businessTypes.map((item) => (
             <SwiperSlide key={item.title}>
               <Card details={item} type="works" />
             </SwiperSlide>
           ))}
-          {businessTypes.map((item) => (
-            <SwiperSlide key={item.title}>
-              <Card details={item} type="works" />
-            </SwiperSlide>
-          ))}
+         
         </Swiper>
       </div>
     </div>

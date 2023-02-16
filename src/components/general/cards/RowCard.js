@@ -15,7 +15,7 @@ const RowCard = ({ details }) => {
       >
         <h2 className={`text-black text-xl md:text-[22px]`}>{title}</h2>
         <p
-          className={`text-grey-text font-light leading-loose text-sm md:text-lg`}
+          className={`text-grey-text font-light leading-loose text-sm md:text-lg w-[75%]`}
         >
           {body}
         </p>

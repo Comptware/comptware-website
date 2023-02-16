@@ -605,13 +605,26 @@ div::-webkit-scrollbar-thumb {
 .black-bg-swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: rgba(255, 255, 255, 1);
+  background: #ffffff;
 }
 
 .black-bg-swiper-pagination .swiper-pagination-bullet-active {
-
   background: #ffffff;
 }
+
+.clients-swiper-pagination .swiper-pagination-bullet,
+.section-swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgb(142, 142, 144);
+}
+
+.clients-swiper-pagination .swiper-pagination-bullet-active,
+.section-swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--bani-blue);
+}
+
+
 
 .animate-fadein {
   animation: fadein 0.5s linear forwards;
@@ -624,7 +637,7 @@ div::-webkit-scrollbar-thumb {
   }
 
   to {
-    transform:1;
+    transform: 1;
     transform: scale(1);
   }
 }
