@@ -18,7 +18,6 @@ const Header = () => {
   const [activeNav, setActiveNav] = useState("");
   const [sidenavOpen, setSidenavOpen] = useState(false);
   const [navbarBg, setNavbarBg] = useState(false);
-  console.log("location: ", location);
   const headerLinks = [
     {
       title: "Use case",

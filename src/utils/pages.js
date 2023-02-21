@@ -55,6 +55,16 @@ const pages = [
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani_twitter_card.jpg",
   },
+
+  {
+    url: "/company/all-openings",
+    title: "Bani | All Openings",
+    description:
+      "Easily and seamlessly collect cardless payments from customers. Whether that is mobile money payments across Sub-Saharan Africa or crypto payments globally we got you covered.",
+    thumbnail:
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani_twitter_card.jpg",
+  },
+
   {
     url: "/products/checkout",
     title: "Bani | Our Products",
