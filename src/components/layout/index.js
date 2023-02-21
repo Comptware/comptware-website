@@ -14,7 +14,6 @@ const Layout = ({ children }) => {
   const pathname = location.pathname;
   const pathIsNotBase = pathname !== "/";
   const pageMatch = getPageByPath(pathname);
-  console.log("pageMatch: ", pageMatch);
   const page = pathIsNotBase ? pageMatch : null;
 
   return (
