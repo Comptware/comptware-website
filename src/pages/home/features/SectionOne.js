@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import Sticky from "react-sticky-el";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 import BorderFade from "assets/icons/border-fade.svg";
 import ArrowRight from "assets/icons/Arrow/arrow-right-black.svg";
+import { PAYMENT_TYPES_STICKY_MODES } from "utils/constants";
 
 const paymentTypes = [
   {
@@ -24,6 +24,7 @@ const paymentTypes = [
     body: "Experience the convenience of managing your money on-the-go with our mobile money service. Ewallets",
   },
 ];
+const { PRE_VIEW, IN_VIEW, POST_VIEW } = PAYMENT_TYPES_STICKY_MODES;
 const SectionOne = () => {
   const sectionRef = useRef(null);
   const sliderRef = useRef(null);
@@ -40,6 +41,7 @@ const SectionOne = () => {
 
   const [activePaymentType, setActivePaymentType] = useState(paymentTypes[0]);
   const [width, setWidth] = useState(0);
+  const [stickyMode, setStickyMode] = useState(PRE_VIEW);
 
   useEffect(() => {
     setWidth(window?.innerWidth);
@@ -52,22 +54,40 @@ const SectionOne = () => {
   }, []);
 
   const handleStickyAnimationUpdate = () => {
-    const paymentTypesLength = paymentTypes.length + 1;
+    const paymentTypesLength = paymentTypes.length;
+    const adjustedPaymentTypesLength = paymentTypes.length * 2;
     const sectionRefRect = sectionRef?.current?.getBoundingClientRect();
     const sectionHeight = sectionRefRect?.height;
     const sectionTopPosition = sectionRefRect?.top;
-    const topOffsetAllowance = 409;
+    const topOffsetAllowance = -150;
     const adjustedSectionTopPosition = -(
       sectionTopPosition + topOffsetAllowance
     );
     const adjustedSectionHeight = sectionHeight - topOffsetAllowance;
-    const allotedHeightFraction = adjustedSectionHeight / paymentTypesLength;
+    const allotedHeightFraction =
+      adjustedSectionHeight / adjustedPaymentTypesLength;
+    const stickyViewHeight = adjustedSectionHeight / 2;
 
-    for (let index = 0; index < paymentTypesLength; index++) {
+    for (let index = 0; index < adjustedPaymentTypesLength; index++) {
+      let newActivePayment;
       if (allotedHeightFraction * (index + 1) <= adjustedSectionTopPosition) {
-        const newActivePayment = paymentTypes[index];
+        newActivePayment = paymentTypes[index];
         setActivePaymentType(newActivePayment);
       }
+    }
+
+    if (
+      adjustedSectionTopPosition > 0 &&
+      adjustedSectionTopPosition < stickyViewHeight
+    ) {
+      setStickyMode(IN_VIEW);
+    } else if (adjustedSectionTopPosition > stickyViewHeight) {
+      setActivePaymentType(paymentTypes[paymentTypesLength - 1]);
+      setStickyMode(POST_VIEW);
+    } else {
+      setActivePaymentType(paymentTypes[0]);
+
+      setStickyMode(PRE_VIEW);
     }
   };
 
@@ -80,21 +100,18 @@ const SectionOne = () => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className="flex flex-col justify-start items-center h-fit w-full space-y-7 px-5 md:px-[5%] lg:px-[8%] sticky-boundary sm:mb-[500px] relative"
-    >
-      <div className="flex flex-col justify-between items-center w-full h-fit gap-y-12 sm:mb-[100px]">
-        <div className="flex flex-col justify-between items-center w-full h-fit gap-y-12 md:pt-16 bg-white z-20">
+    <div className="flex flex-col justify-start items-center h-fit w-full space-y-7 sticky-boundary sm:mb-[0px] relative">
+      <div className="flex flex-col justify-between items-center w-full h-fit gap-y-12 sm:mb-[0px]">
+        <div className="flex flex-col justify-between items-center w-full h-fit gap-y-12 md:pt-16 bg-white z-20 px-5 md:px-[5%] lg:px-[8%]">
           <BorderFade className="scale-x-[0.7]" />
-          <p className="text-grey-text text-left leading-[1.9] bani-heading-alt font-normal ">
-            <span className="text-black-light helv-medium"> Merchants </span>
+          <p className="text-grey-text text-left leading-[1.9] bani-heading-alt font-normal w-full md:w-[75%] lg:w-[70%] ">
+            <span className="text-black-light basier-semibold"> Merchants </span>
             utilise our{" "}
-            <span className="text-black-light helv-medium">
+            <span className="text-black-light basier-semibold">
               unique payment solutions{" "}
             </span>
             to provide customers with{" "}
-            <span className="text-black-light helv-medium">
+            <span className="text-black-light basier-semibold">
               smooth and instant payment experiences
             </span>
             . Collecting and reconciling online and in-store payments is much
@@ -102,16 +119,21 @@ const SectionOne = () => {
           </p>
           <BorderFade className="scale-x-[0.7]" />
         </div>
-        <div className="sm:h-[800px] flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 pt-[70px]">
-          <Sticky
-            className="hidden md:block w-full transition-all duration-[0.5s] ease-in-out"
-            bottomOffset={-450}
-            stickyClassName="hidden md:block transition-all duration-[0.5s] ease-in-out"
-            boundaryElement=".sticky-boundary"
-            hideOnBoundaryHit={false}
+        <div
+          ref={sectionRef}
+          className="sm:h-[1150px] flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 pt-[70px] relative sm:my-[100px]"
+        >
+          <div
+            className={`${
+              stickyMode === IN_VIEW
+                ? "fixed sm:top-[100px] md:top-[200px] left-0 right-0 px-5"
+                : stickyMode === POST_VIEW
+                ? "absolute bottom-0"
+                : "absolute top-0"
+            } px-5 md:px-[5%] lg:px-[8%] h-fit flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto`}
           >
-            <div className="mt-[50px] flex flex-col justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4">
-              <p className="text-black-light font-semibold leading-none bani-base pb-4 pt-20">
+            <div className="mt-[1px] hidden md:flex flex-col justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4">
+              <p className="text-black-light basier-medium leading-none bani-base pb-4 pt-20">
                 COLLECT PAYMENTS ANYWHERE
               </p>
               {paymentTypes.map(({ title, body }) => (
@@ -119,7 +141,7 @@ const SectionOne = () => {
                   key={title}
                   className={`${
                     activePaymentType?.title === title
-                      ? "text-black-light helv-medium"
+                      ? "text-black-light basier-medium"
                       : "text-black-fade font-normal"
                   } tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out`}
                   onClick={() => setActivePaymentType({ title, body })}
@@ -129,19 +151,10 @@ const SectionOne = () => {
                 </span>
               ))}
             </div>
-          </Sticky>
 
-          <div className="hidden sm:flex flex-col justify-center items-center md:items-end w-full min-h-[55vh] md:pt-0">
-            <Sticky
-              className="w-full transition-all md:duration-[0.5s] ease-in-out"
-              topOffset={width > 767 ? -100 : 0}
-              bottomOffset={-450}
-              stickyClassName="md:mt-24 transition-all duration-[0.5s] ease-in-out"
-              boundaryElement=".sticky-boundary"
-              hideOnBoundaryHit={false}
-            >
+            <div className="hidden sm:flex flex-col justify-center items-center md:items-end w-full min-h-[55vh] md:pt-0">
               <div className="flex flex-col md:hidden justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4">
-                <p className="text-black-light font-semibold leading-none bani-base pb-2 pt-10">
+                <p className="text-black-light basier-medium leading-none bani-base pb-2 pt-10">
                   COLLECT PAYMENTS ANYWHERE
                 </p>
 
@@ -150,7 +163,7 @@ const SectionOne = () => {
                     activePaymentType?.title == title ? (
                       <span
                         key={title}
-                        className={`text-black-light helv-medium tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out animate-fadein`}
+                        className={`text-black-light basier-medium tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out animate-fadein`}
                       >
                         {activePaymentType?.title}
                       </span>
@@ -164,11 +177,11 @@ const SectionOne = () => {
                   {activePaymentType?.body}
                 </p>
               </div>
-            </Sticky>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:hidden justify-center items-start text-left w-full h-fit gap-8">
-            <p className="text-black-light font-semibold leading-none text-base">
+          <div className="flex flex-col sm:hidden justify-center items-start text-left w-full h-fit gap-8 px-5">
+            <p className="text-black-light basier-medium leading-none text-base">
               COLLECT PAYMENTS ANYWHERE
             </p>
 

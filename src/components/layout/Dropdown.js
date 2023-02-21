@@ -14,7 +14,7 @@ const Dropdown = ({ links, path, onClick }) => {
           <Link
             href={link}
             key={name}
-            className={`flex justify-start items-center hover:text-blue text-grey-text bani-base font-medium whitespace-nowrap gap-2 ${
+            className={`flex justify-start items-center hover:text-blue text-grey-text bani-base basier-medium whitespace-nowrap gap-2 ${
               path.includes(link) && "text-blue stroke-blue"
             }`}
             onClick={onClick}
@@ -26,7 +26,7 @@ const Dropdown = ({ links, path, onClick }) => {
           <a
             href={href}
             key={name}
-            className={`flex justify-between items-center p-4 hover:text-blue text-grey-text text-base font-medium whitespace-nowrap gap-2`}
+            className={`flex justify-between items-center p-4 hover:text-blue text-grey-text text-base basier-medium whitespace-nowrap gap-2`}
             onClick={onClick}
             target="_blank"
             rel="noreferrer"

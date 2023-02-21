@@ -10,7 +10,7 @@ const SectionTwo = () => {
         <div className="bg-mission-image bg-cover h-[300px] sm:h-[500px] w-full bg-no-repeat bg-left sm:bg-center" />
       </div>
       <div className="flex flex-col justify-center items-start text-left w-full md:w-[65%] h-full px-5 md:px-[5%] lg:px-[8%]">
-        <h2 className="text-black-light helv-medium bani-heading-alt w-full text-left mb-5 md:mb-4">
+        <h2 className="text-black-light basier-medium bani-heading-alt w-full text-left mb-5 md:mb-4">
           Be a part of our mission
         </h2>
         <p className="text-grey-text font-light bani-title mb-8 md:mb-14 text-left leading-[1.85]">
@@ -32,7 +32,8 @@ const SectionTwo = () => {
                   },
                 })
               }
-              height="h-[48px] md:h-[50px]"
+              height="h-[50px] md:h-[56px]"
+              textClass="text-lg"
             />
           </Link>
         </div>

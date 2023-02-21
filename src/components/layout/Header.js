@@ -98,9 +98,12 @@ const Header = () => {
 
   const pathname = location.pathname;
   const pathIsNotBase = pathname !== "/";
+  const navbarBgIsWhite = navbarBg || pathname.includes("company/all-openings");
   return (
     <header
-      style={{ backgroundColor: `${navbarBg ? "white" : "transparent"}` }}
+      style={{
+        backgroundColor: `${navbarBgIsWhite ? "white" : "transparent"}`,
+      }}
       className={`border-b-[0.5px] border-grey transition-colors duration-500 ease-in-out website-header flex flex-row justify-between items-center w-full h-14 md:h-[94px] px-5 md:px-[5%] lg:px-[8%] z-50 drop-shadow-[0_0_30px_rgba(0,0,0,0.1)]`}
     >
       <div className="relative flex flex-row justify-between items-center mx-auto w-full">
@@ -108,7 +111,7 @@ const Header = () => {
           <Logo className="scale-[0.8]" />
         </Link>
 
-        <div className="hidden md:flex justify-end items-center px-10 pt-[10px] pb-[4px] w-fit space-x-7 transition-all duration-150 ease-in-out bg-grey-greyLight rounded-[87px]">
+        <div className="hidden lg:flex justify-end items-center px-10 pt-[9px] pb-[3px] w-fit space-x-7 transition-all duration-150 ease-in-out bg-grey-greyLight rounded-[87px]">
           {headerLinks.map(({ title, link, links }) => (
             <div
               className="relative w-full h-full"
@@ -120,7 +123,7 @@ const Header = () => {
             >
               <Link
                 href={link}
-                className={`flex justify-center items-center hover:text-blue text-grey-text bani-base font-light space-x-1.5 mb-[6px] py-1 px-3 icon-text transition-all duration-300 ease-in-out  ${
+                className={`flex justify-center items-center hover:text-blue text-grey-text bani-base font-light space-x-1.5 mb-[6px] py-1 px-2.5 icon-text transition-all duration-300 ease-in-out  ${
                   pathIsNotBase &&
                   link.includes(pathname) &&
                   "!text-blue border-[0.8px] border-blue rounded-full !bg-blue-dull active-nav"
@@ -142,13 +145,13 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex flex-row justify-start items-center space-x-2">
+        <div className="hidden lg:flex flex-row justify-start items-center space-x-2 pl-2">
           <a href="https://app.getbani.com" target="_blank" rel="noreferrer">
             <Button
               text="Sign in"
               onClick={() => {}}
               isOutline
-              textClass="text-sm"
+              textClass="text-base"
             />
           </a>
           <a
@@ -160,7 +163,7 @@ const Header = () => {
               blackBg
               text="Contact Sales"
               onClick={() => {}}
-              textClass="text-sm"
+              textClass="text-base"
             />
           </a>
         </div>
@@ -174,7 +177,7 @@ const Header = () => {
 
         {/* Mobile side nav */}
         <div
-          className={`flex flex-col justify-start items-start md:hidden bg-white py-24 px-10 fixed top-0 right-0 left-0 bottom-0 h-screen w-full transition-all duration-150 ease-in-out ${
+          className={`flex flex-col justify-start items-start lg:hidden bg-white py-24 px-10 fixed top-0 right-0 left-0 bottom-0 h-screen w-full transition-all duration-150 ease-in-out ${
             sidenavOpen ? "translate-x-0 flex" : "-translate-x-[150%]"
           }`}
         >

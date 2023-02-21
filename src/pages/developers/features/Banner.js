@@ -5,7 +5,7 @@ import Button from "components/general/button/Button";
 const Banner = () => {
   return (
     <div className="flex flex-col justify-center items-start sm:items-center text-center md:text-left w-full md:w-[85%] lg:w-[80%] h-fit z-[5] min-h-[400px] max-h-[700px] website-banner-alt px-5 md:px-[5%] lg:px-[8%]">
-      <p className="text-grey-text font-semibold leading-none bani-base mb-6 md:mb-8">
+      <p className="text-grey-text basier-medium leading-none bani-base mb-6 md:mb-8">
         FOR DEVELOPERS
       </p>
 
@@ -36,7 +36,8 @@ const Banner = () => {
                 },
               })
             }
-            height="h-[48px] md:h-[50px]"
+            height="h-[50px] md:h-[56px]"
+            textClass="text-lg"
           />
         </a>
       </div>

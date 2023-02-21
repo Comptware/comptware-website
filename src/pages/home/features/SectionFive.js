@@ -35,7 +35,7 @@ const SectionFive = () => {
   return (
     <div className="flex flex-col justify-start items-start w-full h-fit gap-y-14 py-14 md:py-24 px-5 md:px-[5%] lg:px-[8%]">
       <div className="flex flex-col justify-start items-center gap-3 w-full">
-        <h2 className="bani-heading text-blue helv-medium text-center">
+        <h2 className="bani-heading-alt-2 text-blue basier-semibold text-center">
           Why merchants <br className="sm:hidden"/>love Bani
         </h2>
         <p className="text-grey-text font-light bani-title mb-5 md:mb-6 ">

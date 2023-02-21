@@ -107,24 +107,42 @@
 }
 
 @font-face {
-  font-family: "HelveticaNeue";
-  src: url("https://bani-assets.s3.eu-west-2.amazonaws.com/static/fonts/HelveticaNeue/HelveticaNeueMedium.woff2") format("woff2"),
-    url("https://bani-assets.s3.eu-west-2.amazonaws.com/static/fonts/HelveticaNeue/HelveticaNeueMedium.woff") format("woff"),
-    url("https://bani-assets.s3.eu-west-2.amazonaws.com/static/fonts/HelveticaNeue/HelveticaNeueMedium.ttf") format("truetype");
+  font-family: "BasierCircleRegular";
+  src: local('Basier Circle Regular'), local('BasierCircle-Regular'), url("../assets/fonts/BasierCircle-Regular.woff2") format("woff2"),
+    url("../assets/fonts/BasierCircle-Regular.woff") format("woff"),
+    url("../assets/fonts/BasierCircle-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/BasierCircle-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "BasierCircleSemiBold";
+  src: local('Basier Circle SemiBold'), local('BasierCircle-SemiBold'), url("../assets/fonts/BasierCircle-SemiBold.woff2") format("woff2"),
+    url("../assets/fonts/BasierCircle-SemiBold.woff") format("woff"),
+    url("../assets/fonts/BasierCircle-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/BasierCircle-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "BasierCircleMedium";
+  src: local('Basier Circle Medium'), local('BasierCircle-Medium'), url("../assets/fonts/BasierCircle-Medium.woff2") format("woff2"),
+    url("../assets/fonts/BasierCircle-Medium.woff") format("woff"),
+    url("../assets/fonts/BasierCircle-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/BasierCircle-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "HelveticaNeueExtended";
-  src: url("https://bani-assets.s3.eu-west-2.amazonaws.com/static/fonts/HelveticaNeueExtended/HelveticaNeueExtended.woff2") format("woff2"),
-    url("https://bani-assets.s3.eu-west-2.amazonaws.com/static/fonts/HelveticaNeueExtended/HelveticaNeueExtended.woff") format("woff"),
-    url("https://bani-assets.s3.eu-west-2.amazonaws.com/static/fonts/HelveticaNeueExtended/HelveticaNeueExtended.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+
+
 
 * {
   font-size: 100%;
@@ -140,7 +158,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Helvetica, sans-serif !important;
+  font-family: "BasierCircleRegular", Helvetica, sans-serif;
   box-sizing: border-box;
   /* width: 100%; */
 }
@@ -150,19 +168,19 @@ body {
 }
 
 h1 {
-  font-family: "HelveticaNeueExtended", Helvetica, sans-serif !important;
+  font-family: "BasierCircleSemiBold", Helvetica, sans-serif;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  font-family: "HelveticaNeue", Helvetica, sans-serif !important;
-  font-weight: 500;
+  font-family: "BasierCircleRegular", Helvetica, sans-serif;
+  font-weight: 100;
 }
 
 h6 {
-  font-family: "HelveticaNeue", Helvetica, sans-serif !important;
+  font-family: "BasierCircleRegular", Helvetica, sans-serif !important;
   font-weight: 100;
 }
 
@@ -315,26 +333,32 @@ table.striped tbody tr:nth-of-type(even) {
 }
 
 table th {
-  font-family: "HelveticaNeue";
+  font-family: "BasierCircleRegular";
   font-weight: 300;
   color: var(--bani-grey);
 }
 
 table td {
-  font-family: "HelveticaNeue";
+  font-family: "BasierCircleRegular";
   font-weight: 300;
 }
 
 .helv-regular {
-  font-family: "HelveticaNeue";
+  font-family: "BasierCircleRegular";
   font-weight: 400;
   letter-spacing: 0.2px;
 }
 
-.helv-medium {
-  font-family: "HelveticaNeue";
-  font-weight: 300;
+.basier-medium {
+  font-family: "BasierCircleMedium";
+  font-weight: 500;
 }
+
+.basier-semibold {
+  font-family: "BasierCircleSemiBold" !important;
+  font-weight: 500;
+}
+
 
 .product-row .remove-icon {
   transition: 0.4s ease;

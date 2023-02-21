@@ -74,7 +74,7 @@ const SectionTwo = () => {
   return (
     <div className="flex flex-col justify-start items-start w-full h-fit gap-y-10 md:gap-y-14 py-14 md:py-24 bg-grey-dull mt-8">
       <div className="flex flex-col md:flex-row justify-start items-start gap-8 md:gap-10 md:items-center w-full px-5 md:px-[5%] lg:px-[8%]">
-        <p className="text-base sm:text-xl md:text-[36px] lg:text-[40px] text-black-light helv-medium md:pl-10 uppercase md:normal-case whitespace-nowrap ">
+        <p className="text-base sm:text-xl md:text-[36px] lg:text-[40px] text-black-light basier-semibold md:pl-10 uppercase md:normal-case whitespace-nowrap ">
           Who we work with
         </p>
 

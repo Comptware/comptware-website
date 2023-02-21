@@ -27,7 +27,7 @@ const RowCard = ({ details }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="font-medium text-xl md:text-[22px]">{type}</span>
+            <span className="basier-medium text-xl md:text-[22px]">{type}</span>
             <ArrowRight />
           </a>
         )}

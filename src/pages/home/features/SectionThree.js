@@ -7,7 +7,6 @@ import Hinge from "assets/icons/Clients/hinge.svg";
 import Kobo from "assets/icons/Clients/kobo.svg";
 import Pivo from "assets/icons/Clients/pivo.svg";
 
-
 const clients = [
   {
     title: "Foodcourt",
@@ -34,7 +33,11 @@ const clients = [
 const SectionThree = () => {
   const sliderRef = useRef(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-  
+
+  const handleSlide = useCallback((index) => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideTo(index);
+  }, []);
 
   return (
     <div className="flex flex-col justify-start items-start w-full h-fit md:gap-y-8 py-14 md:py-[110px] bg-black relative overflow-hidden">
@@ -49,6 +52,7 @@ const SectionThree = () => {
                 key={title}
                 style={{ opacity: activeSlideIndex === i ? 1 : 0.3 }}
                 className="scale-[0.8] transition-all duration-[1s] ease-in-out"
+                onClick={() => handleSlide(i)}
               >
                 {icon}
               </button>
@@ -56,24 +60,20 @@ const SectionThree = () => {
           })}
         </div>
 
-        <div className="w-[85%] md:w-[75%] lg:w-[60%]">
+        <div className="w-[85%] md:w-[75%] lg:w-[55%]">
           <Swiper
             ref={sliderRef}
             spaceBetween={20}
             slidesPerView={1}
             onSlideChange={(e) => setActiveSlideIndex(e.activeIndex)}
             className="!pb-4"
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            speed={1000}
+            autoplay={false}
             modules={[Autoplay, Pagination, Navigation]}
             pagination={{ clickable: true, el: ".black-bg-swiper-pagination" }}
           >
             {clients.map(({ body, title }) => (
               <SwiperSlide key={title}>
-                <p className="text-white font-medium bani-title-alt text-center ">
+                <p className="text-white bani-title-alt text-center leading-loose ">
                   {body}
                 </p>
               </SwiperSlide>

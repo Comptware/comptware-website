@@ -8,16 +8,16 @@ import ArrowRight from "assets/icons/Arrow/arrow-right-white.svg";
 const Banner = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-10 md:space-y-0 w-full h-fit min-h-[500px] max-h-[700px] md:space-x-8 website-banner px-5 md:px-[5%] lg:px-[8%] relative bg-white z-20">
-      <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left md:basis-[60%] w-full h-fit z-[5] !ml-0 !mt-0">
+      <div className="flex flex-col justify-center items-start text-left md:basis-[60%] w-full h-fit z-[5] !ml-0 !mt-0">
         <h1 className="text-blue-gradient bani-heading mb-3 md:mb-5 ">
           Collect and reconcile <br /> payments easily
         </h1>
-        <p className="text-grey-text font-light bani-title mb-5 md:mb-12 ">
+        <p className="text-grey-text font-thin bani-title mb-10 md:mb-12 ">
           Receive, confirm, and track all online and in-
           <br className="hidden md:block" />
           store payments easily and instantly anywhere.
         </p>
-        <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2">
+        <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2 mb-10 md:mb-0">
           <a
             href="https://calendly.com/bani-inc/sales/"
             target="_blank"
@@ -36,8 +36,10 @@ const Banner = () => {
                   },
                 })
               }
-              iconRight={<ArrowRight className="scale-[0.8]" />}
-              height="h-[48px] md:h-[50px]"
+              iconRight={<ArrowRight className="scale-[0.9]" />}
+              height="h-[50px] md:h-[56px]"
+              textClass="text-lg"
+
             />
           </a>
         </div>

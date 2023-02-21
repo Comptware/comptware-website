@@ -14,7 +14,7 @@ module.exports = {
     },
     fontSize: {
       "4xl": [
-        "40px",
+        "48px",
         {
           lineHeight: "1.5",
         },
@@ -51,7 +51,7 @@ module.exports = {
           lineHeight: "1.5",
         },
       ],
-      "2xl": ["24px"],
+      "2xl": ["25px"],
       "22px": ["22px"],
       "xl-alt": ["20px"],
       xl: ["18px"],
@@ -78,7 +78,8 @@ module.exports = {
           fade: "rgba(72, 55, 241, 0.3)",
           light: "#E6EBFF",
           backdrop: "rgba(255, 255, 255, 0.02)",
-          dull:"rgba(84, 68, 242, 0.1)"
+          dull:"rgba(84, 68, 242, 0.1)",
+
 
         },
         grey: {

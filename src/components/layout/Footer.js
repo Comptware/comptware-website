@@ -71,7 +71,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="website-footer flex flex-col justify-center items-center w-full py-10 md:py-16 px-5 md:px-[5%] lg:px-[8%] bg-black space-y-8 md:space-y-12 relative overflow-y-hidden ">
+    <footer className="website-footer flex flex-col justify-center items-center w-full py-10 md:py-16 px-5 md:px-[5%] lg:px-[8%] bg-black space-y-8 md:space-y-12 relative overflow-hidden ">
       <div className="flex flex-row justify-between items-center w-full">
         <div className="relative flex flex-col md:flex-row justify-start items-start mx-auto w-full space-y-10 md:space-y-0">
           <div className="w-[50%] h-full">
@@ -86,7 +86,7 @@ const Footer = () => {
                 key={title + i}
               >
                 <p
-                  className={`font-semibold bani-title-alt ${
+                  className={`basier-medium bani-title-alt ${
                     title === "." ? "text-transparent" : "text-white"
                   }`}
                 >
@@ -135,8 +135,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade py-4 md:pt-10 pb-14">
-        <p className="w-full h-full text-center text-grey-white font-light bani-base-alt px-6 opacity-[0.9] leading-loose ">
+      <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade py-4 md:pt-10 pb-12">
+        <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base px-6 opacity-[0.9] leading-loose ">
           Copyright &copy; 2023 Bani Payments. All rights reserved. <br />
           The content and information on this website is protected by copyright
           laws. No part of this website may be reproduced, distributed, or
