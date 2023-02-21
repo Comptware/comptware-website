@@ -110,7 +110,7 @@ const Header = () => {
           <Logo className="scale-[0.8]" />
         </Link>
 
-        <div className="hidden lg:flex justify-end items-center px-10 pt-[9px] pb-[3px] w-fit space-x-7 transition-all duration-150 ease-in-out bg-grey-greyLight rounded-[87px]">
+        <div className="hidden lg:flex justify-end items-center px-10 pt-[9px] pb-[3px] w-fit space-x-5 transition-all duration-150 ease-in-out bg-grey-greyLight rounded-[87px]">
           {headerLinks.map(({ title, link, links }) => (
             <div
               className="relative w-full h-full"
@@ -122,7 +122,7 @@ const Header = () => {
             >
               <Link
                 href={link}
-                className={`flex justify-center items-center hover:text-blue text-grey-text bani-base font-light space-x-1.5 mb-[6px] py-1 px-2.5 icon-text transition-all duration-300 ease-in-out  ${
+                className={`flex justify-center items-center hover:text-blue text-grey-text bani-base font-light space-x-1.5 mb-[6px] py-1 pl-4 pr-2.5 icon-text transition-all duration-300 ease-in-out  ${
                   pathIsNotBase &&
                   link.includes(pathname) &&
                   "!text-blue border-[0.8px] border-blue rounded-full !bg-blue-dull active-nav"
