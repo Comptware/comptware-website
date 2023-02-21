@@ -46,7 +46,7 @@ module.exports = {
       ],
 
       "2.5xl": [
-        "25px",
+        "26px",
         {
           lineHeight: "1.5",
         },

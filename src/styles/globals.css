@@ -4,7 +4,7 @@
 
 @layer components {
   .bani-heading {
-    @apply text-2.5xl;
+    @apply text-3.2xl;
   }
 
   .bani-heading-alt {

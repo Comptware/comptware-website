@@ -17,7 +17,7 @@ const Banner = () => {
           <br className="hidden md:block" />
           store payments easily and instantly anywhere.
         </p>
-        <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2 mb-10 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2 mb-6 md:mb-0">
           <a
             href="https://calendly.com/bani-inc/sales/"
             target="_blank"
