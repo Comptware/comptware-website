@@ -29,7 +29,11 @@ const SectionOne = () => {
   return (
     <div className="flex flex-col justify-between items-center w-full h-fit gap-12 lg:gap-14 my-[105px]">
       {openings.map((item, index) => (
-        <Opening details={item} showBorder={index !== openings.length - 1} />
+        <Opening
+          key={index + item.title}
+          details={item}
+          showBorder={index !== openings.length - 1}
+        />
       ))}
       {openings.length < 1 && (
         <p className="text-grey-text font-light bani-title text-center leading-[1.85] italic">
