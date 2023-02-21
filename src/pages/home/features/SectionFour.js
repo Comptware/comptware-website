@@ -1,5 +1,4 @@
 import React from "react";
-import  SectionFourImage from "assets/icons/section-four-image.svg";
 
 const SectionFour = () => {
   return (
@@ -15,9 +14,7 @@ const SectionFour = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center md:items-start w-full">
-        <div className="width-full h-fit">
-          <SectionFourImage className="w-[450px] h-[500px] lg:w-[600px] lg:h-[600px] scale-[1.5] md:scale-[1.8] -my-[70px]" />
-        </div>
+        <div className="width-full h-fit"></div>
       </div>
     </div>
   );
