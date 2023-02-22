@@ -1,13 +1,13 @@
 import React from "react";
-import Image from "next/image";
+import Lottie from "lottie-react";
 
-import BannerImage from "assets/images/banner-image.png";
 import Button from "components/general/button/Button";
 import ArrowRight from "assets/icons/Arrow/arrow-right-white.svg";
+import heroAnimation from "assets/animations/home-hero-animation.json";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-10 md:space-y-0 w-full h-fit min-h-[500px] max-h-[700px] md:space-x-8 website-banner px-5 md:px-[5%] lg:px-[8%] relative bg-white z-20">
+    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-10 md:space-y-0 w-full h-fit min-h-[500px] md:max-h-[700px] md:space-x-8 website-banner px-5 md:px-[5%] lg:px-[8%] relative bg-white z-20">
       <div className="flex flex-col justify-center items-start text-left md:basis-[60%] w-full h-fit z-[5] !ml-0 !mt-0">
         <h1 className="text-blue-gradient bani-heading mb-3 md:mb-5 ">
           Collect and reconcile <br /> payments easily
@@ -39,19 +39,15 @@ const Banner = () => {
               iconRight={<ArrowRight className="scale-[0.9]" />}
               height="h-[50px] md:h-[56px]"
               textClass="text-lg"
-
             />
           </a>
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center md:items-end md:basis-[40%] w-full max-h-[60vh] relative z-[5]">
-        <Image
-          src={BannerImage}
-          className="w-full h-full max-w-[500px] z-[5]"
-          alt="banner-image"
-        />
-        <div className="z-[1] w-[60%] h-[70%] bg-blue-fade blur-[200px] absolute left-0 right-0 mx-auto" />
+      <div className="flex flex-col justify-center items-center md:items-end md:basis-[40%] w-full md:max-h-[60vh] relative z-[5]">
+        <div className="flex flex-col justify-center items-center md:items-end w-full h-full rounded-[45px] blue-grey-gradient">
+          <Lottie animationData={heroAnimation} loop={true} />
+        </div>
       </div>
     </div>
   );
