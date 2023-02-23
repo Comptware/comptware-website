@@ -122,11 +122,15 @@ const Header = () => {
             >
               <Link
                 href={link}
-                className={`flex justify-center items-center hover:text-blue text-grey-text bani-base font-light space-x-1.5 mb-[6px] py-1 pl-4 pr-2.5 icon-text transition-all duration-300 ease-in-out  ${
-                  pathIsNotBase &&
-                  link.includes(pathname) &&
-                  "!text-blue border-[0.8px] border-blue rounded-full !bg-blue-dull active-nav"
-                }`}
+                className={`flex justify-center items-center hover:text-blue text-grey-text bani-base font-light space-x-1.5 mb-[6px] py-1  px-2.5 icon-text transition-all duration-300 ease-in-out
+                 
+                 ${
+                   pathIsNotBase &&
+                   link.includes(pathname) &&
+                   `!text-blue border-[0.8px] border-blue rounded-full !bg-blue-dull active-nav ${
+                     links ? "pl-4" : "pl-2.5"
+                   }  `
+                 }`}
               >
                 <span className="text-current whitespace-nowrap">{title}</span>
                 {links && (
