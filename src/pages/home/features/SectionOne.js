@@ -134,7 +134,7 @@ const SectionOne = () => {
         </div>
         <div
           ref={sectionRef}
-          className="sm:h-[1150px] flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 pt-[70px] relative sm:my-[100px]"
+          className="sm:h-[1150px] flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 sm:pt-[70px] relative sm:my-[100px]"
         >
           <div
             className={`${

@@ -13,8 +13,8 @@ const Card = ({ details, type }) => {
 
   const titleClass =
     type === "works"
-      ? "text-black bani-lg"
-      : "text-black bani-title";
+      ? "text-current bani-lg"
+      : "text-current bani-title";
 
   const bodyClass =
     type === "works"
@@ -22,7 +22,7 @@ const Card = ({ details, type }) => {
       : "bani-title-alt md:w-[95%]";
   return (
     <div
-      className={`${containerClass} flex flex-col items-start text-left w-full space-y-4 rounded-[30px] bg-white relative overflow-hidden `}
+      className={`${containerClass} hover:text-blue text-black transition-all duration-[500ms] ease-in-out  flex flex-col items-start text-left w-full space-y-4 rounded-[30px] bg-white relative overflow-hidden `}
     >
       {type === "works" && (
         <div className="blue-fade-gradient absolute top-[-100px] right-[-100px] min-h-[200px] min-w-[200px] rounded-full" />
@@ -32,7 +32,7 @@ const Card = ({ details, type }) => {
 
       <h2 className={`basier-medium ${titleClass}`}>{title}</h2>
 
-      <p className={`text-grey-text font-light leading-loose ${bodyClass}`}>
+      <p className={`!text-grey-text font-light leading-loose ${bodyClass}`}>
         {body}
       </p>
 

@@ -81,7 +81,8 @@ module.exports = {
           dull: "rgba(84, 68, 242, 0.1)",
           clear: "rgba(84, 68, 242, 0.11)",
           border:"rgba(84, 68, 242, 0.21)",
-          textHover:"#9990FA"
+          textHover:"#9990FA",
+          bright:"#1A8DFF"
         },
         grey: {
           DEFAULT: "#C1C1C1",

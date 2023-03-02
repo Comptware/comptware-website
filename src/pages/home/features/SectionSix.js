@@ -7,7 +7,7 @@ import Button from "components/general/button/Button";
 import ArrowRight from "assets/icons/Arrow/arrow-right-white.svg";
 const SectionSix = () => {
   return (
-    <div className="flex flex-col justify-between items-center w-full h-fit my-12 md:my-0 md:py-28 bg-grey-dull px-5 md:px-[5%] lg:px-[8%] ">
+    <div className="flex flex-col justify-between items-center w-full h-fit my-12 md:my-0 py-14 md:py-28 bg-grey-dull px-5 md:px-[5%] lg:px-[8%]">
       <div className="flex flex-col md:flex-row items-center w-full h-fit gap-y-2 md:gap-x-8 shadow-card-2 rounded-[36px] relative overflow-hidden pl-7 pr-12 md:px-16 py-16">
         <div className="blue-fade-gradient absolute top-[-280px] right-[-280px] min-h-[450px] min-w-[500px] rounded-full" />
         <div className="blue-fade-gradient absolute bottom-[-280px] left-[-280px] min-h-[450px] min-w-[500px] rounded-full" />
