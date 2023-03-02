@@ -669,3 +669,14 @@ div::-webkit-scrollbar-thumb {
     transform: scale(1);
   }
 }
+
+.sticky-section-img {
+  width: 100%;
+  background-image: url(../assets/icons/PaymentTypes/virtual-accounts.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 0;
+  padding: 0;
+  /* reset */
+  padding-bottom: calc(100% * 3 / 4);
+}

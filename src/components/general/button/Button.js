@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import  Loader from "assets/icons/Loader/Loader.svg";
+import Loader from "assets/icons/Loader/Loader.svg";
 
 const Button = ({
   type,
@@ -31,8 +31,10 @@ const Button = ({
   whitespace-nowrap ${
     isOutline
       ? `bg-transparent ${
-          isDisabled ? "bg-white/[.2]" : ""
-        } text-black border border-[rgba(0, 0, 0, 0.12)]`
+          isDisabled
+            ? "bg-white/[.2]"
+            : " hover:bg-blue-clear hover:border-blue-border"
+        } text-black border border-[rgba(0, 0, 0, 0.12)] `
       : whiteBg
       ? `bg-white ${isDisabled ? "bg-white/[.2]" : ""} text-${
           textColor || "grey-text"
@@ -40,7 +42,7 @@ const Button = ({
       : redBg
       ? `bg-red ${isDisabled ? "bg-red/[.2]" : ""} text-white`
       : blackBg
-      ? `bg-black ${isDisabled ? "bg-black/[.2]" : ""} text-white`
+      ? `bg-black ${isDisabled ? "bg-black/[.2]" : ""} text-white hover:bg-blue`
       : ` ${
           isDisabled ? "bg-blue/[.2]" : "bg-blue hover:bg-blue-hover"
         } text-white`
@@ -58,10 +60,10 @@ const Button = ({
           <Loader />
         </div>
       ) : (
-        <div className={ `${btnClass} space-x-2`}>
-          {icon && <div >{icon}</div>}
+        <div className={`${btnClass} space-x-2`}>
+          {icon && <div>{icon}</div>}
           <span className={`${textClass}`}>{text}</span>
-          {iconRight && <div >{iconRight}</div>}
+          {iconRight && <div>{iconRight}</div>}
         </div>
       )}
     </button>

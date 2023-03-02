@@ -6,22 +6,32 @@ import BorderFade from "assets/icons/border-fade.svg";
 import ArrowRight from "assets/icons/Arrow/arrow-right-black.svg";
 import { PAYMENT_TYPES_STICKY_MODES } from "utils/constants";
 
+const paymentTypesClsx =
+  "w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-top transition-all duration-[500ms] ease-in";
 const paymentTypes = [
   {
     title: "Virtual accounts",
     body: "Experience the convenience of managing your money on-the-go with our mobile money service.",
+    img: <div className={`${paymentTypesClsx} bg-virtual-accounts`} />,
+    bgImage: "bg-virtual-accounts",
   },
   {
     title: "Mobile Money",
     body: "Experience the convenience of managing your money on-the-go with our mobile money service. Mobile Money",
+    img: <div className={`${paymentTypesClsx} bg-mobile-money`} />,
+    bgImage: "bg-mobile-money",
   },
   {
     title: "Crypto Payments",
     body: "Experience the convenience of managing your money on-the-go with our mobile money service. Crypto Payments",
+    img: <div className={`${paymentTypesClsx} bg-crypto`} />,
+    bgImage: "bg-crypto",
   },
   {
     title: "Ewallets",
     body: "Experience the convenience of managing your money on-the-go with our mobile money service. Ewallets",
+    img: <div className={`${paymentTypesClsx} bg-e-wallets`} />,
+    bgImage: "bg-e-wallets",
   },
 ];
 const { PRE_VIEW, IN_VIEW, POST_VIEW } = PAYMENT_TYPES_STICKY_MODES;
@@ -105,7 +115,10 @@ const SectionOne = () => {
         <div className="flex flex-col justify-between items-center w-full h-fit gap-y-12 md:pt-16 bg-white z-20 px-5 md:px-[5%] lg:px-[8%]">
           <BorderFade className="scale-x-[0.7]" />
           <p className="text-grey-text text-left leading-[1.9] bani-heading-alt font-normal w-full md:w-[75%] lg:w-[70%] ">
-            <span className="text-black-light basier-semibold"> Merchants </span>
+            <span className="text-black-light basier-semibold">
+              {" "}
+              Merchants{" "}
+            </span>
             utilise our{" "}
             <span className="text-black-light basier-semibold">
               unique payment solutions{" "}
@@ -132,11 +145,11 @@ const SectionOne = () => {
                 : "absolute top-0"
             } px-5 md:px-[5%] lg:px-[8%] h-fit flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto`}
           >
-            <div className="mt-[1px] hidden md:flex flex-col justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4">
+            <div className="mt-[1px] hidden md:flex flex-col justify-center items-center md:items-start text-center md:text-left !min-w-[50%] !w-full !max-w-[50%] h-fit space-y-4">
               <p className="text-black-light basier-medium leading-none bani-base pb-4 pt-20">
                 COLLECT PAYMENTS ANYWHERE
               </p>
-              {paymentTypes.map(({ title, body }) => (
+              {paymentTypes.map(({ title, body, img,bgImage }) => (
                 <span
                   key={title}
                   className={`${
@@ -144,15 +157,19 @@ const SectionOne = () => {
                       ? "text-black-light basier-medium"
                       : "text-black-fade font-normal"
                   } tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out`}
-                  onClick={() => setActivePaymentType({ title, body })}
-                  onMouseEnter={() => setActivePaymentType({ title, body })}
+                  onClick={() =>
+                    setActivePaymentType({ title, body, img, bgImage })
+                  }
+                  onMouseEnter={() =>
+                    setActivePaymentType({ title, body, img, bgImage })
+                  }
                 >
                   {title}
                 </span>
               ))}
             </div>
 
-            <div className="hidden sm:flex flex-col justify-center items-center md:items-end w-full min-h-[55vh] md:pt-0">
+            <div className="hidden sm:flex flex-col justify-center items-center md:items-end !min-w-[50%] !w-full !max-w-[50%] min-h-[55vh] md:pt-0">
               <div className="flex flex-col md:hidden justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4">
                 <p className="text-black-light basier-medium leading-none bani-base pb-2 pt-10">
                   COLLECT PAYMENTS ANYWHERE
@@ -171,8 +188,15 @@ const SectionOne = () => {
                   )}
                 </div>
               </div>
-              <div className="flex flex-col justify-between items-center w-full min-h-[55vh] bg-grey-dull rounded-[40px] pb-8">
-                <div className="h-[60%]"></div>
+              <div className="flex flex-col justify-center items-center !min-w-[100%] !w-full !max-w-[100%] min-h-[450px] bg-grey-dull rounded-[40px] pb-8">
+                {activePaymentType?.img ? (
+                  <div className="h-[350px] !min-w-[100%] !w-full !max-w-[100%]">
+                  
+                    <div
+                      className={`${paymentTypesClsx} ${activePaymentType?.bgImage}`}
+                    />
+                  </div>
+                ) : null}
                 <p className="font-light bani-title-2 text-black px-8">
                   {activePaymentType?.body}
                 </p>

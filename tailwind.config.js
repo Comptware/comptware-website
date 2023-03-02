@@ -78,9 +78,10 @@ module.exports = {
           fade: "rgba(72, 55, 241, 0.3)",
           light: "#E6EBFF",
           backdrop: "rgba(255, 255, 255, 0.02)",
-          dull:"rgba(84, 68, 242, 0.1)",
-
-
+          dull: "rgba(84, 68, 242, 0.1)",
+          clear: "rgba(84, 68, 242, 0.11)",
+          border:"rgba(84, 68, 242, 0.21)",
+          textHover:"#9990FA"
         },
         grey: {
           DEFAULT: "#C1C1C1",
@@ -159,16 +160,20 @@ module.exports = {
         "3xs": "380px",
         "2xs": "475px",
         xs: "540px",
-        "slg": "910px",
+        slg: "910px",
       },
       margin: {
         "-85px": "-85px",
         "-60px": "-60px",
       },
       backgroundImage: {
-        
         "company-banner": "url('../assets/images/company-banner.jpeg')",
         "mission-image": "url('../assets/images/mission-image.jpeg')",
+        "virtual-accounts":
+          "url('../assets/icons/PaymentTypes/virtual-accounts.svg')",
+        crypto: "url('../assets/icons/PaymentTypes/crypto.svg')",
+        "e-wallets": "url('../assets/icons/PaymentTypes/e-wallets.svg')",
+        "mobile-money": "url('../assets/icons/PaymentTypes/mobile-money.svg')",
       },
       keyframes: {
         slide: {

@@ -95,7 +95,7 @@ const Footer = () => {
                 {links && (
                   <ul className=" flex flex-col justify-start items-start gap-y-5 text-grey-white bani-base-alt font-light">
                     {links.map((lnk, i) => (
-                      <li className="whitespace-nowrap" key={lnk.title + i}>
+                      <li className="whitespace-nowrap hover:text-blue-textHover transition-all duration-[500ms] ease-in-out" key={lnk.title + i}>
                         {lnk.url ? (
                           <a
                             href={lnk.url}
@@ -123,6 +123,7 @@ const Footer = () => {
                         href={url}
                         target="_blank"
                         rel="noreferrer"
+                        className="hover:text-blue-textHover transition-all duration-[700ms] ease-in-out"
                       >
                         {icon}
                       </a>
