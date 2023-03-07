@@ -105,6 +105,7 @@ module.exports = {
           greyLight: "#d0cfd128",
           dull: "#F8F8F8",
           white: "rgba(255, 255, 255, 0.8)",
+          15:"rgba(255, 255, 255, 0.15)"
         },
         red: {
           DEFAULT: "#F3564D",
@@ -175,6 +176,11 @@ module.exports = {
         crypto: "url('../assets/icons/PaymentTypes/crypto.svg')",
         "e-wallets": "url('../assets/icons/PaymentTypes/e-wallets.svg')",
         "mobile-money": "url('../assets/icons/PaymentTypes/mobile-money.svg')",
+        "section-one-usecase": "url('../assets/icons/Usecase/retail-stores/section-one.svg')",
+        "invoicing": "url('../assets/icons/Usecase/retail-stores/invoicing.svg')",
+        "multiple-payment": "url('../assets/icons/Usecase/retail-stores/multiple-payment.svg')",
+        "branch-setup": "url('../assets/icons/Usecase/retail-stores/branch-setup.svg')",
+        "instant-confirmation": "url('../assets/icons/Usecase/retail-stores/instant-confirmation.svg')",
       },
       keyframes: {
         slide: {

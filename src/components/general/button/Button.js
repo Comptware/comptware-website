@@ -63,7 +63,7 @@ const Button = ({
         <div className={`${btnClass} space-x-2`}>
           {icon && <div>{icon}</div>}
           <span className={`${textClass}`}>{text}</span>
-          {iconRight && <div>{iconRight}</div>}
+          {iconRight && <div className={`${textClass}`}>{iconRight}</div>}
         </div>
       )}
     </button>

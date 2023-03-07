@@ -270,9 +270,11 @@ select.grey-placeholder {
 
 .website-banner,
 .website-banner-alt,
-.app-vh {
-  height: calc(100vh - 100px);
+.app-vh,
+.usecase-banner {
+  height: calc(100vh - 95px);
 }
+
 
 @media (max-width: 767px) {
   .website-banner {
@@ -285,6 +287,11 @@ select.grey-placeholder {
     height: fit-content;
     margin-bottom: 20px !important;
 
+  }
+  .usecase-banner {
+    height: fit-content;
+    margin-bottom: 0px !important;
+    margin-top: 10px !important;
   }
 }
 
@@ -547,11 +554,32 @@ div::-webkit-scrollbar-thumb {
 
 .text-blue-gradient {
   background: linear-gradient(88.49deg, #00B0FF 0.08%, #3D5AFE 52.89%, #5444F2 106.56%);
+  stroke: linear-gradient(88.49deg, #00B0FF 0.08%, #3D5AFE 52.89%, #5444F2 106.56%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 
+}
+
+.text-blue-gradient-container span {
+  background: linear-gradient(88.49deg, #00B0FF 0.08%, #3D5AFE 52.89%, #5444F2 106.56%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+}
+
+.stroke-blue-gradient-container path {
+  stroke: var(--bani-blue)
+}
+
+
+.text-grey-gradient-container svg,
+.text-grey-gradient-container path {
+  color: #C1C1C1 !important;
+  stroke: #C1C1C1 !important;
 }
 
 .icon-text path {
@@ -624,7 +652,6 @@ div::-webkit-scrollbar-thumb {
 .hamburger {
   width: 25px;
   height: 1px;
-  background-color: #000;
   transition: all 0.15s linear;
   transform-origin: 1px;
 }
@@ -679,4 +706,26 @@ div::-webkit-scrollbar-thumb {
   padding: 0;
   /* reset */
   padding-bottom: calc(100% * 3 / 4);
+}
+
+.header-nav-section {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(25px);
+}
+
+.usecase-hero-section-bg {
+  background-image: url(../assets/icons/Usecase/banner-vector.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 10px 0px 20px;
+  resize: both;
+}
+
+
+@media (max-width: 767px) {
+  .usecase-hero-section-bg {
+    background-image: url(../assets/icons/Usecase/banner-vector-mobile.svg);
+    background-position: 0px;
+    background-repeat: no-repeat;
+  }
 }

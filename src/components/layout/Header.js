@@ -5,10 +5,12 @@ import Link from "next/link";
 import ArrowDownIcon from "assets/icons/Arrow/arrow-down-grey.svg";
 import ArrowRight from "assets/icons/Arrow/arrow-right-blue.svg";
 import Logo from "assets/logos/faint-black.svg";
+import LogoWhite from "assets/logos/logo-white.svg";
 import DigitalCreatorsIcon from "assets/icons/header/brush.svg";
 import FintechIcon from "assets/icons/header/coin.svg";
 import EcommerceIcon from "assets/icons/header/shopping-cart.svg";
-
+import CryptoIcon from "assets/icons/header/crypto.svg";
+import RetailIcon from "assets/icons/header/retail.svg";
 import Button from "../general/button/Button";
 import Dropdown from "./Dropdown";
 import Hamburger from "./hamburger";
@@ -20,24 +22,69 @@ const Header = () => {
   const [navbarBg, setNavbarBg] = useState(false);
   const headerLinks = [
     {
-      title: "Use case",
-      link: "/usecase/fintech",
+      title: "Payments",
+      link: "/payments/virtual-account",
+      slug: "payments",
       notPage: true,
       links: [
         {
-          name: "Fintechs/Neobanks",
-          link: "/usecase/fintech",
-          icon: <FintechIcon className="scale-[0.7]" />,
+          name: "Virtual Accounts",
+          link: "/payments/virtual-account",
+          icon: <RetailIcon className="scale-[0.7]" />,
         },
+
         {
-          name: "Retail Stores",
-          link: "/usecase/e-commerce",
+          name: "Ewallets",
+          link: "/payments/ewallets",
           icon: <EcommerceIcon className="scale-[0.7]" />,
         },
+
+        {
+          name: "Mobile Money",
+          link: "/payments/mobile-money",
+          icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
+        },
+        {
+          name: "Crypto Payments",
+          link: "/payments/crypto-payments",
+          icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
+        },
+      ],
+    },
+    {
+      title: "Use case",
+      link: "/usecase/retail-stores",
+      slug: "usecase",
+      notPage: true,
+      links: [
+        {
+          name: "Retail Stores",
+          link: "/usecase/retail-stores",
+          icon: <RetailIcon className="scale-[0.7]" />,
+        },
+
+        {
+          name: "Fast food and restaurants",
+          link: "/usecase/fast-food-and-restaurants",
+          icon: <EcommerceIcon className="scale-[0.7]" />,
+        },
+
+        {
+          name: "Travel agencies and airlines",
+          link: "/usecase/travel-agencies-and-airlines",
+          icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
+        },
+
+        {
+          name: "Fintechs and neobanks",
+          link: "/usecase/fintechs-and-neobanks",
+          icon: <FintechIcon className="scale-[0.7]" />,
+        },
+
         {
           name: "Crypto and digital asset platforms",
-          link: "/usecase/digital-creators",
-          icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
+          link: "/usecase/crypto-and-digital-asset-platforms",
+          icon: <CryptoIcon className="scale-[0.7]" />,
         },
 
         {
@@ -55,6 +102,7 @@ const Header = () => {
     {
       title: "Developers",
       link: "/developers",
+      slug: "developers",
       links: [
         {
           name: "API Documentation",
@@ -70,10 +118,7 @@ const Header = () => {
         },
       ],
     },
-    {
-      title: "Products",
-      link: "/products",
-    },
+
     {
       title: "Company",
       link: "/company",
@@ -97,21 +142,38 @@ const Header = () => {
 
   const pathname = location.pathname;
   const pathIsNotBase = pathname !== "/";
+  const pathIsUsecase = pathname.includes("/usecase");
   const navbarBgIsWhite = navbarBg || pathname.includes("company/all-openings");
+  const navbarBgIsBlueGradient = pathIsUsecase && !navbarBg;
+
+  const headerLinksActiveClass = navbarBgIsBlueGradient
+    ? "!bg-white text-blue-gradient-container text-grey-gradient-container"
+    : "!text-blue !bg-blue-dull border-blue";
+
   return (
     <header
       style={{
-        backgroundColor: `${navbarBgIsWhite ? "white" : "transparent"}`,
+        background: `${navbarBgIsWhite ? "white" : "transparent"}`,
       }}
-      className={`border-b-[0.5px] border-grey transition-colors duration-500 ease-in-out website-header flex flex-row justify-between items-center w-full h-14 md:h-[94px] px-5 md:px-[5%] lg:px-[8%] z-50 drop-shadow-[0_0_30px_rgba(0,0,0,0.1)]`}
+      className={` ${
+        pathIsUsecase ? "" : "border-b-[0.5px] border-grey"
+      } transition-colors duration-500 ease-in-out website-header flex flex-row justify-between items-center w-full h-14 md:h-[94px] px-5 md:px-[5%] lg:px-[8%] z-50 drop-shadow-[0_0_30px_rgba(0,0,0,0.1)]`}
     >
       <div className="relative flex flex-row justify-between items-center mx-auto w-full">
         <Link className="w-fit !my-0 z-[99999]" href="/">
-          <Logo className="scale-[0.8]" />
+          {navbarBgIsBlueGradient ? (
+            <LogoWhite className="scale-[0.8]" />
+          ) : (
+            <Logo className="scale-[0.8]" />
+          )}
         </Link>
 
-        <div className="hidden lg:flex justify-end items-center px-10 pt-[9px] pb-[3px] w-fit space-x-5 transition-all duration-150 ease-in-out bg-grey-greyLight rounded-[87px]">
-          {headerLinks.map(({ title, link, links }) => (
+        <div
+          className={`hidden lg:flex justify-end items-center px-10 pt-[9px] pb-[3px] w-fit space-x-5 transition-all duration-150 ease-in-out  rounded-[87px] ${
+            navbarBgIsBlueGradient ? "header-nav-section" : "bg-grey-greyLight"
+          }`}
+        >
+          {headerLinks.map(({ title, link, links, slug }) => (
             <div
               className="relative w-full h-full"
               key={title}
@@ -122,17 +184,23 @@ const Header = () => {
             >
               <Link
                 href={link}
-                className={`flex justify-center items-center hover:text-blue text-grey-text bani-base font-light space-x-1.5 mb-[6px] py-1  px-2.5 icon-text transition-all duration-300 ease-in-out
+                className={`flex justify-center items-center ${
+                  navbarBgIsBlueGradient
+                    ? "hover:text-grey-light text-white stroke-grey"
+                    : "hover:text-blue text-grey-text"
+                } bani-base font-light space-x-1.5 mb-[6px] py-1  px-2.5 icon-text transition-all duration-300 ease-in-out
                  
                  ${
                    pathIsNotBase &&
-                   link.includes(pathname) &&
-                   `!text-blue border-[0.8px] border-blue rounded-full !bg-blue-dull active-nav ${
+                   (link.includes(pathname) || pathname.includes(slug)) &&
+                   `border-[0.8px] rounded-full active-nav ${headerLinksActiveClass} ${
                      links ? "pl-4" : "pl-2.5"
                    }  `
                  }`}
               >
-                <span className="text-current whitespace-nowrap">{title}</span>
+                <span className={`text-current whitespace-nowrap`}>
+                  {title}
+                </span>
                 {links && (
                   <ArrowDownIcon className="scale-[0.85] transition-all duration-300 ease-in-out" />
                 )}
@@ -148,34 +216,37 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="hidden lg:flex flex-row justify-start items-center space-x-2 pl-2">
-          <a href="https://app.getbani.com" target="_blank" rel="noreferrer">
-            <Button
-              text="Sign in"
-              onClick={() => {}}
-              isOutline
-              textClass="text-base"
-            />
-          </a>
-          <a
-            href="https://app.getbani.com/signup"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button
-              blackBg
-              text="Contact Sales"
-              onClick={() => {}}
-              textClass="text-base"
-            />
-          </a>
-        </div>
+        {!pathIsUsecase && (
+          <div className="hidden lg:flex flex-row justify-start items-center space-x-2 pl-2">
+            <a href="https://app.getbani.com" target="_blank" rel="noreferrer">
+              <Button
+                text="Sign in"
+                onClick={() => {}}
+                isOutline
+                textClass="text-base"
+              />
+            </a>
+            <a
+              href="https://app.getbani.com/signup"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button
+                blackBg
+                text="Contact Sales"
+                onClick={() => {}}
+                textClass="text-base"
+              />
+            </a>
+          </div>
+        )}
 
         <Hamburger
-          click={() => {
+          handlecClick={() => {
             setSidenavOpen(!sidenavOpen);
           }}
           className={sidenavOpen ? "ham_crossed" : ""}
+          navbarBgIsBlueGradient={navbarBgIsBlueGradient}
         />
 
         {/* Mobile side nav */}

@@ -7,7 +7,7 @@ import ArrowRight from "assets/icons/Arrow/arrow-right-blue.svg";
 const Dropdown = ({ links, path, onClick }) => {
   return (
     <div
-      className={`flex flex-col justify-start align-start space-y-1.5 bg-white h-fit shadow-[0px 0px 30px rgba(101, 113, 124, 0.1)] pl-3.5 pr-6 py-7 rounded-[14px] border-1/2 border-grey-bordercolor absolute animate-slide -left-[10px] -top-[20px] z-[999] `}
+      className={`flex flex-col justify-start align-start space-y-1.5 bg-white h-fit shadow-[0px 0px 30px rgba(101, 113, 124, 0.1)] pl-3.5 pr-8 py-7 rounded-[14px] border-1/2 border-grey-bordercolor absolute animate-slide -left-[10px] -top-[20px] z-[999] `}
     >
       {links?.map(({ name, link, icon, href }) =>
         link ? (
