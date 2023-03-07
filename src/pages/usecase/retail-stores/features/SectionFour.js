@@ -20,7 +20,7 @@ const SectionFour = () => {
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full leading-[1.75]">
-        Customers want to make payments and leave immediately. You'll enjoy instant notification channels that will make you confirm payments instantly so you won't delay them
+        Customers want to make payments and leave immediately. You&apos;ll enjoy instant notification channels that will make you confirm payments instantly so you won&apos;t delay them
         </p>
       </div>
     </div>
