@@ -51,7 +51,7 @@ const SectionThree = () => {
               <button
                 key={title}
                 style={{ opacity: activeSlideIndex === i ? 1 : 0.3 }}
-                className="scale-[0.8] transition-all duration-[1s] ease-in-out"
+                className="scale-[0.8] transition-all duration-[0.5s] ease-in-out"
                 onClick={() => handleSlide(i)}
               >
                 {icon}
@@ -69,7 +69,7 @@ const SectionThree = () => {
             className="!pb-4"
             autoplay={false}
             modules={[Autoplay, Pagination, Navigation]}
-            pagination={{ clickable: true, el: ".black-bg-swiper-pagination" }}
+           
           >
             {clients.map(({ body, title }) => (
               <SwiperSlide key={title}>
@@ -80,7 +80,7 @@ const SectionThree = () => {
             ))}
           </Swiper>
 
-          <div className="black-bg-swiper-pagination flex justify-center items-center mt-7 " />
+      
         </div>
       </div>
     </div>

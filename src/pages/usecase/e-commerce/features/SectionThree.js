@@ -7,17 +7,17 @@ const SectionThree = () => {
     >
       <div className="mt-[1px] flex flex-col justify-center items-start text-left !min-w-[50%] !w-full md:!max-w-[50%] h-fit space-y-4">
         <h2 className="bani-heading-alt-2 text-black basier-semibold md:pb-4 pt-0 md:capitalize">
-        Multiple payment <br className="" />  options 
+        Instant confirmation <br className="" />  and settlement 
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[67%] leading-[1.75]">
-        Your customers will have various options to choose from when making payments.
+        Receive instant notification of payment and your money is settled instantly.
         </p>
       </div>
 
-      <div className="flex flex-col justify-center items-center w-full md:min-h-[450px] h-[300px] md:h-[350px] bg-grey-dull rounded-[40px] pb-8">
+      <div className="flex flex-col justify-center items-center w-full md:min-h-[450px] h-[300px] md:h-[350px] bg-grey-dull rounded-[40px] py-8">
         <div
-          className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-top bg-multiple-payment mt-[-60px] md:mt-[-160px] scale-125 md:scale-100`}
+          className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center bg-instant-confirmation`}
         />
       </div>
     </div>

@@ -16,9 +16,9 @@ const SectionSix = () => {
             Crafted for developers by developers
           </p>
           <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 ">
-            Receive, confirm, and track all online and in-
+          With our developer-friendly APIs and a few lines 
             <br className="hidden md:block" />
-            store payments easily and instantly anywhere.
+            of code you can implement Bani in the afternoon.
           </p>
 
           <a

@@ -15,7 +15,7 @@ const Dropdown = ({ links, path, onClick }) => {
             href={link}
             key={name}
             className={`flex justify-start items-center hover:text-blue text-grey-text bani-base basier-medium whitespace-nowrap gap-2 ${
-              path.includes(link) && "text-blue stroke-blue"
+              path.includes(link) && "!text-blue"
             }`}
             onClick={onClick}
           >

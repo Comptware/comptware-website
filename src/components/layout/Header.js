@@ -161,7 +161,7 @@ const Header = () => {
     >
       <div className="relative flex flex-row justify-between items-center mx-auto w-full">
         <Link className="w-fit !my-0 z-[99999]" href="/">
-          {navbarBgIsBlueGradient ? (
+          {(navbarBgIsBlueGradient&&!sidenavOpen) ? (
             <LogoWhite className="scale-[0.8]" />
           ) : (
             <Logo className="scale-[0.8]" />
@@ -292,7 +292,7 @@ const Header = () => {
                       className={`flex justify-start items-center p-4 hover:text-blue text-grey-text text-base font-light whitespace-nowrap ${
                         pathIsNotBase &&
                         link.includes(pathname) &&
-                        "!text-blue !stroke-blue"
+                        "!text-blue"
                       }`}
                       onClick={() => {
                         setActiveNav("");

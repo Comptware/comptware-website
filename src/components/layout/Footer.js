@@ -26,9 +26,8 @@ const Footer = () => {
       links: [
         { title: "What drives us", link: "/company/what-drives-us" },
         { title: "Work with us", link: "/company/Work-with-us" },
-        { title: "FAQ", link: "/company/faq" },
         width < 640 && { title: "Newsroom", link: "/what-is-latest" },
-        width < 640 && { title: "Say hello", link: "/hey-there" },
+        width < 640 && { title: "Say hello", url: "mailto:hello@bani.africa" },
       ],
     },
 
@@ -36,7 +35,7 @@ const Footer = () => {
       title: ".",
       links: [
         { title: "Newsroom", link: "/what-is-latest" },
-        { title: "Say hello", link: "/hey-there" },
+        { title: "Say hello", url: "mailto:hello@bani.africa" },
       ],
     },
 

@@ -7,20 +7,20 @@ const SectionFour = () => {
     >
    
 
-      <div className="flex flex-col justify-center items-center w-full md:min-h-[450px] h-[300px] md:h-[350px] bg-grey-dull rounded-[40px] pb-8">
+      <div className="flex flex-col justify-center items-center w-full md:min-h-[450px] h-[300px] md:h-[350px] bg-grey-dull rounded-[40px] py-8">
         <div
-          className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center bg-instant-confirmation mt-8`}
+          className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center bg-dynamic-pricing`}
         />
       </div>
 
 
       <div className="mt-[1px] flex flex-col justify-center items-start text-left min-w-[50%] w-full md:max-w-[50%] h-fit space-y-4 md:pl-20">
         <h2 className="bani-heading-alt-2 text-black basier-semibold text-cente  md:pb-4 pt-0 md:capitalize">
-        Instant confirmation <br className="sm:hidden" /> and <br className="hidden sm:block" /> settlement
+        Dynamic Pricing
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full leading-[1.75]">
-        Receive instant notification of payment and your money is settled instantly.
+        You can optimize revenue by adjusting the price of a product or service in real-time based on demand, competition, or inventory levels.
         </p>
       </div>
     </div>

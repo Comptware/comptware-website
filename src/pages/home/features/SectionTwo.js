@@ -16,43 +16,44 @@ import Card from "components/general/cards";
 const businessTypes = [
   {
     title: "Retail Stores",
-    body: "Leverage Bani's customisable payment tools to build the next generation of fintech products.",
+    body: "Provide fast and reliable payment processes for customer satisfaction and effectively manage business finances.",
     icon: <Retail />,
     href: "/",
   },
   {
-    title: "Fintechs / Neobanks",
-    body: "Leverage Bani's customisable payment tools to build the next generation of fintech products.",
-    icon: <Fintech />,
-    href: "/",
-  },
-  {
     title: "Fast Food and Restaurants",
-    body: "Leverage Bani's customisable payment tools to build the next generation of fintech products.",
+    body: "Offer seamless and instant payment options to increase customer satisfaction and repeat business.",
     icon: <FastFood />,
     href: "/",
   },
   {
+    title: "Fintechs / Neobanks",
+    body: "Offer customers innovative, streamlined, and secure payment solutions and products.",
+    icon: <Fintech />,
+    href: "/",
+  },
+ 
+  {
     title: "Travel agencies and airlines",
-    body: "Leverage Bani's customisable payment tools to build the next generation of fintech products.",
+    body: "Provide real-time payment updates and offer loyalty programs to create memorable customer experiences.",
     icon: <Airline />,
     href: "/",
   },
   {
     title: "Crypto and digital asset platforms",
-    body: "Leverage Bani's customisable payment tools to build the next generation of fintech products.",
+    body: "Provide faster transactions with globally accessible and decentralised security systems.",
     icon: <Crypto />,
     href: "/",
   },
   {
     title: "E-Commerce",
-    body: "Leverage Bani's customisable payment tools to build the next generation of fintech products.",
+    body: "Collect instant local customer payments and improve the checkout experience.",
     icon: <Ecommerce />,
     href: "/",
   },
   {
     title: "Digital Creators",
-    body: "Leverage Bani's customisable payment tools to build the next generation of fintech products.",
+    body: "Offer various payment options, set clear payment terms, and ensure secure and reliable payment processing.",
     icon: <DigitalCreators />,
     href: "/",
   },

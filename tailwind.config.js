@@ -181,6 +181,13 @@ module.exports = {
         "multiple-payment": "url('../assets/icons/Usecase/retail-stores/multiple-payment.svg')",
         "branch-setup": "url('../assets/icons/Usecase/retail-stores/branch-setup.svg')",
         "instant-confirmation": "url('../assets/icons/Usecase/retail-stores/instant-confirmation.svg')",
+        "integrate": "url('../assets/icons/Usecase/fintechs-and-neobanks/integrate.svg')",
+        "phone-in-hand": "url('../assets/icons/Usecase/fintechs-and-neobanks/phone-in-hand.svg')",
+        "flags": "url('../assets/icons/Usecase/fintechs-and-neobanks/flags.svg')",
+        "fast-payment": "url('../assets/icons/Usecase/travel-agencies-and-airlines/fast-payment.svg')",
+        "dynamic-pricing": "url('../assets/icons/Usecase/travel-agencies-and-airlines/dynamic-pricing.svg')",
+        "settlement": "url('../assets/icons/Usecase/crypto-and-digital-asset-platforms/settlement.svg')",
+        "payment-link": "url('../assets/icons/Usecase/digital-creators/payment-link.svg')",
       },
       keyframes: {
         slide: {

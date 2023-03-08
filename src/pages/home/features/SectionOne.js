@@ -11,25 +11,25 @@ const paymentTypesClsx =
 const paymentTypes = [
   {
     title: "Virtual accounts",
-    body: "Experience the convenience of managing your money on-the-go with our mobile money service.",
+    body: "Experience greater payment efficiency, control, and flexibility with our virtual accounts.",
     img: <div className={`${paymentTypesClsx} bg-virtual-accounts`} />,
     bgImage: "bg-virtual-accounts",
   },
   {
     title: "Mobile Money",
-    body: "Experience the convenience of managing your money on-the-go with our mobile money service. Mobile Money",
+    body: "Experience payment convenience and accessibility across Africa with our mobile money service.",
     img: <div className={`${paymentTypesClsx} bg-mobile-money`} />,
     bgImage: "bg-mobile-money",
   },
   {
     title: "Crypto Payments",
-    body: "Experience the convenience of managing your money on-the-go with our mobile money service. Crypto Payments",
+    body: "Enjoy fast and secure local and cross-border transactions with our crypto payment service",
     img: <div className={`${paymentTypesClsx} bg-crypto`} />,
     bgImage: "bg-crypto",
   },
   {
     title: "Ewallets",
-    body: "Experience the convenience of managing your money on-the-go with our mobile money service. Ewallets",
+    body: "Experience the convenience of managing your money on the go with our e-wallets.",
     img: <div className={`${paymentTypesClsx} bg-e-wallets`} />,
     bgImage: "bg-e-wallets",
   },
