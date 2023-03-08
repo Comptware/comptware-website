@@ -216,13 +216,15 @@ const Header = () => {
           ))}
         </div>
 
-        {!pathIsUsecase && (
+       
           <div className="hidden lg:flex flex-row justify-start items-center space-x-2 pl-2">
             <a href="https://app.getbani.com" target="_blank" rel="noreferrer">
               <Button
                 text="Sign in"
                 onClick={() => {}}
-                isOutline
+                isOutline={!navbarBgIsBlueGradient}
+                whiteBg={navbarBgIsBlueGradient}
+                textColor={navbarBgIsBlueGradient&&"black"}
                 textClass="text-base"
               />
             </a>
@@ -239,7 +241,7 @@ const Header = () => {
               />
             </a>
           </div>
-        )}
+       
 
         <Hamburger
           handlecClick={() => {
