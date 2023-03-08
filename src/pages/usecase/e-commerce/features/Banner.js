@@ -15,7 +15,7 @@ const Banner = () => {
           </div>
          
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
-          Helping you make customers 
+          Helping you make customers {" "}
             <br className="hidden lg:block" />
             shop with ease
           </h1>

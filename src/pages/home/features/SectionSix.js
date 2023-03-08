@@ -1,10 +1,10 @@
 import React from "react";
-
-import Vector from "assets/icons/Developers/vector.svg";
-import VectorShadow from "assets/icons/Developers/vector-shadow.svg";
+import Lottie from "lottie-react";
 
 import Button from "components/general/button/Button";
 import ArrowRight from "assets/icons/Arrow/arrow-right-white.svg";
+import devAnimation from "assets/animations/dev-animation.json";
+
 const SectionSix = () => {
   return (
     <div className="flex flex-col justify-between items-center w-full h-fit my-12 md:my-0 py-14 md:py-28 bg-grey-dull px-5 md:px-[5%] lg:px-[8%]">
@@ -17,7 +17,7 @@ const SectionSix = () => {
           </p>
           <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 ">
           With our developer-friendly APIs and a few lines 
-            <br className="hidden md:block" />
+           
             of code you can implement Bani in the afternoon.
           </p>
 
@@ -49,8 +49,9 @@ const SectionSix = () => {
         </div>
 
         <div className="hidden md:flex flex-col justify-center items-center w-fit pt-1 md:pt-0  mr-[-50px]">
-          <Vector />
-          <VectorShadow className="scale-x-[0.8]" />
+         
+          <Lottie className="scale-125 mt-[-100px]" animationData={devAnimation} loop={true} />
+
         </div>
       </div>
     </div>

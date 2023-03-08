@@ -15,7 +15,7 @@ const Banner = () => {
           </div>
          
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
-          Streamline collections and 
+          Streamline collections and {" "}
             <br className="hidden md:block" />
             payout services across Africa
           </h1>

@@ -15,7 +15,7 @@ const Banner = () => {
           </div>
          
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
-          The best payment experience for 
+          The best payment experience for {" "}
             <br className="hidden lg:block" />
             your customers
           </h1>

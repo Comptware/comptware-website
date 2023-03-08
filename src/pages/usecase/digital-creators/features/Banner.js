@@ -15,7 +15,7 @@ const Banner = () => {
           </div>
          
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
-          Speedy collection of payments 
+          Speedy collection of payments {" "}
             <br className="hidden md:block" />
             from clients 
           </h1>
