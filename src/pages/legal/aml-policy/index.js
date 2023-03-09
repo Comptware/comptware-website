@@ -7,6 +7,7 @@ import DashboardLayout from "components/layout";
 
 const AmlPolicyList = () => {
   const [pageLoaded, setPageLoaded] = useState(false);
+  
   useEffect(() => {
     setPageLoaded(true);
   }, []);
