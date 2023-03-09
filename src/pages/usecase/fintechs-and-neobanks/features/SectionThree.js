@@ -10,8 +10,8 @@ const SectionThree = () => {
         E-Wallets
         </h2>
 
-        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[67%] leading-[1.75]">
-        Helping you make customers shop with ease. 
+        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[80%] leading-[1.75]">
+        Easily integrate e-wallet apps and give your customers a more seamless and convenient way to manage their finances.
         </p>
       </div>
 

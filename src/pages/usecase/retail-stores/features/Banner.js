@@ -15,7 +15,7 @@ const Banner = () => {
           </div>
          
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
-            We optimize transactions, for{" "}
+            We optimise transactions for{" "}
             <br className="hidden md:block" />
             you and your customers
           </h1>

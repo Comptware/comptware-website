@@ -7,11 +7,11 @@ const SectionThree = () => {
     >
       <div className="mt-[1px] flex flex-col justify-center items-start text-left !min-w-[50%] !w-full md:!max-w-[50%] h-fit space-y-4">
         <h2 className="bani-heading-alt-2 text-black basier-semibold md:pb-4 pt-0 md:capitalize">
-        Instant confirmation <br className="" />  and settlement 
+        Instant notification <br className="" />  and settlement 
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[67%] leading-[1.75]">
-        Receive instant notification of payment and your money is settled instantly.
+        Your money is instantly settled, and you can proceed to deliver customers' items or give value.
         </p>
       </div>
 

@@ -10,8 +10,11 @@ const SectionThree = () => {
         Multiple payment <br className="" />  options 
         </h2>
 
-        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[67%] leading-[1.75]">
+        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] leading-[1.75]">
         Your customers will have various options to choose from when making payments.
+
+        <br/>
+        You can allow them to make payments via bank transfer, payment link, e-wallet, or crypto.
         </p>
       </div>
 

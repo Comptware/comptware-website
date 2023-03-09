@@ -20,7 +20,7 @@ const SectionTwo = () => {
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full leading-[1.75]">
-        Optimize revenue by adjusting prices in real-time to suit various factors that can affect the demand and supply of tickets.
+        Optimise revenue by adjusting prices in real-time to suit various factors that can affect the demand and supply of tickets.
         </p>
       </div>
     </div>

@@ -170,7 +170,6 @@ module.exports = {
       },
       backgroundImage: {
         "company-banner": "url('../assets/images/company-banner.jpeg')",
-        "mission-image": "url('../assets/images/mission-image.jpeg')",
         "virtual-accounts":
           "url('../assets/icons/PaymentTypes/virtual-accounts.svg')",
         crypto: "url('../assets/icons/PaymentTypes/crypto.svg')",

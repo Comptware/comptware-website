@@ -11,8 +11,8 @@ const SectionOne = () => {
         payments
         </h2>
 
-        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[75%] leading-[1.75]">
-        Customers want to make a booking and pay without a hitch. Allow them to make instant payments, anytime via bank transfer or mobile money.
+        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[85%] leading-[1.75]">
+        Customers want to make bookings and pay without a hitch. They can make instant payments anytime via bank transfer, mobile money, and e-wallet apps.
         </p>
       </div>
 

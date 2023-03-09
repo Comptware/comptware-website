@@ -23,7 +23,7 @@ const paymentTypes = [
   },
   {
     title: "Crypto Payments",
-    body: "Enjoy fast and secure local and cross-border transactions with our crypto payment service",
+    body: "Enjoy fast and secure local and cross-border transactions with our crypto payment service.",
     img: <div className={`${paymentTypesClsx} bg-crypto`} />,
     bgImage: "bg-crypto",
   },

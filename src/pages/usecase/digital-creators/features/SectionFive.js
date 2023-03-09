@@ -10,7 +10,7 @@ const SectionFive = () => {
         Invoicing
         </h2>
 
-        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[67%] leading-[1.75]">
+        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] leading-[1.75]">
         We help you provide prompt invoices. You can receive payment more quickly and improve cash flow. You will also track payments due more effectively and manage your finances more efficiently.
         </p>
       </div>

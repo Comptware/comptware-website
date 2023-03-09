@@ -15,9 +15,9 @@ const Banner = () => {
           </div>
          
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
-          Streamline collections and {" "}
+          Inspire customer adoption{" "}
             <br className="hidden md:block" />
-            payout services across Africa
+             rates.
           </h1>
 
           <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2 mb-6 md:mb-0">

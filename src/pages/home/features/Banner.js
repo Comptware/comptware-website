@@ -46,7 +46,7 @@ const Banner = () => {
 
       <div className="flex flex-col justify-center items-center md:items-end md:basis-[40%] w-full md:max-h-[60vh] relative z-[5]">
         <div className="flex flex-col justify-center items-center md:items-end w-full h-full rounded-[45px] blue-grey-gradient">
-          <Lottie animationData={heroAnimation} loop={true} />
+          <Lottie animationData={heroAnimation} loop={true}  />
         </div>
       </div>
     </div>

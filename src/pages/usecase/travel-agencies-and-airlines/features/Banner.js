@@ -17,7 +17,7 @@ const Banner = () => {
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
           We assist you in letting your customers {" "}
             <br className="hidden lg:block" />
-            get somewhere, anywhere fast.
+            get somewhere, anywhere, fast.
           </h1>
 
           <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2 mb-6 md:mb-0">

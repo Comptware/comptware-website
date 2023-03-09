@@ -11,7 +11,7 @@ const SectionOne = () => {
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[85%] leading-[1.75]">
-        Your customers can make fast and secure crypto payments, anytime and anywhere.
+        Your customers can make fast and secure crypto payments anytime and anywhere.
         </p>
       </div>
 

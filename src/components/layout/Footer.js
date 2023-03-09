@@ -24,8 +24,8 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        { title: "What drives us", link: "/company/what-drives-us" },
-        { title: "Work with us", link: "/company/Work-with-us" },
+        { title: "What drives us", link: "/company" },
+        { title: "Work with us", link: "/company/all-openings" },
         width < 640 && { title: "Newsroom", link: "/what-is-latest" },
         width < 640 && { title: "Say hello", url: "mailto:hello@bani.africa" },
       ],
@@ -34,7 +34,7 @@ const Footer = () => {
     {
       title: ".",
       links: [
-        { title: "Newsroom", link: "/what-is-latest" },
+        { title: "Newsroom", url: "https://blog.bani.africa" },
         { title: "Say hello", url: "mailto:hello@bani.africa" },
       ],
     },
@@ -44,7 +44,7 @@ const Footer = () => {
       links: [
         { title: "AML", link: "/legal/aml-policy" },
         { title: "Privacy Policy", link: "/legal/privacy-policy" },
-        { title: "Terms & Conditions", link: "/legal/terms" },
+        { title: "Terms & Conditions", link: "/legal/terms-and-conditions" },
       ],
     },
     {
@@ -115,7 +115,7 @@ const Footer = () => {
                 )}
 
                 {socials && (
-                  <div className=" flex justify-end items-center w-fit space-x-3 transition-all duration-150 ease-in-out text-white">
+                  <div className=" flex flex-wrap justify-end items-center w-fit gap-3 transition-all duration-150 ease-in-out text-white z-[1]">
                     {socials.map(({ url, icon }, i) => (
                       <a
                         key={url + i}

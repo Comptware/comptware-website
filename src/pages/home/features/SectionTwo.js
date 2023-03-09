@@ -18,44 +18,44 @@ const businessTypes = [
     title: "Retail Stores",
     body: "Provide fast and reliable payment processes for customer satisfaction and effectively manage business finances.",
     icon: <Retail />,
-    href: "/",
+    href: "/usecase/retail-stores",
   },
   {
     title: "Fast Food and Restaurants",
     body: "Offer seamless and instant payment options to increase customer satisfaction and repeat business.",
     icon: <FastFood />,
-    href: "/",
+    href: "/usecase/fast-food-and-restaurants",
   },
   {
     title: "Fintechs / Neobanks",
     body: "Offer customers innovative, streamlined, and secure payment solutions and products.",
     icon: <Fintech />,
-    href: "/",
+    href: "/usecase/fintechs-and-neobanks",
   },
  
   {
     title: "Travel agencies and airlines",
     body: "Provide real-time payment updates and offer loyalty programs to create memorable customer experiences.",
     icon: <Airline />,
-    href: "/",
+    href: "/usecase/travel-agencies-and-airlines",
   },
   {
-    title: "Crypto and digital asset platforms",
+    title: "Crypto and Digital Assets platforms",
     body: "Provide faster transactions with globally accessible and decentralised security systems.",
     icon: <Crypto />,
-    href: "/",
+    href:"/usecase/crypto-and-digital-asset-platforms",
   },
   {
     title: "E-Commerce",
     body: "Collect instant local customer payments and improve the checkout experience.",
     icon: <Ecommerce />,
-    href: "/",
+    href: "/usecase/e-commerce",
   },
   {
     title: "Digital Creators",
     body: "Offer various payment options, set clear payment terms, and ensure secure and reliable payment processing.",
     icon: <DigitalCreators />,
-    href: "/",
+    href: "/usecase/digital-creators",
   },
 ];
 

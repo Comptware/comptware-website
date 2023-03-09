@@ -37,8 +37,8 @@ const Card = ({ details, type }) => {
       </p>
 
       {href && (
-        <Link href={href} className="flex justify-start items-center space-x-2">
-          <span className="basier-medium bani-base-alt text-black-light">
+        <Link href={href} className="flex justify-start items-center space-x-2 text-black-light hover:text-blue">
+          <span className="basier-medium bani-base-alt ">
             Learn More
           </span>
           <ArrowRight />

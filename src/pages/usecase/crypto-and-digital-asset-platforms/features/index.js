@@ -2,6 +2,7 @@ import React from "react";
 
 import Banner from "./Banner";
 import SectionOne from "./SectionOne";
+import SectionThree from "./SectionThree";
 import SectionTwo from "./SectionTwo";
 
 const HomeList = () => {
@@ -10,6 +11,7 @@ const HomeList = () => {
         <Banner />
         <SectionOne />
         <SectionTwo />
+        <SectionThree />
       </div>
   );
 };

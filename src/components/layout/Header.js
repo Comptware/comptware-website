@@ -64,25 +64,25 @@ const Header = () => {
         },
 
         {
-          name: "Fast food and restaurants",
+          name: "Fast Food and Restaurants",
           link: "/usecase/fast-food-and-restaurants",
           icon: <EcommerceIcon className="scale-[0.7]" />,
         },
 
         {
-          name: "Travel agencies and airlines",
+          name: "Travel Agencies and Airlines",
           link: "/usecase/travel-agencies-and-airlines",
           icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
         },
 
         {
-          name: "Fintechs and neobanks",
+          name: "Fintechs and Neobanks",
           link: "/usecase/fintechs-and-neobanks",
           icon: <FintechIcon className="scale-[0.7]" />,
         },
 
         {
-          name: "Crypto and digital asset platforms",
+          name: "Crypto and Digital Assets Platforms",
           link: "/usecase/crypto-and-digital-asset-platforms",
           icon: <CryptoIcon className="scale-[0.7]" />,
         },

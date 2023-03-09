@@ -9,8 +9,8 @@ const Banner = () => {
       <div className="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-10 md:space-y-0 w-full !h-full md:h-fit md:min-h-[700px] md:max-h-[800px] md:space-x-8 usecase-banner px-5 md:px-[5%] lg:px-[8%] relative z-20 usecase-hero-section-bg -mt-[95px] pb-[60px] md:pt-[95px] md:pb-0">
         <div className="flex flex-col justify-center items-start text-left md:basis-[90%] w-full h-fit z-[5] !ml-0 !mt-0">
           <div className="rounded-[100px] bg-grey-15 px-5 py-[3px] mb-4 md:mb-5">
-            <h1 className="text-white text-sm md:text-xl leading-[27px] ">
-              BANI FOR CRYPTO AND DIGITAL ASSET PLATFORMS
+            <h1 className="text-white text-sm md:text-xl leading-[27px] uppercase">
+              BANI FOR CRYPTO AND DIGITAL ASSETS PLATFORMS
             </h1>
           </div>
 
