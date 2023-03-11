@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   const page = pathIsNotBase ? pageMatch : null;
 
   return (
-    <div className="w-screen min-h-screen flex flex-grow flex-col">
+    <div className="w-screen min-h-screen flex flex-grow flex-col max-w-9xl mx-auto">
       {page && (
         <Head>
           <meta property="og:type" content="website" />
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
       )}
 
       <Header />
-      <section className="w-full flex flex-row flex-grow max-w-9xl mx-auto ">
+      <section className="w-full flex flex-row flex-grow">
         <main
           className={`website-content w-full pt-[95px] md:pt-[14px] md:mt-[80px] flex flex-col flex-grow bg-white`}
         >

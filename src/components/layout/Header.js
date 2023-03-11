@@ -11,6 +11,11 @@ import FintechIcon from "assets/icons/header/coin.svg";
 import EcommerceIcon from "assets/icons/header/shopping-cart.svg";
 import CryptoIcon from "assets/icons/header/crypto.svg";
 import RetailIcon from "assets/icons/header/retail.svg";
+import VirtualAccountIcon from "assets/icons/header/virtual-account.svg";
+import EwalletIcon from "assets/icons/header/ewallet.svg";
+import MobileMoneyIcon from "assets/icons/header/mobile-money.svg";
+import FastfoodIcon from "assets/icons/header/fastfood.svg";
+import TravelIcon from "assets/icons/header/travel.svg";
 import Button from "../general/button/Button";
 import Dropdown from "./Dropdown";
 import Hamburger from "./hamburger";
@@ -23,31 +28,31 @@ const Header = () => {
   const headerLinks = [
     {
       title: "Payments",
-      link: "/payments/virtual-account",
+      link: "/payments/virtual-accounts",
       slug: "payments",
       notPage: true,
       links: [
         {
           name: "Virtual Accounts",
-          link: "/payments/virtual-account",
-          icon: <RetailIcon className="scale-[0.7]" />,
+          link: "/payments/virtual-accounts",
+          icon: <VirtualAccountIcon className="scale-[0.7]" />,
         },
 
         {
           name: "Ewallets",
           link: "/payments/ewallets",
-          icon: <EcommerceIcon className="scale-[0.7]" />,
+          icon: <EwalletIcon className="scale-[0.7]" />,
         },
 
         {
           name: "Mobile Money",
           link: "/payments/mobile-money",
-          icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
+          icon: <MobileMoneyIcon className="scale-[0.7]" />,
         },
         {
           name: "Crypto Payments",
-          link: "/payments/crypto-payments",
-          icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
+          link: "/payments/crypto",
+          icon: <CryptoIcon className="scale-[0.7]" />,
         },
       ],
     },
@@ -66,13 +71,13 @@ const Header = () => {
         {
           name: "Fast Food and Restaurants",
           link: "/usecase/fast-food-and-restaurants",
-          icon: <EcommerceIcon className="scale-[0.7]" />,
+          icon: <FastfoodIcon className="scale-[0.7]" />,
         },
 
         {
           name: "Travel Agencies and Airlines",
           link: "/usecase/travel-agencies-and-airlines",
-          icon: <DigitalCreatorsIcon className="scale-[0.7]" />,
+          icon: <TravelIcon className="scale-[0.7]" />,
         },
 
         {
@@ -157,7 +162,7 @@ const Header = () => {
       }}
       className={` ${
         pathIsUsecase ? "" : "border-b-[0.5px] border-grey"
-      } transition-colors duration-500 ease-in-out website-header flex flex-row justify-between items-center w-full h-14 md:h-[94px] px-5 md:px-[5%] lg:px-[8%] z-50 drop-shadow-[0_0_30px_rgba(0,0,0,0.1)]`}
+      } transition-colors duration-500 ease-in-out website-header flex flex-row justify-between items-center w-full h-14 md:h-[94px] px-5 md:px-[5%] lg:px-[8%] z-50 drop-shadow-[0_0_30px_rgba(0,0,0,0.1)] max-w-9xl mx-auto`}
     >
       <div className="relative flex flex-row justify-between items-center mx-auto w-full">
         <Link className="w-fit !my-0 z-[99999]" href="/">
