@@ -5,6 +5,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import BorderFade from "assets/icons/border-fade.svg";
 import ArrowRight from "assets/icons/Arrow/arrow-right-black.svg";
 import { PAYMENT_TYPES_STICKY_MODES } from "utils/constants";
+import Link from "next/link";
 
 const paymentTypesClsx =
   "w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-top transition-all duration-[500ms] ease-in";
@@ -14,24 +15,28 @@ const paymentTypes = [
     body: "Experience greater payment efficiency, control, and flexibility with our virtual accounts.",
     img: <div className={`${paymentTypesClsx} bg-virtual-accounts`} />,
     bgImage: "bg-virtual-accounts",
+    link: "/payments/virtual-accounts",
   },
   {
     title: "Mobile Money",
     body: "Experience payment convenience and accessibility across Africa with our mobile money service.",
     img: <div className={`${paymentTypesClsx} bg-mobile-money`} />,
     bgImage: "bg-mobile-money",
+    link: "/payments/mobile-money",
   },
   {
     title: "Crypto Payments",
     body: "Enjoy fast and secure local and cross-border transactions with our crypto payment service.",
     img: <div className={`${paymentTypesClsx} bg-crypto scale-[0.8]`} />,
     bgImage: "bg-crypto scale-[0.8]",
+    link: "/payments/crypto",
   },
   {
     title: "Ewallets",
     body: "Experience the convenience of managing your money on the go with our e-wallets.",
     img: <div className={`${paymentTypesClsx} bg-e-wallets`} />,
     bgImage: "bg-e-wallets",
+    link: "/payments/ewallets",
   },
 ];
 const { PRE_VIEW, IN_VIEW, POST_VIEW } = PAYMENT_TYPES_STICKY_MODES;
@@ -50,20 +55,10 @@ const SectionOne = () => {
   }, []);
 
   const [activePaymentType, setActivePaymentType] = useState(paymentTypes[0]);
-  const [width, setWidth] = useState(0);
   const [stickyMode, setStickyMode] = useState(PRE_VIEW);
 
-  useEffect(() => {
-    setWidth(window?.innerWidth);
-    function handleResize() {
-      setWidth(window?.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const handleStickyAnimationUpdate = () => {
+    console.log("handleStickyAnimationUpdate");
     const paymentTypesLength = paymentTypes.length;
     const adjustedPaymentTypesLength = paymentTypes.length * 2;
     const sectionRefRect = sectionRef?.current?.getBoundingClientRect();
@@ -82,6 +77,11 @@ const SectionOne = () => {
       let newActivePayment;
       if (allotedHeightFraction * (index + 1) <= adjustedSectionTopPosition) {
         newActivePayment = paymentTypes[index];
+        console.log("code 1");
+        console.log(
+          "allotedHeightFraction * (index + 1): ",
+          allotedHeightFraction * (index + 1)
+        );
         setActivePaymentType(newActivePayment);
       }
     }
@@ -92,11 +92,17 @@ const SectionOne = () => {
     ) {
       setStickyMode(IN_VIEW);
     } else if (adjustedSectionTopPosition > stickyViewHeight) {
-      setActivePaymentType(paymentTypes[paymentTypesLength - 1]);
+      console.log("code 2");
+      console.log(
+        " adjustedSectionTopPosition, stickyViewHeight : ",
+        adjustedSectionTopPosition,
+        stickyViewHeight
+      );
+      // setActivePaymentType(paymentTypes[paymentTypesLength - 1]);
       setStickyMode(POST_VIEW);
     } else {
+      console.log("code 3");
       setActivePaymentType(paymentTypes[0]);
-
       setStickyMode(PRE_VIEW);
     }
   };
@@ -108,6 +114,10 @@ const SectionOne = () => {
       window.removeEventListener("scroll", handleStickyAnimationUpdate);
     };
   }, []);
+
+  useEffect(() => {
+    console.log("activePaymentType: ", activePaymentType);
+  }, [activePaymentType]);
 
   return (
     <div className="flex flex-col justify-start items-center h-fit w-full space-y-7 sticky-boundary sm:mb-[0px] relative">
@@ -149,23 +159,27 @@ const SectionOne = () => {
               <p className="text-black-light basier-medium leading-none bani-base pb-4 pt-20">
                 COLLECT PAYMENTS ANYWHERE
               </p>
-              {paymentTypes.map(({ title, body, img,bgImage }) => (
-                <span
+              {paymentTypes.map(({ title, body, img, bgImage, link }) => (
+                <Link
                   key={title}
+                  href={link}
                   className={`${
                     activePaymentType?.title === title
                       ? "text-black-light basier-medium"
                       : "text-black-fade font-normal"
                   } tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out`}
-                  onClick={() =>
-                    setActivePaymentType({ title, body, img, bgImage })
-                  }
-                  onMouseEnter={() =>
-                    setActivePaymentType({ title, body, img, bgImage })
-                  }
+                  onMouseEnter={() => {
+                    console.log("{ title, body, img, bgImage }: ", {
+                      title,
+                      body,
+                      img,
+                      bgImage,
+                    });
+                    setActivePaymentType({ title, body, img, bgImage });
+                  }}
                 >
                   {title}
-                </span>
+                </Link>
               ))}
             </div>
 
@@ -191,7 +205,6 @@ const SectionOne = () => {
               <div className="flex flex-col justify-center items-center !min-w-[100%] !w-full !max-w-[100%] min-h-[450px] bg-grey-dull rounded-[40px] pb-8">
                 {activePaymentType?.img ? (
                   <div className="h-[350px] !min-w-[100%] !w-full !max-w-[100%]">
-                  
                     <div
                       className={`${paymentTypesClsx} ${activePaymentType?.bgImage}`}
                     />

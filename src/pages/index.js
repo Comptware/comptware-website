@@ -8,7 +8,7 @@ export default function Home() {
         <title>Bani</title>
         <meta
           name="description"
-          content="Receive, confirm, and track all online and in-store payments easily and instantly across Africa."
+          content="Receive, confirm, and track all online and in-store payments easily and instantly."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -17,7 +17,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Receive, confirm, and track all online and in-store payments easily and instantly across Africa."
+          content="Receive, confirm, and track all online and in-store payments easily and instantly."
         />
         <meta
           property="og:image"
@@ -33,7 +33,7 @@ export default function Home() {
         />
         <meta
           name="twitter:description"
-          content="Receive, confirm, and track all online and in-store payments easily and instantly across Africa."
+          content="Receive, confirm, and track all online and in-store payments easily and instantly."
         />
         <meta
           name="twitter:image"
