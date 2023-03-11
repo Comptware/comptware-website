@@ -11,7 +11,6 @@ import * as gtag from "utils/gtag";
 register();
 
 export default function App({ Component, pageProps }) {
-
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -27,6 +26,7 @@ export default function App({ Component, pageProps }) {
     <>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
+        id="gtm-script"
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
