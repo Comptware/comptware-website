@@ -24,7 +24,7 @@ const paymentTypes = [
     title: "Mobile Money",
     body: "Experience payment convenience and accessibility across Africa with our mobile money service.",
     img: (
-      <div className={`${paymentTypesClsx} bg-mobile-money h-[400px] mt-5`} />
+      <div className={`${paymentTypesClsx} bg-mobile-money h-[400px] scale-125 mt-5`} />
     ),
     bgImage: "bg-mobile-money",
     link: "/payments/mobile-money",
