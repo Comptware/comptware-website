@@ -17,7 +17,7 @@ const PrivacyPolicyList = () => {
         <DashboardLayout>
           <div className="flex flex-col justify-start items-center h-fit w-full">
             <div className="w-full h-[900px] min-h-[600px] scale-[1.1] mt-[30px] md:mt-0 md:scale-[1]">
-              <h1 className="text-grey-text basier-medium leading-none bani-lg md:text-xl mb-6 md:mb-8  text-left md:text-center pt-10 px-5 md:px-[5%] lg:px-[8%]">
+              <h1 className="text-grey-text basier-medium leading-none bani-lg md:text-xl mb-6 md:mb-8 text-center pt-10 px-[40px] md:px-[5%] lg:px-[8%]">
                 PRIVACY POLICY
               </h1>
               <Viewer fileUrl="https://bani-assets.s3.eu-west-2.amazonaws.com/static/docs/BANI-PRIVACY-POLICY.pdf" />

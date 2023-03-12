@@ -148,7 +148,8 @@ const Header = () => {
   const pathname = location.pathname;
   const pathIsNotBase = pathname !== "/";
   const pathIsUsecase = pathname.includes("/usecase");
-  const navbarBgIsWhite = navbarBg || pathname.includes("company/all-openings");
+  const navbarBgIsWhite =
+    navbarBg || pathname.includes("company/all-openings") || sidenavOpen;
   const navbarBgIsBlueGradient = pathIsUsecase && !navbarBg;
 
   const headerLinksActiveClass = navbarBgIsBlueGradient
@@ -165,8 +166,13 @@ const Header = () => {
       } transition-colors duration-500 ease-in-out website-header flex flex-row justify-between items-center w-full h-14 md:h-[94px] px-5 md:px-[5%] lg:px-[8%] z-50 drop-shadow-[0_0_30px_rgba(0,0,0,0.1)] max-w-9xl mx-auto`}
     >
       <div className="relative flex flex-row justify-between items-center mx-auto w-full">
-        <Link className="w-fit !my-0 z-[99999]" href="/">
-          {(navbarBgIsBlueGradient&&!sidenavOpen) ? (
+        <Link
+          className={`!my-0 z-[99999] ${
+            sidenavOpen ? "bg-white w-full" : "w-fit"
+          }`}
+          href="/"
+        >
+          {navbarBgIsBlueGradient && !sidenavOpen ? (
             <LogoWhite className="scale-[0.8]" />
           ) : (
             <Logo className="scale-[0.8]" />
@@ -221,32 +227,30 @@ const Header = () => {
           ))}
         </div>
 
-       
-          <div className="hidden lg:flex flex-row justify-start items-center space-x-2 pl-2">
-            <a href="https://app.getbani.com" target="_blank" rel="noreferrer">
-              <Button
-                text="Sign in"
-                onClick={() => {}}
-                isOutline={!navbarBgIsBlueGradient}
-                whiteBg={navbarBgIsBlueGradient}
-                textColor={navbarBgIsBlueGradient&&"black"}
-                textClass="text-base"
-              />
-            </a>
-            <a
-              href="https://app.getbani.com/signup"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button
-                blackBg
-                text="Contact Sales"
-                onClick={() => {}}
-                textClass="text-base"
-              />
-            </a>
-          </div>
-       
+        <div className="hidden lg:flex flex-row justify-start items-center space-x-2 pl-2">
+          <a href="https://app.getbani.com" target="_blank" rel="noreferrer">
+            <Button
+              text="Sign in"
+              onClick={() => {}}
+              isOutline={!navbarBgIsBlueGradient}
+              whiteBg={navbarBgIsBlueGradient}
+              textColor={navbarBgIsBlueGradient && "black"}
+              textClass="text-base"
+            />
+          </a>
+          <a
+            href="https://app.getbani.com/signup"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button
+              blackBg
+              text="Contact Sales"
+              onClick={() => {}}
+              textClass="text-base"
+            />
+          </a>
+        </div>
 
         <Hamburger
           handlecClick={() => {
@@ -258,7 +262,7 @@ const Header = () => {
 
         {/* Mobile side nav */}
         <div
-          className={`flex flex-col justify-start items-start lg:hidden bg-white py-24 px-10 fixed top-0 right-0 left-0 bottom-0 h-screen w-full transition-all duration-150 ease-in-out ${
+          className={`flex flex-col justify-start items-start lg:hidden bg-white py-24 px-5 sm:px-10 fixed top-0 right-0 left-0 bottom-0 h-screen w-full transition-all duration-150 ease-in-out overflow-y-scroll ${
             sidenavOpen ? "translate-x-0 flex" : "-translate-x-[150%]"
           }`}
         >
@@ -297,9 +301,7 @@ const Header = () => {
                       href={link}
                       key={name}
                       className={`flex justify-start items-center p-4 hover:text-blue text-grey-text text-base font-light whitespace-nowrap ${
-                        pathIsNotBase &&
-                        link.includes(pathname) &&
-                        "!text-blue"
+                        pathIsNotBase && link.includes(pathname) && "!text-blue"
                       }`}
                       onClick={() => {
                         setActiveNav("");
@@ -333,6 +335,37 @@ const Header = () => {
                 )}
             </div>
           ))}
+
+          <div className="flex flex-col justify-start items-center gap-8 w-full">
+            <a
+              className="w-full"
+              href="https://app.getbani.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button
+                text="Sign in"
+                isOutline={!navbarBgIsBlueGradient}
+                whiteBg={navbarBgIsBlueGradient}
+                textColor={navbarBgIsBlueGradient && "black"}
+                textClass="text-base"
+                fullWidth
+              />
+            </a>
+            <a
+              className="w-full"
+              href="https://app.getbani.com/signup"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button
+                blackBg
+                text="Contact Sales"
+                textClass="text-base"
+                fullWidth
+              />
+            </a>
+          </div>
         </div>
         {/* Mobile side nav */}
       </div>

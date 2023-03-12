@@ -3,7 +3,7 @@ import React from "react";
 const SectionFive = () => {
   return (
     <div
-      className={` px-5 md:px-[5%] lg:px-[8%] h-fit flex flex-col md:flex-row items-center w-full gap-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto my-10 md:my-28`}
+      className={` px-5 md:px-[5%] lg:px-[8%] h-fit flex flex-col-reverse md:flex-row items-center w-full gap-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto my-10 md:my-28`}
     >
     
 

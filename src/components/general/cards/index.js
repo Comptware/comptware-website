@@ -8,7 +8,7 @@ const Card = ({ details, type }) => {
 
   const containerClass =
     type === "works"
-      ? "justify-between min-w-[220px] max-w-[360px] w-full h-fit sm:h-[330px] ml-3 md:ml-4 lg:ml-5 pl-5 sm:pl-4 pt-6 pb-12 sm:pr-6 sm:pt-2 sm:pb-7 shadow-card"
+      ? "justify-between min-w-[220px] max-w-[360px] w-full h-[330px] ml-3 md:ml-4 lg:ml-5 pl-5 sm:pl-4 pt-6 pb-[24px] sm:pr-6 sm:pt-2 sm:pb-7 shadow-card"
       : "justify-start pl-7 pr-9 pt-8 pb-12 shadow-card-2 h-full";
 
   const titleClass =

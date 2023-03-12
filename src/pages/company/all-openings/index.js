@@ -8,7 +8,7 @@ const DevelopersList = () => {
   return (
     <div>
       <DashboardLayout>
-        <div className="flex flex-col justify-start items-center h-fit w-full">
+        <div className="flex flex-col justify-start items-center h-fit w-full mt-[-40px] md:mt-0">
           <div className="w-full bg-blue">
             <Banner />
           </div>

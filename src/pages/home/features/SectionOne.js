@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-import BorderFade from "assets/icons/border-fade.svg";
 import ArrowRight from "assets/icons/Arrow/arrow-right-black.svg";
 import { PAYMENT_TYPES_STICKY_MODES } from "utils/constants";
 import Link from "next/link";
@@ -13,28 +12,36 @@ const paymentTypes = [
   {
     title: "Virtual accounts",
     body: "Experience greater payment efficiency, control, and flexibility with our virtual accounts.",
-    img: <div className={`${paymentTypesClsx} bg-virtual-accounts`} />,
+    img: (
+      <div
+        className={`${paymentTypesClsx} bg-virtual-accounts h-[400px] mt-5`}
+      />
+    ),
     bgImage: "bg-virtual-accounts",
     link: "/payments/virtual-accounts",
   },
   {
     title: "Mobile Money",
     body: "Experience payment convenience and accessibility across Africa with our mobile money service.",
-    img: <div className={`${paymentTypesClsx} bg-mobile-money`} />,
+    img: (
+      <div className={`${paymentTypesClsx} bg-mobile-money h-[400px] mt-5`} />
+    ),
     bgImage: "bg-mobile-money",
     link: "/payments/mobile-money",
   },
   {
     title: "Crypto Payments",
     body: "Enjoy fast and secure local and cross-border transactions with our crypto payment service.",
-    img: <div className={`${paymentTypesClsx} bg-crypto scale-[0.8]`} />,
+    img: <div className={`${paymentTypesClsx} bg-crypto h-[350px] mt-10`} />,
     bgImage: "bg-crypto scale-[0.8]",
     link: "/payments/crypto",
   },
   {
     title: "Ewallets",
     body: "Experience the convenience of managing your money on the go with our e-wallets.",
-    img: <div className={`${paymentTypesClsx} bg-e-wallets`} />,
+    img: (
+      <div className={`${paymentTypesClsx} bg-e-wallets scale-90 h-[400px]`} />
+    ),
     bgImage: "bg-e-wallets",
     link: "/payments/ewallets",
   },
@@ -58,7 +65,6 @@ const SectionOne = () => {
   const [stickyMode, setStickyMode] = useState(PRE_VIEW);
 
   const handleStickyAnimationUpdate = () => {
-    console.log("handleStickyAnimationUpdate");
     const paymentTypesLength = paymentTypes.length;
     const adjustedPaymentTypesLength = paymentTypes.length * 2;
     const sectionRefRect = sectionRef?.current?.getBoundingClientRect();
@@ -77,11 +83,6 @@ const SectionOne = () => {
       let newActivePayment;
       if (allotedHeightFraction * (index + 1) <= adjustedSectionTopPosition) {
         newActivePayment = paymentTypes[index];
-        console.log("code 1");
-        console.log(
-          "allotedHeightFraction * (index + 1): ",
-          allotedHeightFraction * (index + 1)
-        );
         setActivePaymentType(newActivePayment);
       }
     }
@@ -92,16 +93,9 @@ const SectionOne = () => {
     ) {
       setStickyMode(IN_VIEW);
     } else if (adjustedSectionTopPosition > stickyViewHeight) {
-      console.log("code 2");
-      console.log(
-        " adjustedSectionTopPosition, stickyViewHeight : ",
-        adjustedSectionTopPosition,
-        stickyViewHeight
-      );
-      // setActivePaymentType(paymentTypes[paymentTypesLength - 1]);
+      setActivePaymentType(paymentTypes[paymentTypesLength - 1]);
       setStickyMode(POST_VIEW);
     } else {
-      console.log("code 3");
       setActivePaymentType(paymentTypes[0]);
       setStickyMode(PRE_VIEW);
     }
@@ -115,15 +109,11 @@ const SectionOne = () => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log("activePaymentType: ", activePaymentType);
-  }, [activePaymentType]);
-
   return (
     <div className="flex flex-col justify-start items-center h-fit w-full space-y-7 sticky-boundary sm:mb-[0px] relative">
       <div className="flex flex-col justify-between items-center w-full h-fit gap-y-12 sm:mb-[0px]">
         <div className="flex flex-col justify-between items-center w-full h-fit gap-y-12 md:pt-16 bg-white z-20 px-5 md:px-[5%] lg:px-[8%]">
-          <BorderFade className="scale-x-[0.7]" />
+          <hr className="w-full divider-fade" />
           <p className="text-grey-text text-left leading-[1.9] bani-heading-alt font-normal w-full md:w-[75%] lg:w-[70%] ">
             <span className="text-black-light basier-semibold">
               {" "}
@@ -140,7 +130,7 @@ const SectionOne = () => {
             . Collecting and reconciling online and in-store payments is much
             more seamless and faster
           </p>
-          <BorderFade className="scale-x-[0.7]" />
+          <hr className="w-full divider-fade" />
         </div>
         <div
           ref={sectionRef}
@@ -169,12 +159,6 @@ const SectionOne = () => {
                       : "text-black-fade font-normal"
                   } tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out`}
                   onMouseEnter={() => {
-                    console.log("{ title, body, img, bgImage }: ", {
-                      title,
-                      body,
-                      img,
-                      bgImage,
-                    });
                     setActivePaymentType({ title, body, img, bgImage });
                   }}
                 >
@@ -258,8 +242,8 @@ const SectionOne = () => {
             >
               {paymentTypes.map((item) => (
                 <SwiperSlide key={item.title}>
-                  <div className="flex flex-col justify-between items-center w-full min-h-[55vh] bg-grey-dull rounded-[20px] pb-8">
-                    <div className="h-[60%]"></div>
+                  <div className="flex flex-col justify-between items-center w-full h-[450px] bg-grey-dull rounded-[20px] pb-8">
+                    <div className="h-[60%] w-full">{item.img}</div>
                     <p className="font-light bani-title-2 text-black px-8">
                       {item?.body}
                     </p>

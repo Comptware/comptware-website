@@ -11,9 +11,7 @@ const HomeList = () => {
   return (
     <div className="flex flex-col justify-start items-center h-fit w-full">
       <Banner />
-
       <SectionOne />
-
       <SectionTwo />
       <SectionThree />
       <SectionFive />
