@@ -210,7 +210,7 @@ const SectionOne = () => {
               <button
                 onClick={handlePrev}
                 className={`scale-[0.75]`}
-                style={{ opacity: activeSlideIndex <= 1 ? 0.15 : 1 }}
+                style={{ opacity: activeSlideIndex < 1 ? 0.15 : 1 }}
               >
                 <ArrowRight className="rotate-[180deg]" />
               </button>
