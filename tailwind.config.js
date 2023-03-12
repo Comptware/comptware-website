@@ -187,6 +187,7 @@ module.exports = {
         "dynamic-pricing": "url('../assets/icons/Usecase/travel-agencies-and-airlines/dynamic-pricing.svg')",
         "settlement": "url('../assets/icons/Usecase/crypto-and-digital-asset-platforms/settlement.svg')",
         "payment-link": "url('../assets/icons/Usecase/digital-creators/payment-link.svg')",
+        "low-cost": "url('../assets/icons/Usecase/low-cost.svg')",
       },
       keyframes: {
         slide: {
