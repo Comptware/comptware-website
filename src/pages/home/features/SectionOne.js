@@ -40,7 +40,7 @@ const paymentTypes = [
     title: "Ewallets",
     body: "Experience the convenience of managing your money on the go with our e-wallets.",
     img: (
-      <div className={`${paymentTypesClsx} bg-e-wallets scale-90 h-[400px]`} />
+      <div className={`${paymentTypesClsx} bg-e-wallets scale-125 h-[400px] mt-14`} />
     ),
     bgImage: "bg-e-wallets",
     link: "/payments/ewallets",
