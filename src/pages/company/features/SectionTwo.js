@@ -10,8 +10,7 @@ const SectionTwo = () => {
         Be a part of our mission
       </h2>
       <p className="text-grey-text font-light bani-title mb-8 md:mb-14 leading-[1.85]">
-        Come be part of the rockstar and diverse team of people building a new
-        payments highway connecting more trade globally.
+      Be part of the rockstar and diverse team building a new payments highway connecting more trade globally.
       </p>
       <div className="flex justify-center items-center w-full">
         <Link href="company/all-openings" target="_blank" rel="noreferrer">

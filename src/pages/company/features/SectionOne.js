@@ -9,13 +9,11 @@ const SectionOne = () => {
         Our Mission
       </h2>
       <p className="text-grey-text font-light bani-title text-left w-full md:w-[65%] leading-[1.85] ">
-        We are building an alternative Payment Infrastructure for the Global
-        Economy. What does this mean? We want to make it super easy for any
-        business to easily and seamlessly collect alternative payments from
-        their customers. Whether that is mobile money payments across
-        Sub-Saharan Africa or crypto payments globally we got you covered with
-        our frictionless setup process and API infrastructure resources, we are
-        making it possible for businesses to scale into more markets
+      We are building a new payments highway to connect and grow trade globally. What does this mean? We want to make it easy for businesses to quickly and seamlessly collect local customer payments.
+
+Whether that is payments into virtual bank accounts, mobile money payments across Sub-Saharan Africa, or crypto and e-wallet payments, we got you covered with our frictionless setup process and API infrastructure resources.
+
+We are making it possible for businesses to scale into more markets.
       </p>
 
     </div>

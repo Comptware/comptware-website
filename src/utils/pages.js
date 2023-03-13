@@ -89,7 +89,7 @@ const pages = [
     url: "/company",
     title: "Bani | Our Company",
     description:
-      "Building a global payment infrastructure alternative",
+      "Building a new payments highway connecting more trade globally.",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
   },
