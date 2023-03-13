@@ -5,11 +5,11 @@ import Card from "components/general/cards";
 const cardItems = [
   {
     title: "Security",
-    body: "Enjoy access to secure stable coin transactions that protect you from fraud.", 
+    body: "Enjoy access to secure stable and non-stable coin transactions that protect you from fraud.", 
   },
   {
     title: "Speed",
-    body: "Enjoy real time stable coin payment and instant settlement that saves you time.",
+    body: "Enjoy real time stable and non-stable coin payment and instant settlement that saves you time.",
   },
   {
     title: "Low Cost",

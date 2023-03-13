@@ -28,7 +28,7 @@ const businessTypes = [
   },
   {
     title: "Fintechs / Neobanks",
-    body: "Offer customers innovative, streamlined, and secure payment solutions and products.",
+    body: "Offer customers streamlined and secure collections and payout services across Africa.",
     icon: <Fintech />,
     href: "/usecase/fintechs-and-neobanks",
   },
@@ -41,7 +41,7 @@ const businessTypes = [
   },
   {
     title: "Crypto and Digital Assets platforms",
-    body: "Provide faster transactions with globally accessible and decentralised security systems.",
+    body: "Provide faster transactions with globally accessible and decentralised systems.",
     icon: <Crypto />,
     href:"/usecase/crypto-and-digital-asset-platforms",
   },

@@ -128,7 +128,7 @@ const SectionOne = () => {
               smooth and instant payment experiences
             </span>
             . Collecting and reconciling online and in-store payments is much
-            more seamless and faster
+            more  <span className="text-black-light basier-semibold">seamless and faster</span>.
           </p>
           <hr className="w-full divider-fade" />
         </div>

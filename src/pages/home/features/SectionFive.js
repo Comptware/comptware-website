@@ -21,7 +21,7 @@ const baniFeatures = [
   },
   {
     title: "Cloud-based API",
-    body: "Bani Our cloud-based services make building customisable experiences for online and in-store payment collections effortless. Build faster systems by reconciling transactions in real time.",
+    body: "Our cloud-based services make building customisable experiences for online and in-store payment collections effortless. Build faster systems by reconciling transactions in real time.",
     icon: <Cloud className="stroke-current"/>,
   },
   {
@@ -39,7 +39,7 @@ const SectionFive = () => {
           Why merchants <br className="sm:hidden"/>love Bani
         </h2>
         <p className="text-grey-text font-light bani-title mb-5 md:mb-6 ">
-          Loved by merchants and businesses
+          Loved by merchants and customers
         </p>
       </div>
 
