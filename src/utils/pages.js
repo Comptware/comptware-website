@@ -5,7 +5,7 @@ const pages = [
     description:
       "Easily and seamlessly collect cardless payments from customers. Whether that is mobile money payments across Sub-Saharan Africa or crypto payments globally we got you covered.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/usecase/fintechs-and-neobanks",
@@ -13,7 +13,7 @@ const pages = [
     description:
       "Inspire customer adoption rates.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/usecase/e-commerce",
@@ -21,7 +21,7 @@ const pages = [
     description:
       "Helping you make customers shop with ease",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/usecase/digital-creators",
@@ -29,7 +29,7 @@ const pages = [
     description:
       "Speedy collection of payments from clients ",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
 
   {
@@ -38,7 +38,7 @@ const pages = [
     description:
       "We optimise transactions for you and your customers",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
 
   {
@@ -47,7 +47,7 @@ const pages = [
     description:
       "The best payment experience for your customers",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
 
   {
@@ -56,7 +56,7 @@ const pages = [
     description:
       "We assist you in letting your customers get somewhere, anywhere, fast.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
 
   {
@@ -65,7 +65,7 @@ const pages = [
     description:
       "Providing you with seamless crypto transactions for customers' satisfaction",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
 
 
@@ -75,7 +75,7 @@ const pages = [
     description:
       "Welcome, Engineer! Get started integrating Bani's collections and payout services on your platform. Install the free plugins or start building something yourself with our API resource.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/pricing",
@@ -83,7 +83,7 @@ const pages = [
     description:
       "With the lowest transaction rates on the market, Bani puts the focus back on conversion, not charges.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/company",
@@ -91,7 +91,7 @@ const pages = [
     description:
       "Building a new payments highway connecting more trade globally.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
 
   {
@@ -100,7 +100,7 @@ const pages = [
     description:
       "Job openings at Bani",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
 
   {
@@ -108,28 +108,28 @@ const pages = [
     title: "Bani | Virtual Accounts",
     description: "Experience greater payment efficiency, control, and flexibility with our virtual accounts.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/payments/ewallets",
     title: "Bani | E-Wallets",
     description: "Experience the convenience of managing your money on the go with our e-wallets.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/payments/mobile-money",
     title: "Bani | Mobile Money",
     description: "Experience payment convenience and accessibility across Africa with our mobile money service.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/payments/crypto",
     title: "Bani | Crypto Payments",
     description: "Enjoy fast and secure local and cross-border transactions with our crypto payment service.",
     thumbnail:
-      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png",
+      "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
 ];
 export const getPageByPath = (path) =>

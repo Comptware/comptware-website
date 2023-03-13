@@ -21,7 +21,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png"
+          content="https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.png"
+          content="https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg"
         />
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
