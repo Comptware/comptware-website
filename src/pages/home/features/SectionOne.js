@@ -38,7 +38,7 @@ const paymentTypes = [
   },
   {
     title: "Ewallets",
-    body: "Experience the convenience of managing your money on the go with our e-wallets.",
+    body: "Experience the convenience of paying seamlessly on the go with your e-wallet apps.",
     img: (
       <div className={`${paymentTypesClsx} bg-e-wallets scale-125 h-[400px] mt-14`} />
     ),

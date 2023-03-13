@@ -7,7 +7,7 @@ const Banner = () => {
       E-Wallets
       </h1>
       <p className="text-grey-text font-light bani-title mb-2 md:mb-6 text-left sm:text-center md:w-[60%] lg:w-[50%]">
-      Experience the convenience of managing your money on the go with our e-wallets.
+      Experience the convenience of paying seamlessly on the go with your e-wallet apps.
       </p>
       <div className="flex flex-col md:flex-row justify-between items-center w-full space-y-4 md:space-y-0 md:space-x-2">
        <div className="bg-e-wallets w-full bg-contain bg-no-repeat p-0 h-[350px] pb-[calc(100% * 3 / 4)] bg-top" />

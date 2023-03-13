@@ -113,7 +113,7 @@ const pages = [
   {
     url: "/payments/ewallets",
     title: "Bani | E-Wallets",
-    description: "Experience the convenience of managing your money on the go with our e-wallets.",
+    description: "Experience the convenience of paying seamlessly on the go with your e-wallet apps.",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
