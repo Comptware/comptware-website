@@ -67,7 +67,11 @@ const Header = () => {
           link: "/usecase/retail-stores",
           icon: <RetailIcon className="scale-[0.7]" />,
         },
-
+        {
+          name: "E-commerce",
+          link: "/usecase/e-commerce",
+          icon: <EcommerceIcon className="scale-[0.7]" />,
+        },
         {
           name: "Fast Food and Restaurants",
           link: "/usecase/fast-food-and-restaurants",
@@ -90,12 +94,6 @@ const Header = () => {
           name: "Crypto and Digital Assets Platforms",
           link: "/usecase/crypto-and-digital-asset-platforms",
           icon: <CryptoIcon className="scale-[0.7]" />,
-        },
-
-        {
-          name: "E-commerce",
-          link: "/usecase/e-commerce",
-          icon: <EcommerceIcon className="scale-[0.7]" />,
         },
         {
           name: "Digital Creators",

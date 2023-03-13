@@ -27,7 +27,7 @@ const SectionTwo = () => {
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full leading-[1.75]">
-        Enjoy seamless mobile money collections in Zambia, Tanzania, Ghana, Kenya, Rwanda, Cameroon, Senegal, Benin, or Ivory Coast.
+        Enjoy seamless mobile money collections in Zambia, Tanzania, Ghana, Kenya, Rwanda, Cameroon, Senegal, Benin, and Ivory Coast.
         </p>
       </div>
     </div>

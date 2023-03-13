@@ -9,7 +9,7 @@ const SectionSix = () => {
 
       <div className="flex flex-col justify-center items-center w-full md:min-h-[450px] h-[300px] md:h-[350px] bg-grey-dull rounded-[40px] pb-8">
         <div
-          className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center bg-virtual-accounts `}
+          className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center bg-integrate `}
         />
       </div>
 
@@ -18,7 +18,7 @@ const SectionSix = () => {
         Integrate more services
         </h2>
 
-        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[70%] leading-[1.75]">
+        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[80%] leading-[1.75]">
         Easily integrate more features into your services with our one-time and secure API integration.
         </p>
       </div>

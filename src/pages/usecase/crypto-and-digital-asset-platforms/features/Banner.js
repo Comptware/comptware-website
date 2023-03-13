@@ -16,7 +16,7 @@ const Banner = () => {
 
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
             Providing you with seamless crypto{" "}
-            <br className="hidden md:block" />
+            <br className="hidden md:block"/>
             transactions for customers&apos; satisfaction
           </h1>
 

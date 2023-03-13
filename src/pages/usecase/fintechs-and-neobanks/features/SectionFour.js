@@ -20,7 +20,7 @@ const SectionFour = () => {
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full leading-[1.75]">
-        We help you to accept fast and secure crypto payments from your customers, anytime & anywhere
+        We help you to accept fast and secure crypto payments from your customers, anytime & anywhere.
         </p>
       </div>
     </div>
