@@ -115,7 +115,7 @@ const Footer = () => {
                 )}
 
                 {socials && (
-                  <div className=" flex flex-wrap justify-end items-center w-fit gap-3 transition-all duration-150 ease-in-out text-white z-[1]">
+                  <div className=" flex flex-wrap justify-start items-center w-fit gap-3 transition-all duration-150 ease-in-out text-white z-[1]">
                     {socials.map(({ url, icon }, i) => (
                       <a
                         key={url + i}
