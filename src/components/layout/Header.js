@@ -228,10 +228,9 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:flex flex-row justify-start items-center space-x-2 pl-2">
-          <a href="https://app.getbani.com" target="_blank" rel="noreferrer">
+          <a href="https://app.bani.africa" target="_blank" rel="noreferrer">
             <Button
               text="Sign in"
-              onClick={() => {}}
               isOutline={!navbarBgIsBlueGradient}
               whiteBg={navbarBgIsBlueGradient}
               textColor={navbarBgIsBlueGradient && "black"}
@@ -239,14 +238,13 @@ const Header = () => {
             />
           </a>
           <a
-            href="https://app.getbani.com/signup"
+            href="https://calendly.com/bani-inc/sales/"
             target="_blank"
             rel="noreferrer"
           >
             <Button
               blackBg
               text="Contact Sales"
-              onClick={() => {}}
               textClass="text-base"
             />
           </a>
@@ -339,7 +337,7 @@ const Header = () => {
           <div className="flex flex-col justify-start items-center gap-8 w-full">
             <a
               className="w-full"
-              href="https://app.getbani.com"
+              href="https://app.bani.africa"
               target="_blank"
               rel="noreferrer"
             >
@@ -354,7 +352,7 @@ const Header = () => {
             </a>
             <a
               className="w-full"
-              href="https://app.getbani.com/signup"
+              href="https://calendly.com/bani-inc/sales/"
               target="_blank"
               rel="noreferrer"
             >
