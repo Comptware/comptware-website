@@ -13,12 +13,11 @@ const SectionSix = () => {
         <div className="blue-fade-gradient absolute bottom-[-280px] left-[-280px] min-h-[450px] min-w-[500px] rounded-full" />
         <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4 ">
           <p className="text-black-light basier-medium text-[26px] md:text-[32px] pb-4 leading-normal text-left ">
-            Crafted for developers by developers
+            Engineered for developers by developers
           </p>
           <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 ">
-          With our developer-friendly APIs and a few lines 
-           
-            of code you can implement Bani in the afternoon.
+            With our developer-friendly APIs and a few lines of code you can
+            implement Bani in the afternoon.
           </p>
 
           <a
@@ -49,9 +48,11 @@ const SectionSix = () => {
         </div>
 
         <div className="hidden md:flex flex-col justify-center items-center w-fit pt-1 md:pt-0  mr-[-50px]">
-         
-          <Lottie className="scale-125 mt-[-100px]" animationData={devAnimation} loop={true} />
-
+          <Lottie
+            className="scale-125 mt-[-100px]"
+            animationData={devAnimation}
+            loop={true}
+          />
         </div>
       </div>
     </div>
