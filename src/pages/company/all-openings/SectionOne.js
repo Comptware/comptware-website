@@ -4,24 +4,17 @@ import Opening from "./Opening";
 const openings = [
   {
     title: "Product Designer",
-    body: "We are looking for a full-time product designer to join our team",
-    location: "Lagos, Nigeria",
+    body: "We are looking for a full-time product designer to join our team.",
+    location: "Remote",
     type: "Full-time",
-    href: "https://wordpress.org/plugins/bani-payments-for-woocommerce/",
+    href: "https://bani.zohorecruit.com/jobs/Careers/714028000000453003/Product-Designer?source=CareerSite",
   },
   {
-    title: "Frontend Engineer",
-    body: "We are looking for a full-time product designer to join our team",
-    location: "Lagos, Nigeria",
+    title: "Accountant",
+    body: "We are looking for a full-time accountant to join our team.",
+    location: "Remote",
     type: "Full-time",
-    href: "https://wordpress.org/plugins/bani-payments-for-woocommerce/",
-  },
-  {
-    title: "Backend Specialist",
-    body: "We are looking for a full-time product designer to join our team",
-    location: "Accra, Ghana",
-    type: "Full-time",
-    href: "https://wordpress.org/plugins/bani-payments-for-woocommerce/",
+    href: "https://bani.zohorecruit.com/jobs/Careers/714028000000453093/Accountant?source=CareerSite",
   },
 ];
 
