@@ -7,14 +7,21 @@ const openings = [
     body: "We are looking for a full-time product designer to join our team.",
     location: "Remote",
     type: "Full-time",
-    href: "https://bani.zohorecruit.com/jobs/Careers/714028000000453003/Product-Designer?source=CareerSite",
+    href: "https://bani.zohorecruit.com/jobs/Careers/714028000000453003/Product-Designer?source=BaniAfrica",
   },
   {
     title: "Accountant",
     body: "We are looking for a full-time accountant to join our team.",
     location: "Remote",
     type: "Full-time",
-    href: "https://bani.zohorecruit.com/jobs/Careers/714028000000453093/Accountant?source=CareerSite",
+    href: "https://bani.zohorecruit.com/jobs/Careers/714028000000453093/Accountant?source=BaniAfrica",
+  },
+  {
+    title: "Compliance Officer",
+    body: "We are looking for a full-time compliance officer to join our team.",
+    location: "Remote",
+    type: "Full-time",
+    href: "https://bani.zohorecruit.com/jobs/Careers/714028000000453111/Compliance-Officer?source=BaniAfrica",
   },
 ];
 
