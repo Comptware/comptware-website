@@ -4,29 +4,29 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 import Foodcourt from "assets/icons/Clients/foodcourt.svg";
 import Hinge from "assets/icons/Clients/hinge.svg";
-import Kobo from "assets/icons/Clients/kobo.svg";
-import Pivo from "assets/icons/Clients/pivo.svg";
+import FFStores from "assets/icons/Clients/ff-stores.svg";
+import Mood from "assets/icons/Clients/mood.svg";
 
 const clients = [
   {
     title: "Foodcourt",
-    body: "Bani makes ordering food more convenient and efficient for customers, and it streamlines the process for restaurants and delivery drivers. With our payment integration, customers can easily and securely pay for their food using their credit or debit card, or even with popular e-wallets",
+    body: "Bani makes payment collection more seamless and instant for Foodcourt. Customers can easily order and pay for food without having to worry about delayed delivery due to failed payments.",
     icon: <Foodcourt />,
   },
   {
-    title: "Pivo",
-    body: "Bani makes ordering food more convenient and efficient for customers, and it streamlines the process for restaurants and delivery drivers. With our payment integration, customers can easily and securely pay for their food using their credit or debit card, or even with popular e-wallets",
-    icon: <Pivo />,
+    title: "Mood Lagos",
+    body: "Bani allows Mood Lagos to deliver efficient and timely service to customers seeking premium relaxation and quality food. With an easy and instant payment process, customers' requests are delivered swiftly without delay.",
+    icon: <Mood />,
   },
   {
     title: "Hinge",
-    body: "Bani makes ordering food more convenient and efficient for customers, and it streamlines the process for restaurants and delivery drivers. With our payment integration, customers can easily and securely pay for their food using their credit or debit card, or even with popular e-wallets",
+    body: "Bani supports Hinge with a seamless payment collection process that helps the company easily provide IoT solutions to businesses. Payment is smooth and swift for clients seeking Hinge's IoT solutions to enjoy automated, stress-free and more efficient utility payments.",
     icon: <Hinge />,
   },
   {
-    title: "Kobo",
-    body: "Bani makes ordering food more convenient and efficient for customers, and it streamlines the process for restaurants and delivery drivers. With our payment integration, customers can easily and securely pay for their food using their credit or debit card, or even with popular e-wallets",
-    icon: <Kobo />,
+    title: "Fastforward Stores",
+    body: "Bani enables Fastforward Stores to render quality and timely service to fashion lovers shopping for their favourite brands. Payment is easy and swift, allowing customers to spend less time shopping.",
+    icon: <FFStores />,
   },
 ];
 
@@ -47,10 +47,13 @@ const SectionThree = () => {
       <div className="flex flex-col items-center justify-start w-full py-3 px-5 md:gap-y-20">
         <div className="flex justify-between items-center py-3 md:w-[80%] overflow-x-scroll scale-[0.5] sm:scale-[0.6] md:scale-[0.7] lg:scale-[1]">
           {clients.map(({ icon, title }, i) => {
+            const inactiveOpacity = i === 1 ? 0.7 : 0.3;
             return (
               <button
                 key={title}
-                style={{ opacity: activeSlideIndex === i ? 1 : 0.3 }}
+                style={{
+                  opacity: activeSlideIndex === i ? 1 : inactiveOpacity,
+                }}
                 className="scale-[0.8] transition-all duration-[0.5s] ease-in-out"
                 onClick={() => handleSlide(i)}
               >
@@ -69,7 +72,6 @@ const SectionThree = () => {
             className="!pb-4"
             autoplay={false}
             modules={[Autoplay, Pagination, Navigation]}
-           
           >
             {clients.map(({ body, title }) => (
               <SwiperSlide key={title}>
@@ -79,8 +81,6 @@ const SectionThree = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
-      
         </div>
       </div>
     </div>
