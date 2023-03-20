@@ -148,9 +148,9 @@ const Footer = () => {
       <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade py-4 md:pt-10 pb-12">
         <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base md:px-6 opacity-[0.9] leading-loose ">
           Copyright &copy; 2023 Bani Payments. All rights reserved. <br />
-          The use of all partnering companies' intellectual property is subject
-          to copyright law and requires the permission of the owner of the
-          property. Any unauthorized use of such intellectual property is
+          The use of all partnering companies&apos; intellectual property is
+          subject to copyright law and requires the permission of the owner of
+          the property. Any unauthorized use of such intellectual property is
           strictly prohibited and may lead to legal consequences.
         </p>
       </div>
