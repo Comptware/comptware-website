@@ -45,7 +45,7 @@ const SectionThree = () => {
       <div className="blue-black-fade-gradient absolute bottom-[-280px] right-[-280px] min-h-[450px] min-w-[500px] rounded-full" />
 
       <div className="flex flex-col items-center justify-start w-full py-3 px-5 md:gap-y-20">
-        <div className="flex justify-between items-center py-3 md:w-[80%] overflow-x-scroll scale-[0.5] sm:scale-[0.6] md:scale-[0.7] lg:scale-[1]">
+        <div className="flex justify-between items-center py-3 md:w-[80%] overflow-x-scroll scale-[0.45] sm:scale-[0.6] md:scale-[0.7] lg:scale-[1]">
           {clients.map(({ icon, title }, i) => {
             const inactiveOpacity = i === 1 ? 0.7 : 0.3;
             return (
