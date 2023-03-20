@@ -27,7 +27,10 @@ const Footer = () => {
         { title: "What drives us", link: "/company" },
         { title: "Work with us", link: "/company/all-openings" },
         width < 640 && { title: "Newsroom", link: "/what-is-latest" },
-        width < 640 && { title: "Say hello", url: "https://calendly.com/bani-inc/sales/" },
+        width < 640 && {
+          title: "Say hello",
+          url: "https://calendly.com/bani-inc/sales/",
+        },
       ],
     },
 
@@ -78,10 +81,14 @@ const Footer = () => {
               <LogoWhite className="scale-[0.95]" />
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-between items-start w-full transition-all duration-150 ease-in-out text-white bani-base">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-between items-start w-full transition-all duration-150 ease-in-out text-white bani-base">
             {footerLinks.map(({ title, links, socials }, i) => (
               <div
-                className={`justify-start flex-grow items-start gap-y-12 ${ title === "." ? "hidden sm:flex flex-col" : "flex flex-col"}`}
+                className={`${
+                  socials && "col-span-2 sm:col-span-1"
+                } justify-start flex-grow items-start gap-y-12 ${
+                  title === "." ? "hidden sm:flex flex-col" : "flex flex-col"
+                }`}
                 key={title + i}
               >
                 <p
@@ -94,7 +101,10 @@ const Footer = () => {
                 {links && (
                   <ul className=" flex flex-col justify-start items-start gap-y-5 text-grey-white bani-base-alt font-light">
                     {links.map((lnk, i) => (
-                      <li className="whitespace-nowrap hover:text-blue-textHover transition-all duration-[500ms] ease-in-out" key={lnk.title + i}>
+                      <li
+                        className="whitespace-nowrap hover:text-blue-textHover transition-all duration-[500ms] ease-in-out"
+                        key={lnk.title + i}
+                      >
                         {lnk.url ? (
                           <a
                             href={lnk.url}
@@ -136,13 +146,12 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade py-4 md:pt-10 pb-12">
-        <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base px-6 opacity-[0.9] leading-loose ">
+        <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base md:px-6 opacity-[0.9] leading-loose ">
           Copyright &copy; 2023 Bani Payments. All rights reserved. <br />
-          The content and information on this website is protected by copyright
-          laws. No part of this website may be reproduced, distributed, or
-          transmitted in any form or by any means, including photocopying,
-          recording, or other electronic or mechanical methods, without the
-          prior written permission of Bani.
+          The use of all partnering companies' intellectual property is subject
+          to copyright law and requires the permission of the owner of the
+          property. Any unauthorized use of such intellectual property is
+          strictly prohibited and may lead to legal consequences.
         </p>
       </div>
       <div className="blue-black-fade-gradient absolute bottom-[-50px] right-[-50px] min-h-[450px] min-w-[300px] rounded-full" />

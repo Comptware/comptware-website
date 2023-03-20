@@ -20,6 +20,7 @@ const Button = ({
   textClass = "",
   height,
   className,
+  buttonClass,
   href = undefined,
 }) => {
   const btnClass = `
@@ -60,7 +61,7 @@ const Button = ({
           <Loader />
         </div>
       ) : (
-        <div className={`${btnClass} space-x-2`}>
+        <div className={`${btnClass} space-x-2 ${buttonClass}`}>
           {icon && <div>{icon}</div>}
           <span className={`${textClass}`}>{text}</span>
           {iconRight && <div className={`${textClass}`}>{iconRight}</div>}
@@ -89,6 +90,7 @@ Button.propTypes = {
   height: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,
+  buttonClass: PropTypes.string,
 };
 
 export default Button;
