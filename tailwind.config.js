@@ -80,9 +80,9 @@ module.exports = {
           backdrop: "rgba(255, 255, 255, 0.02)",
           dull: "rgba(84, 68, 242, 0.1)",
           clear: "rgba(84, 68, 242, 0.11)",
-          border:"rgba(84, 68, 242, 0.21)",
-          textHover:"#9990FA",
-          bright:"#1A8DFF"
+          border: "rgba(84, 68, 242, 0.21)",
+          textHover: "#9990FA",
+          bright: "#1A8DFF",
         },
         grey: {
           DEFAULT: "#C1C1C1",
@@ -105,7 +105,7 @@ module.exports = {
           greyLight: "#d0cfd128",
           dull: "#F8F8F8",
           white: "rgba(255, 255, 255, 0.8)",
-          15:"rgba(255, 255, 255, 0.15)"
+          15: "rgba(255, 255, 255, 0.15)",
         },
         red: {
           DEFAULT: "#F3564D",
@@ -174,19 +174,30 @@ module.exports = {
           "url('../assets/icons/PaymentTypes/virtual-accounts.svg')",
         crypto: "url('../assets/icons/PaymentTypes/crypto.svg')",
         "e-wallets": "url('../assets/icons/PaymentTypes/e-wallets.svg')",
-        "mobile-money": "url('../assets/icons/PaymentTypes/mobile-money.svg')",
-        "section-one-usecase": "url('../assets/icons/Usecase/retail-stores/section-one.svg')",
-        "invoicing": "url('../assets/icons/Usecase/retail-stores/invoicing.svg')",
-        "multiple-payment": "url('../assets/icons/Usecase/retail-stores/multiple-payment.svg')",
-        "branch-setup": "url('../assets/icons/Usecase/retail-stores/branch-setup.svg')",
-        "instant-confirmation": "url('../assets/icons/Usecase/retail-stores/instant-confirmation.svg')",
-        "integrate": "url('../assets/icons/Usecase/fintechs-and-neobanks/integrate.svg')",
-        "phone-in-hand": "url('../assets/icons/Usecase/fintechs-and-neobanks/phone-in-hand.svg')",
-        "flags": "url('../assets/icons/Usecase/fintechs-and-neobanks/flags.svg')",
-        "fast-payment": "url('../assets/icons/Usecase/travel-agencies-and-airlines/fast-payment.svg')",
-        "dynamic-pricing": "url('../assets/icons/Usecase/travel-agencies-and-airlines/dynamic-pricing.svg')",
-        "settlement": "url('../assets/icons/Usecase/crypto-and-digital-asset-platforms/settlement.svg')",
-        "payment-link": "url('../assets/icons/Usecase/digital-creators/payment-link.svg')",
+        "mobile-money-png":
+          "url('../assets/icons/PaymentTypes/mobile-money.png')",
+        "section-one-usecase":
+          "url('../assets/icons/Usecase/retail-stores/section-one.svg')",
+        invoicing: "url('../assets/icons/Usecase/retail-stores/invoicing.svg')",
+        "multiple-payment":
+          "url('../assets/icons/Usecase/retail-stores/multiple-payment.svg')",
+        "branch-setup":
+          "url('../assets/icons/Usecase/retail-stores/branch-setup.svg')",
+        "instant-confirmation":
+          "url('../assets/icons/Usecase/retail-stores/instant-confirmation.svg')",
+        integrate:
+          "url('../assets/icons/Usecase/fintechs-and-neobanks/integrate.svg')",
+        "phone-in-hand":
+          "url('../assets/icons/Usecase/fintechs-and-neobanks/phone-in-hand.svg')",
+        flags: "url('../assets/icons/Usecase/fintechs-and-neobanks/flags.svg')",
+        "fast-payment":
+          "url('../assets/icons/Usecase/travel-agencies-and-airlines/fast-payment.svg')",
+        "dynamic-pricing":
+          "url('../assets/icons/Usecase/travel-agencies-and-airlines/dynamic-pricing.svg')",
+        settlement:
+          "url('../assets/icons/Usecase/crypto-and-digital-asset-platforms/settlement.svg')",
+        "payment-link":
+          "url('../assets/icons/Usecase/digital-creators/payment-link.svg')",
         "low-cost": "url('../assets/icons/Usecase/low-cost.svg')",
       },
       keyframes: {

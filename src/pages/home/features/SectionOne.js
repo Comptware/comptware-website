@@ -24,9 +24,11 @@ const paymentTypes = [
     title: "Mobile Money",
     body: "Experience payment convenience and accessibility across Africa with our mobile money service.",
     img: (
-      <div className={`${paymentTypesClsx} bg-mobile-money h-[400px] scale-125 mt-5`} />
+      <div
+        className={`${paymentTypesClsx} bg-mobile-money-png h-[400px] scale-125 mt-5`}
+      />
     ),
-    bgImage: "bg-mobile-money",
+    bgImage: "bg-mobile-money-png",
     link: "/payments/mobile-money",
   },
   {
@@ -40,7 +42,9 @@ const paymentTypes = [
     title: "Ewallets",
     body: "Experience the convenience of paying seamlessly on the go with your e-wallet apps.",
     img: (
-      <div className={`${paymentTypesClsx} bg-e-wallets scale-125 h-[400px] mt-14`} />
+      <div
+        className={`${paymentTypesClsx} bg-e-wallets scale-125 h-[400px] mt-14`}
+      />
     ),
     bgImage: "bg-e-wallets",
     link: "/payments/ewallets",
@@ -128,7 +132,10 @@ const SectionOne = () => {
               smooth and instant payment experiences
             </span>
             . Collecting and reconciling online and in-store payments is much
-            more  <span className="text-black-light basier-semibold">seamless</span> and <span className="text-black-light basier-semibold">faster</span>.
+            more{" "}
+            <span className="text-black-light basier-semibold">seamless</span>{" "}
+            and <span className="text-black-light basier-semibold">faster</span>
+            .
           </p>
           <hr className="w-full divider-fade" />
         </div>
