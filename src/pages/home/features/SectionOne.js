@@ -14,7 +14,7 @@ const paymentTypes = [
     body: "Experience greater payment efficiency, control, and flexibility with our virtual accounts.",
     img: (
       <div
-        className={`${paymentTypesClsx} bg-virtual-accounts h-[400px] mt-5`}
+        className={`${paymentTypesClsx} bg-virtual-accounts h-[400px] mt-10`}
       />
     ),
     bgImage: "bg-virtual-accounts",
@@ -25,7 +25,7 @@ const paymentTypes = [
     body: "Experience payment convenience and accessibility across Africa with our mobile money service.",
     img: (
       <div
-        className={`${paymentTypesClsx} bg-mobile-money-png h-[400px] scale-125 mt-5`}
+        className={`${paymentTypesClsx} bg-mobile-money-png h-[400px] scale-125 mt-14`}
       />
     ),
     bgImage: "bg-mobile-money-png",
