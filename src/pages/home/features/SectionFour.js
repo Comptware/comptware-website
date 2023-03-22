@@ -28,7 +28,7 @@ const clients = [
     icon: <div className={`${logoClass} bg-levis`} />,
   },
   {
-    icon: <div className={`${logoClass} bg-charles`} />,
+    icon: <div className={`${logoClass} bg-charles `} />,
   },
   {
     icon: <div className={`${logoClass} bg-adidas`} />,
@@ -43,7 +43,7 @@ const clients = [
 
 const SectionFour = () => {
   return (
-    <div className="flex flex-col justify-start items-center w-full h-fit gap-y-10 py-14 md:py-24 px-5 md:px-[5%] lg:px-[8%]">
+    <div className="flex flex-col justify-start items-center w-full h-fit gap-y-10 pt-14 pb-4 md:pt-24 md:pb-1 px-5 md:px-[5%] lg:px-[8%]">
       <p className="text-grey-text basier-medium leading-none bani-base text-center">
         TRUSTED BY THESE AMAZING BUSINESSES
       </p>
