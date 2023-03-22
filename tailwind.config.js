@@ -106,6 +106,7 @@ module.exports = {
           dull: "#F8F8F8",
           white: "rgba(255, 255, 255, 0.8)",
           15: "rgba(255, 255, 255, 0.15)",
+          144: "rgb(142, 142, 144)",
         },
         red: {
           DEFAULT: "#F3564D",
@@ -199,6 +200,19 @@ module.exports = {
         "payment-link":
           "url('../assets/icons/Usecase/digital-creators/payment-link.svg')",
         "low-cost": "url('../assets/icons/Usecase/low-cost.svg')",
+
+        ffstores: "url('../assets/icons/Trustees/ffstores.svg')",
+        mood: "url('../assets/icons/Trustees/mood.svg')",
+        clarks: "url('../assets/icons/Trustees/clarks.svg')",
+        swatch: "url('../assets/icons/Trustees/swatch.svg')",
+        aldo: "url('../assets/icons/Trustees/aldo.svg')",
+        converse: "url('../assets/icons/Trustees/converse.svg')",
+        foodcourt: "url('../assets/icons/Trustees/foodcourt.svg')",
+        levis: "url('../assets/icons/Trustees/levis.svg')",
+        charles: "url('../assets/icons/Trustees/charles.svg')",
+        adidas: "url('../assets/icons/Trustees/adidas.svg')",
+        dune: "url('../assets/icons/Trustees/dune.svg')",
+        tommyhf: "url('../assets/icons/Trustees/tommyhf.svg')",
       },
       keyframes: {
         slide: {

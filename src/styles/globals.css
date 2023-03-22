@@ -746,3 +746,8 @@ div::-webkit-scrollbar-thumb {
   background: radial-gradient(#D9D9D9 40%, rgba(0, 0, 0, 0) 80%);
   height: 2px;
 }
+
+.no-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar-thumb {
+  display: none;
+}

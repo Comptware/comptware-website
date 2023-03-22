@@ -1,4 +1,10 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -12,6 +18,7 @@ import Fintech from "assets/icons/Works/fintech.svg";
 
 import ArrowRight from "assets/icons/Arrow/arrow-right-black.svg";
 import Card from "components/general/cards";
+import SliderPagination from "components/general/siderPagination";
 
 const businessTypes = [
   {
@@ -32,7 +39,7 @@ const businessTypes = [
     icon: <Fintech />,
     href: "/usecase/fintechs-and-neobanks",
   },
- 
+
   {
     title: "Travel agencies and airlines",
     body: "Provide real-time payment updates and offer loyalty programs to create memorable customer experiences.",
@@ -43,7 +50,7 @@ const businessTypes = [
     title: "Crypto and Digital Assets platforms",
     body: "Provide faster transactions with globally accessible and decentralised systems.",
     icon: <Crypto />,
-    href:"/usecase/crypto-and-digital-asset-platforms",
+    href: "/usecase/crypto-and-digital-asset-platforms",
   },
   {
     title: "E-Commerce",
@@ -58,10 +65,47 @@ const businessTypes = [
     href: "/usecase/digital-creators",
   },
 ];
-
+const delay = 2500;
 const SectionTwo = () => {
   const sliderRef = useRef(null);
+  const scrollXContainerRef = useRef(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [width, setWidth] = useState(0);
+
+  const timeoutRef = useRef(null);
+  const cardsRef = useRef([]);
+  const isMobile = useMemo(() => width < 640, [width]);
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  React.useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setActiveSlideIndex((prevIndex) =>
+          prevIndex === businessTypes.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [activeSlideIndex]);
+
+  useEffect(() => {
+    setWidth(window?.innerWidth);
+    function handleResize() {
+      setWidth(window?.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slidePrev();
@@ -72,6 +116,35 @@ const SectionTwo = () => {
     sliderRef.current.swiper.slideNext();
   }, []);
 
+  const handleScroll = (direction) => {
+    if (direction === "left") {
+      isMobile
+        ? (scrollXContainerRef.current.scrollLeft -= width)
+        : handlePrev();
+    } else {
+      isMobile
+        ? (scrollXContainerRef.current.scrollLeft += width)
+        : handleNext();
+    }
+  };
+
+  useEffect(() => {
+    handleActiveSlideUpdate();
+  }, [scrollXContainerRef?.current?.scrollLeft]);
+
+  useEffect(() => {
+    scrollXContainerRef.current.scrollLeft = width * activeSlideIndex;
+  }, [activeSlideIndex]);
+
+  const handleActiveSlideUpdate = () => {
+    for (let i = 0; i < cardsRef?.current?.length; i++) {
+      const x = cardsRef?.current[i]?.getBoundingClientRect()?.x;
+      if (x >= 0 && x < 30) {
+        setActiveSlideIndex(i);
+      }
+    }
+  };
+
   return (
     <div className="flex flex-col justify-start items-start w-full h-fit gap-y-10 md:gap-y-14 py-14 md:py-24 bg-grey-dull mt-8">
       <div className="flex flex-col md:flex-row justify-start items-start gap-8 md:gap-10 md:items-center w-full px-5 md:px-[5%] lg:px-[8%]">
@@ -79,25 +152,44 @@ const SectionTwo = () => {
           Who we work with
         </p>
 
-
         <div className="flex justify-start items-center gap-x-4 w-full ml-[-10px] md:ml-0">
           <button
-            onClick={handlePrev}
+            onClick={() => handleScroll("left")}
             className={`scale-[0.75]`}
-            style={{ opacity: activeSlideIndex <= 1 ? 0.15 : 1 }}
+            style={{
+              opacity: activeSlideIndex <= 0 ? 0.15 : 1,
+            }}
           >
             <ArrowRight className="rotate-[180deg]" />
           </button>
 
-          <button className="works-slide-right scale-[0.75]" onClick={handleNext}>
+          <button
+            className="works-slide-right scale-[0.75]"
+            onClick={() => handleScroll("right")}
+          >
             <ArrowRight />
           </button>
-
-          <div className="clients-swiper-pagination flex md:hidden justify-end items-center ml-auto pl-3 gap-[-3px]" />
+          <SliderPagination
+            activePage={activeSlideIndex}
+            setActivePage={(i) => setActiveSlideIndex(i)}
+            pages={businessTypes}
+            className="ml-auto sm:hidden"
+          />
         </div>
       </div>
 
-      <div className="flex w-full py-3 works-swiper px-5 md:px-0">
+      <div
+        className="flex sm:hidden w-full gap-3 py-3 px-3 md:px-0 no-scrollbar overflow-x-auto scroll-smooth snap-mandatory snap-x"
+        ref={scrollXContainerRef}
+      >
+        {businessTypes.map((item, i) => (
+          <div key={item.title} ref={(el) => (cardsRef.current[i] = el)}>
+            <Card details={item} type="works" />
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden sm:flex w-full py-3 works-swiper px-5 md:px-0">
         <Swiper
           ref={sliderRef}
           spaceBetween={20}
@@ -135,7 +227,6 @@ const SectionTwo = () => {
               <Card details={item} type="works" />
             </SwiperSlide>
           ))}
-         
         </Swiper>
       </div>
     </div>

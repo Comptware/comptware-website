@@ -100,10 +100,10 @@ const Footer = () => {
                 </p>
                 {links && (
                   <ul className=" flex flex-col justify-start items-start gap-y-5 text-grey-white bani-base-alt font-light">
-                    {links.map((lnk, i) => (
+                    {links.map((lnk, ind) => (
                       <li
                         className="whitespace-nowrap hover:text-blue-textHover transition-all duration-[500ms] ease-in-out"
-                        key={lnk.title + i}
+                        key={lnk.title + ind}
                       >
                         {lnk.url ? (
                           <a

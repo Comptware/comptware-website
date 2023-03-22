@@ -8,13 +8,11 @@ const Card = ({ details, type }) => {
 
   const containerClass =
     type === "works"
-      ? "justify-between min-w-[220px] max-w-[360px] w-full h-[330px] ml-3 md:ml-4 lg:ml-5 pl-5 sm:pl-4 pt-6 pb-[24px] sm:pr-6 sm:pt-2 sm:pb-7 shadow-card"
+      ? "justify-start min-w-[calc(100vw-30px)] max-w-[calc(100vw-30px)] sm:min-w-[360px] sm:max-w-[360px] w-full h-[320px] sm:ml-3 md:ml-4 lg:ml-5 pl-5 sm:pl-4 pt-6 pb-[24px] sm:pr-6 sm:pt-2 sm:pb-7 shadow-card snap-center"
       : "justify-start pl-7 pr-9 pt-8 pb-12 shadow-card-2 h-full";
 
   const titleClass =
-    type === "works"
-      ? "text-current bani-lg"
-      : "text-current bani-title";
+    type === "works" ? "text-current bani-lg" : "text-current bani-title";
 
   const bodyClass =
     type === "works"
@@ -22,25 +20,27 @@ const Card = ({ details, type }) => {
       : "bani-title-alt md:w-[95%]";
   return (
     <div
-      className={`${containerClass} hover:text-blue text-black transition-all duration-[500ms] ease-in-out  flex flex-col items-start text-left w-full space-y-4 rounded-[30px] bg-white relative overflow-hidden `}
+      className={`${containerClass} hover:text-blue text-black transition-all duration-[500ms] ease-in-out  flex flex-col items-start text-left w-full rounded-[30px] bg-white relative overflow-hidden `}
     >
       {type === "works" && (
         <div className="blue-fade-gradient absolute top-[-100px] right-[-100px] min-h-[200px] min-w-[200px] rounded-full" />
       )}
+      <div className="flex flex-col justify-start items-start gap-6 sm:gap-5 mb-4 sm:mb-3">
+        <div className="scale-[0.9] sm:scale-[0.8]">{icon}</div>
 
-      <div className="scale-[0.9] sm:scale-[0.8] pb-4 sm:pb-0">{icon}</div>
-
-      <h2 className={`basier-medium ${titleClass}`}>{title}</h2>
+        <h2 className={`basier-medium ${titleClass}`}>{title}</h2>
+      </div>
 
       <p className={`!text-grey-text font-light leading-loose ${bodyClass}`}>
         {body}
       </p>
 
       {href && (
-        <Link href={href} className="flex justify-start items-center space-x-2 text-black-light hover:text-blue">
-          <span className="basier-medium bani-base-alt ">
-            Learn More
-          </span>
+        <Link
+          href={href}
+          className="flex justify-start items-center gap-x-2 text-black-light hover:text-blue mt-auto pt-2"
+        >
+          <span className="basier-medium bani-base-alt ">Learn More</span>
           <ArrowRight />
         </Link>
       )}

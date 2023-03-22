@@ -1,20 +1,59 @@
 import React from "react";
 
+const logoClass =
+  "scale-[0.7] w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center";
+const clients = [
+  {
+    icon: <div className={`${logoClass} bg-ffstores`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-mood`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-clarks`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-swatch`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-aldo`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-converse`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-foodcourt`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-levis`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-charles`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-adidas`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-dune`} />,
+  },
+  {
+    icon: <div className={`${logoClass} bg-tommyhf`} />,
+  },
+];
+
 const SectionFour = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center w-full h-fit space-y-8 md:space-x-8 md:py-4">
-      <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left w-full h-fit ">
-        <p className="text-blue font-normal leading-none bani-base mb-4">
-          Get access in less than 10 minutes
-        </p>
-        <h1 className="text-black leading-normal bani-title mb-4">E-Wallets</h1>
-        <p className="text-grey-text font-light bani-lg mb-8">
-          Instantly accept or settle payments from e-wallets and fintech apps
-        </p>
-      </div>
+    <div className="flex flex-col justify-start items-center w-full h-fit gap-y-10 py-14 md:py-24 px-5 md:px-[5%] lg:px-[8%]">
+      <p className="text-grey-text basier-medium leading-none bani-base text-center">
+        TRUSTED BY THESE AMAZING BUSINESSES
+      </p>
 
-      <div className="flex flex-col justify-center items-center md:items-start w-full">
-        <div className="width-full h-fit"></div>
+      <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8 justify-center items-center w-[80%]">
+        {clients.map(({ icon }, i) => (
+          <span className="w-full h-[70px]" key={i}>
+            {icon}
+          </span>
+        ))}
       </div>
     </div>
   );
