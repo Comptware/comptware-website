@@ -24,6 +24,7 @@ const SectionSix = () => {
               href="https://docs.getbani.com/bani-pop/"
               target="_blank"
               rel="noreferrer"
+              className="z-20"
             >
               <Button
                 text="Read our API documentation"
