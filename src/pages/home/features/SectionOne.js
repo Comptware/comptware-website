@@ -121,7 +121,8 @@ const SectionOne = () => {
   const handleActiveSlideUpdate = () => {
     for (let i = 0; i < cardsRef?.current?.length; i++) {
       const x = cardsRef?.current[i]?.getBoundingClientRect()?.x;
-      if (x >= 0 && x < 30) {
+
+      if (x >= 0 && x < 35) {
         setActiveSlideIndex(i);
       }
     }
