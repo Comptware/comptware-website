@@ -71,40 +71,9 @@ const SectionTwo = () => {
   const scrollXContainerRef = useRef(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [width, setWidth] = useState(0);
-
   const timeoutRef = useRef(null);
   const cardsRef = useRef([]);
   const isMobile = useMemo(() => width < 640, [width]);
-  function resetTimeout() {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  }
-
-  React.useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setActiveSlideIndex((prevIndex) =>
-          prevIndex === businessTypes.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-
-    return () => {
-      resetTimeout();
-    };
-  }, [activeSlideIndex]);
-
-  useEffect(() => {
-    setWidth(window?.innerWidth);
-    function handleResize() {
-      setWidth(window?.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -128,13 +97,42 @@ const SectionTwo = () => {
     }
   };
 
-  useEffect(() => {
-    handleActiveSlideUpdate();
-  }, [scrollXContainerRef?.current?.scrollLeft]);
+  const handleCustomScroll = (i) => {
+    scrollXContainerRef.current.scrollLeft = width * i;
+  };
+
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  React.useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        handleCustomScroll(
+          activeSlideIndex === businessTypes.length - 1
+            ? 0
+            : activeSlideIndex + 1
+        ),
+      delay
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [cardsRef?.current[0]?.getBoundingClientRect()?.x]);
 
   useEffect(() => {
-    scrollXContainerRef.current.scrollLeft = width * activeSlideIndex;
-  }, [activeSlideIndex]);
+    setWidth(window?.innerWidth);
+    function handleResize() {
+      setWidth(window?.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleActiveSlideUpdate = () => {
     for (let i = 0; i < cardsRef?.current?.length; i++) {
@@ -171,7 +169,10 @@ const SectionTwo = () => {
           </button>
           <SliderPagination
             activePage={activeSlideIndex}
-            setActivePage={(i) => setActiveSlideIndex(i)}
+            setActivePage={(i) => {
+              setActiveSlideIndex(i);
+              handleCustomScroll(i);
+            }}
             pages={businessTypes}
             className="ml-auto sm:hidden"
           />
@@ -181,6 +182,7 @@ const SectionTwo = () => {
       <div
         className="flex sm:hidden w-full gap-3 py-3 px-3 md:px-0 no-scrollbar overflow-x-auto scroll-smooth snap-mandatory snap-x"
         ref={scrollXContainerRef}
+        onScroll={(e) => handleActiveSlideUpdate()}
       >
         {businessTypes.map((item, i) => (
           <div key={item.title} ref={(el) => (cardsRef.current[i] = el)}>
@@ -212,7 +214,6 @@ const SectionTwo = () => {
               slidesPerView: 3.7,
             },
           }}
-          onSlideChange={(e) => setActiveSlideIndex(e.activeIndex)}
           className="!pb-4"
           autoplay={{
             delay: 2000,
@@ -221,6 +222,7 @@ const SectionTwo = () => {
           speed={4000}
           modules={[Autoplay, Pagination, Navigation]}
           pagination={{ clickable: true, el: ".clients-swiper-pagination" }}
+          onSlideChange={(e) => !isMobile && setActiveSlideIndex(e.activeIndex)}
         >
           {businessTypes.map((item) => (
             <SwiperSlide key={item.title}>

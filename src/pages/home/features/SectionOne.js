@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import Link from "next/link";
 
 import ArrowRight from "assets/icons/Arrow/arrow-right-black.svg";
 import { PAYMENT_TYPES_STICKY_MODES } from "utils/constants";
-import Link from "next/link";
+import SliderPagination from "components/general/siderPagination";
 
 const paymentTypesClsx =
   "w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-top transition-all duration-[500ms] ease-in";
@@ -25,7 +24,7 @@ const paymentTypes = [
     body: "Experience payment convenience and accessibility across Africa with our mobile money service.",
     img: (
       <div
-        className={`${paymentTypesClsx} bg-mobile-money-png h-[400px] scale-125 mt-14`}
+        className={`${paymentTypesClsx} bg-mobile-money-png h-[400px] scale-[1.05] mt-14`}
       />
     ),
     bgImage: "bg-mobile-money-png",
@@ -51,10 +50,19 @@ const paymentTypes = [
   },
 ];
 const { PRE_VIEW, IN_VIEW, POST_VIEW } = PAYMENT_TYPES_STICKY_MODES;
+const delay = 2000;
 const SectionOne = () => {
   const sectionRef = useRef(null);
   const sliderRef = useRef(null);
+  const scrollXContainerRef = useRef(null);
+  const timeoutRef = useRef(null);
+  const cardsRef = useRef([]);
+
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [width, setWidth] = useState(0);
+  const [activePaymentType, setActivePaymentType] = useState(paymentTypes[0]);
+  const [stickyMode, setStickyMode] = useState(PRE_VIEW);
+
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slidePrev();
@@ -65,8 +73,59 @@ const SectionOne = () => {
     sliderRef.current.swiper.slideNext();
   }, []);
 
-  const [activePaymentType, setActivePaymentType] = useState(paymentTypes[0]);
-  const [stickyMode, setStickyMode] = useState(PRE_VIEW);
+  const handleScroll = (direction) => {
+    if (direction === "left") {
+      scrollXContainerRef.current.scrollLeft -= width;
+    } else {
+      scrollXContainerRef.current.scrollLeft += width;
+    }
+  };
+
+  const handleCustomScroll = (i) => {
+    scrollXContainerRef.current.scrollLeft = width * i;
+  };
+
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  React.useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        handleCustomScroll(
+          activeSlideIndex === paymentTypes.length - 1
+            ? 0
+            : activeSlideIndex + 1
+        ),
+      delay
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [cardsRef?.current[0]?.getBoundingClientRect()?.x]);
+
+  useEffect(() => {
+    setWidth(window?.innerWidth);
+    function handleResize() {
+      setWidth(window?.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleActiveSlideUpdate = () => {
+    for (let i = 0; i < cardsRef?.current?.length; i++) {
+      const x = cardsRef?.current[i]?.getBoundingClientRect()?.x;
+      if (x >= 0 && x < 30) {
+        setActiveSlideIndex(i);
+      }
+    }
+  };
 
   const handleStickyAnimationUpdate = () => {
     const paymentTypesLength = paymentTypes.length;
@@ -215,49 +274,49 @@ const SectionOne = () => {
 
             <div className="flex sm:hidden justify-start items-center gap-x-4 w-full ml-[-10px] md:ml-0">
               <button
-                onClick={handlePrev}
+                onClick={() => handleScroll("left")}
                 className={`scale-[0.75]`}
-                style={{ opacity: activeSlideIndex < 1 ? 0.15 : 1 }}
+                style={{ opacity: activeSlideIndex <= 0 ? 0.15 : 1 }}
               >
                 <ArrowRight className="rotate-[180deg]" />
               </button>
 
               <button
                 className="works-slide-right scale-[0.75]"
-                onClick={handleNext}
+                onClick={() => handleScroll("right")}
               >
                 <ArrowRight />
               </button>
 
-              <div className="section-swiper-pagination flex md:hidden justify-end items-center ml-auto pl-3 gap-[1px] " />
+              <SliderPagination
+                activePage={activeSlideIndex}
+                setActivePage={(i) => {
+                  setActiveSlideIndex(i);
+                  handleCustomScroll(i);
+                }}
+                pages={paymentTypes}
+                className="ml-auto sm:hidden"
+              />
             </div>
           </div>
-          <div className="flex sm:hidden w-full py-3 works-swiper px-5 md:px-0">
-            <Swiper
-              ref={sliderRef}
-              spaceBetween={20}
-              slidesPerView={1}
-              onSlideChange={(e) => setActiveSlideIndex(e.activeIndex)}
-              className="!pb-4"
-              autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
-              }}
-              // speed={4000}
-              modules={[Autoplay, Pagination, Navigation]}
-              pagination={{ clickable: true, el: ".section-swiper-pagination" }}
-            >
-              {paymentTypes.map((item) => (
-                <SwiperSlide key={item.title}>
-                  <div className="flex flex-col justify-between items-center w-full h-[450px] bg-grey-dull rounded-[20px] pb-8">
-                    <div className="h-[60%] w-full">{item.img}</div>
-                    <p className="font-light bani-title-2 text-black px-8">
-                      {item?.body}
-                    </p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+
+          <div
+            className="flex sm:hidden w-full gap-3 py-3 px-5 md:px-0 no-scrollbar overflow-x-auto scroll-smooth snap-mandatory snap-x"
+            ref={scrollXContainerRef}
+            onScroll={(e) => handleActiveSlideUpdate()}
+          >
+            {paymentTypes.map((item, i) => (
+              <div
+                key={item.title}
+                ref={(el) => (cardsRef.current[i] = el)}
+                className="flex flex-col justify-between items-center w-full min-w-[calc(100vw-50px)] max-w-[calc(100vw-50px)] h-[450px] bg-grey-dull rounded-[20px] pb-8 snap-center overflow-hidden"
+              >
+                <div className="h-[60%] w-full">{item.img}</div>
+                <p className="font-light bani-title-2 text-black px-8">
+                  {item?.body}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

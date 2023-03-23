@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 const SliderPagination = ({ pages, className, activePage, setActivePage }) => (
-  <div className={`flex justify-start items-center gap-2  ${className}`}>
+  <div
+    className={`flex justify-start items-center gap-2 transition-all duration-[1s] ease-in-out ${className}`}
+  >
     {pages?.map((item, i) => (
       <div
         key={i}
