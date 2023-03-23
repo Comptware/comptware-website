@@ -213,6 +213,7 @@ module.exports = {
         adidas: "url('../assets/icons/Trustees/adidas.svg')",
         dune: "url('../assets/icons/Trustees/dune.svg')",
         tommyhf: "url('../assets/icons/Trustees/tommyhf.svg')",
+        hinge: "url('../assets/icons/Trustees/hinge.svg')",
       },
       keyframes: {
         slide: {

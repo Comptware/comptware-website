@@ -31,7 +31,7 @@ const clients = [
     icon: <div className={`${logoClass} bg-charles `} />,
   },
   {
-    icon: <div className={`${logoClass} bg-adidas`} />,
+    icon: <div className={`${logoClass} bg-hinge`} />,
   },
   {
     icon: <div className={`${logoClass} bg-dune`} />,

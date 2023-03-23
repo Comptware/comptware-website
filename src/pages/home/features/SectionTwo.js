@@ -197,20 +197,30 @@ const SectionTwo = () => {
           spaceBetween={20}
           slidesPerView={1}
           breakpoints={{
-            // when window width is >= 640px
+            // when window width is <= 640px
             0: {
               slidesPerView: 1,
             },
+            // when window width is >= 640px
             640: {
               slidesPerView: 1.7,
             },
             // when window width is >= 768px
             768: {
+              slidesPerView: 2,
+            },
+
+            // when window width is >= 840px
+            840: {
               slidesPerView: 2.7,
             },
 
-            // when window width is >= 768px
+            // when window width is >= 1024px
             1024: {
+              slidesPerView: 3,
+            },
+            // when window width is >= 1200px
+            1200: {
               slidesPerView: 3.7,
             },
           }}
