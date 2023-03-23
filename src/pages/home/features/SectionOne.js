@@ -50,7 +50,7 @@ const paymentTypes = [
   },
 ];
 const { PRE_VIEW, IN_VIEW, POST_VIEW } = PAYMENT_TYPES_STICKY_MODES;
-const delay = 2000;
+const delay = 3000;
 const SectionOne = () => {
   const sectionRef = useRef(null);
   const sliderRef = useRef(null);

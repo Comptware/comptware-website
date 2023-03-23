@@ -65,7 +65,7 @@ const businessTypes = [
     href: "/usecase/digital-creators",
   },
 ];
-const delay = 2500;
+const delay = 3500;
 const SectionTwo = () => {
   const sliderRef = useRef(null);
   const scrollXContainerRef = useRef(null);

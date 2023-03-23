@@ -210,7 +210,6 @@ module.exports = {
         foodcourt: "url('../assets/icons/Trustees/foodcourt.svg')",
         levis: "url('../assets/icons/Trustees/levis.svg')",
         charles: "url('../assets/icons/Trustees/charles.svg')",
-        adidas: "url('../assets/icons/Trustees/adidas.svg')",
         dune: "url('../assets/icons/Trustees/dune.svg')",
         tommyhf: "url('../assets/icons/Trustees/tommyhf.svg')",
         hinge: "url('../assets/icons/Trustees/hinge.svg')",
