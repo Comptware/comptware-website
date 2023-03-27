@@ -148,7 +148,8 @@ const Footer = () => {
       <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade py-4 md:pt-10 pb-12">
         <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base md:px-6 opacity-[0.9] leading-loose ">
           Copyright &copy; 2023 Convey Dot Africa Limited. All rights reserved. <br />
-          Any unauthorized redistribution or reproduction of any copyrighted materials on this website is strictly prohibited. Other company names are trademarks of their respective owners.
+          Any unauthorized redistribution or reproduction of any copyrighted materials on this website is strictly prohibited. <br />
+          Other company names are trademarks of their respective owners.
         </p>
       </div>
       <div className="blue-black-fade-gradient absolute bottom-[-50px] right-[-50px] min-h-[450px] min-w-[300px] rounded-full" />
