@@ -147,11 +147,8 @@ const Footer = () => {
 
       <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade py-4 md:pt-10 pb-12">
         <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base md:px-6 opacity-[0.9] leading-loose ">
-          Copyright &copy; 2023 Bani Payments. All rights reserved. <br />
-          The use of all partnering companies&apos; intellectual property is
-          subject to copyright law and requires the permission of the owner of
-          the property. Any unauthorized use of such intellectual property is
-          strictly prohibited and may lead to legal consequences.
+          Copyright &copy; 2023 Convey Dot Africa Limited. All rights reserved. <br />
+          Any unauthorized redistribution or reproduction of any copyrighted materials on this website is strictly prohibited. Other company names are trademarks of their respective owners.
         </p>
       </div>
       <div className="blue-black-fade-gradient absolute bottom-[-50px] right-[-50px] min-h-[450px] min-w-[300px] rounded-full" />
