@@ -73,7 +73,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="website-footer flex flex-col justify-center items-center w-full py-10 md:py-16 px-5 md:px-[5%] lg:px-[8%] bg-black space-y-8 md:space-y-12 relative overflow-hidden ">
+    <footer className="website-footer flex flex-col justify-center items-center w-full py-8 md:py-12 px-5 md:px-[5%] lg:px-[8%] bg-black space-y-8 md:space-y-12 relative overflow-hidden ">
       <div className="flex flex-row justify-between items-center w-full">
         <div className="relative flex flex-col md:flex-row justify-start items-start mx-auto w-full space-y-10 md:space-y-0">
           <div className="w-[50%] h-full">
@@ -145,10 +145,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade py-4 md:pt-10 pb-12">
+      <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade pt-4 md:pt-10">
         <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base md:px-6 opacity-[0.9] leading-loose ">
-          Copyright &copy; 2023 Convey Dot Africa Limited. All rights reserved. <br />
-          Any unauthorized redistribution or reproduction of any copyrighted materials on this website is strictly prohibited. <br />
+          Copyright &copy; 2023 Convey Dot Africa Limited. All rights reserved.{" "}
+          <br />
+          Any unauthorized redistribution or reproduction of any copyrighted
+          materials on this website is strictly prohibited. <br />
           Other company names are trademarks of their respective owners.
         </p>
       </div>
