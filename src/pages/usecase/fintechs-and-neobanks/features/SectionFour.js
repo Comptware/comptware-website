@@ -13,7 +13,7 @@ const SectionFour = () => {
 
       <div className="mt-[1px] flex flex-col justify-center items-start text-left min-w-[50%] w-full md:max-w-[50%] h-fit space-y-4 md:pl-20">
         <h2 className="bani-heading-alt-2 text-black basier-semibold text-cente  md:pb-4 pt-0 md:capitalize">
-          DLT
+          DLT Payments
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full leading-[1.75]">
