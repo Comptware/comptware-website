@@ -47,7 +47,7 @@ const businessTypes = [
     href: "/usecase/travel-agencies-and-airlines",
   },
   {
-    title: "DLT and Digital Assets platforms",
+    title: "Digital Assets platforms",
     body: "Provide faster transactions with globally accessible and decentralised systems.",
     icon: <Crypto />,
     href: "/usecase/crypto-and-digital-asset-platforms",
