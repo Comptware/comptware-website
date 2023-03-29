@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import ArrowRight from "assets/icons/Arrow/arrow-right-black.svg";
@@ -31,14 +31,14 @@ const paymentTypes = [
     link: "/payments/mobile-money",
   },
   {
-    title: "Crypto Payments",
-    body: "Enjoy fast and secure local and cross-border transactions with our crypto payment service.",
+    title: "DLT Payments",
+    body: "Enjoy fast and secure local and cross-border transactions with our DLT payment service.",
     img: <div className={`${paymentTypesClsx} bg-crypto h-[350px] mt-10`} />,
     bgImage: "bg-crypto scale-[0.8]",
     link: "/payments/crypto",
   },
   {
-    title: "Ewallets",
+    title: "E-wallets",
     body: "Experience the convenience of paying seamlessly on the go with your e-wallet apps.",
     img: (
       <div
@@ -53,7 +53,6 @@ const { PRE_VIEW, IN_VIEW, POST_VIEW } = PAYMENT_TYPES_STICKY_MODES;
 const delay = 3000;
 const SectionOne = () => {
   const sectionRef = useRef(null);
-  const sliderRef = useRef(null);
   const scrollXContainerRef = useRef(null);
   const timeoutRef = useRef(null);
   const cardsRef = useRef([]);
@@ -62,16 +61,6 @@ const SectionOne = () => {
   const [width, setWidth] = useState(0);
   const [activePaymentType, setActivePaymentType] = useState(paymentTypes[0]);
   const [stickyMode, setStickyMode] = useState(PRE_VIEW);
-
-  const handlePrev = useCallback(() => {
-    if (!sliderRef.current) return;
-    sliderRef.current.swiper.slidePrev();
-  }, []);
-
-  const handleNext = useCallback(() => {
-    if (!sliderRef.current) return;
-    sliderRef.current.swiper.slideNext();
-  }, []);
 
   const handleScroll = (direction) => {
     if (direction === "left") {
@@ -128,50 +117,74 @@ const SectionOne = () => {
     }
   };
 
-  const handleStickyAnimationUpdate = () => {
-    const paymentTypesLength = paymentTypes.length;
-    const adjustedPaymentTypesLength = paymentTypes.length * 2;
-    const sectionRefRect = sectionRef?.current?.getBoundingClientRect();
-    const sectionHeight = sectionRefRect?.height;
-    const sectionTopPosition = sectionRefRect?.top;
-    const topOffsetAllowance = -150;
-    const adjustedSectionTopPosition = -(
-      sectionTopPosition + topOffsetAllowance
-    );
-    const adjustedSectionHeight = sectionHeight - topOffsetAllowance;
-    const allotedHeightFraction =
-      adjustedSectionHeight / adjustedPaymentTypesLength;
-    const stickyViewHeight = adjustedSectionHeight / 2;
+  // const handleStickyAnimationUpdate = () => {
+  //   const paymentTypesLength = paymentTypes.length;
+  //   const adjustedPaymentTypesLength = paymentTypes.length * 2;
+  //   const sectionRefRect = sectionRef?.current?.getBoundingClientRect();
+  //   const sectionHeight = sectionRefRect?.height;
+  //   const sectionTopPosition = sectionRefRect?.top;
+  //   const topOffsetAllowance = -150;
+  //   const adjustedSectionTopPosition = -(
+  //     sectionTopPosition + topOffsetAllowance
+  //   );
+  //   const adjustedSectionHeight = sectionHeight - topOffsetAllowance;
+  //   const allotedHeightFraction =
+  //     adjustedSectionHeight / adjustedPaymentTypesLength;
+  //   const stickyViewHeight = adjustedSectionHeight / 2;
 
-    for (let index = 0; index < adjustedPaymentTypesLength; index++) {
-      let newActivePayment;
-      if (allotedHeightFraction * (index + 1) <= adjustedSectionTopPosition) {
-        newActivePayment = paymentTypes[index];
-        setActivePaymentType(newActivePayment);
-      }
-    }
+  //   for (let index = 0; index < adjustedPaymentTypesLength; index++) {
+  //     let newActivePayment;
+  //     if (allotedHeightFraction * (index + 1) <= adjustedSectionTopPosition) {
+  //       newActivePayment = paymentTypes[index];
+  //       setActivePaymentType(newActivePayment);
+  //     }
+  //   }
 
-    if (
-      adjustedSectionTopPosition > 0 &&
-      adjustedSectionTopPosition < stickyViewHeight
-    ) {
-      setStickyMode(IN_VIEW);
-    } else if (adjustedSectionTopPosition > stickyViewHeight) {
-      setActivePaymentType(paymentTypes[paymentTypesLength - 1]);
-      setStickyMode(POST_VIEW);
-    } else {
-      setActivePaymentType(paymentTypes[0]);
-      setStickyMode(PRE_VIEW);
-    }
-  };
+  //   if (
+  //     adjustedSectionTopPosition > 0 &&
+  //     adjustedSectionTopPosition < stickyViewHeight
+  //   ) {
+  //     setStickyMode(IN_VIEW);
+  //   } else if (adjustedSectionTopPosition > stickyViewHeight) {
+  //     setActivePaymentType(paymentTypes[paymentTypesLength - 1]);
+  //     setStickyMode(POST_VIEW);
+  //   } else {
+  //     setActivePaymentType(paymentTypes[0]);
+  //     setStickyMode(PRE_VIEW);
+  //   }
+  // };
 
-  useEffect(() => {
-    handleStickyAnimationUpdate();
-    window.addEventListener("scroll", handleStickyAnimationUpdate);
-    return () => {
-      window.removeEventListener("scroll", handleStickyAnimationUpdate);
-    };
-  }, []);
+  // const handleStickyAnimationUpdate = () => {
+  //   const sectionRefRect = sectionRef?.current?.getBoundingClientRect();
+  //   const sectionHeight = sectionRefRect?.height;
+  //   const sectionTopPosition = sectionRefRect?.top;
+  //   const topOffsetAllowance = -25;
+  //   const adjustedSectionTopPosition = -(
+  //     sectionTopPosition + topOffsetAllowance
+  //   );
+  //   const adjustedSectionHeight = sectionHeight - topOffsetAllowance;
+
+  //   const stickyViewHeight = 100;
+
+  //   if (
+  //     adjustedSectionTopPosition > 0 &&
+  //     adjustedSectionTopPosition < stickyViewHeight
+  //   ) {
+  //     setStickyMode(IN_VIEW);
+  //   } else if (adjustedSectionTopPosition > stickyViewHeight) {
+  //     setStickyMode(POST_VIEW);
+  //   } else {
+  //     setStickyMode(PRE_VIEW);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   handleStickyAnimationUpdate();
+  //   window.addEventListener("scroll", handleStickyAnimationUpdate);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleStickyAnimationUpdate);
+  //   };
+  // }, []);
 
   return (
     <div className="flex flex-col justify-start items-center h-fit w-full space-y-7 sticky-boundary sm:mb-[0px] relative">
@@ -201,40 +214,43 @@ const SectionOne = () => {
         </div>
         <div
           ref={sectionRef}
-          className="sm:h-[1150px] flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 sm:pt-[70px] relative sm:my-[100px]"
+          className="h-fit flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 sm:py-[70px] relative"
         >
           <div
-            className={`${
-              stickyMode === IN_VIEW
-                ? "fixed sm:top-[100px] md:top-[200px] left-0 right-0 px-5"
-                : stickyMode === POST_VIEW
-                ? "absolute bottom-0"
-                : "absolute top-0"
-            } px-5 md:px-[5%] lg:px-[8%] h-fit flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto`}
+            className={` h-fit flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto`}
+            // className={`px-5 md:px-[5%] lg:px-[8%] h-fit flex flex-col md:flex-row items-start w-full space-y-2 md:space-x-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto`}
           >
-            <div className="mt-[1px] hidden md:flex flex-col justify-center items-center md:items-start text-center md:text-left !min-w-[50%] !w-full !max-w-[50%] h-fit space-y-4">
-              <p className="text-black-light basier-medium leading-none bani-base pb-4 pt-20">
-                COLLECT PAYMENTS ANYWHERE
-              </p>
-              {paymentTypes.map(({ title, body, img, bgImage, link }) => (
-                <Link
-                  key={title}
-                  href={link}
-                  className={`${
-                    activePaymentType?.title === title
-                      ? "text-black-light basier-medium"
-                      : "text-black-fade font-normal"
-                  } tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out`}
-                  onMouseEnter={() => {
-                    setActivePaymentType({ title, body, img, bgImage });
-                  }}
-                >
-                  {title}
-                </Link>
-              ))}
+            <div className="w-full ">
+              <div
+                className={`${
+                  stickyMode === IN_VIEW
+                    ? "fixed sm:top-[90px] left-0 pl-5 md:pl-[5%] lg:pl-[8%]"
+                    : "pl-10 md:pl-[10%] lg:pl-[16%]"
+                }  mt-[1px] hidden md:flex flex-col justify-center items-center md:items-start text-center md:text-left !w-full h-fit space-y-4`}
+              >
+                <p className="text-black-light basier-medium leading-none bani-base pb-4 pt-5">
+                  COLLECT PAYMENTS ANYWHERE
+                </p>
+                {paymentTypes.map(({ title, body, img, bgImage, link }) => (
+                  <Link
+                    key={title}
+                    href={link}
+                    className={`${
+                      activePaymentType?.title === title
+                        ? "text-black-light basier-medium"
+                        : "text-black-fade font-normal"
+                    } tracking-[0.05em]  leading-normal bani-heading-alt-2 mb-4 cursor-pointer transition-all duration-300 ease-in-out`}
+                    onMouseEnter={() => {
+                      setActivePaymentType({ title, body, img, bgImage });
+                    }}
+                  >
+                    {title}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <div className="hidden sm:flex flex-col justify-center items-center md:items-end !min-w-[50%] !w-full !max-w-[50%] min-h-[55vh] md:pt-0">
+            <div className="pr-5 md:pr-[5%] lg:pr-[8%] hidden sm:flex flex-col justify-center items-center md:items-end !min-w-[50%] !w-full !max-w-[50%] min-h-[55vh] md:pt-0">
               <div className="flex flex-col md:hidden justify-center items-center md:items-start text-center md:text-left w-full h-fit space-y-4">
                 <p className="text-black-light basier-medium leading-none bani-base pb-2 pt-10">
                   COLLECT PAYMENTS ANYWHERE

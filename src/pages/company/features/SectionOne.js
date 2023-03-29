@@ -13,9 +13,8 @@ const SectionOne = () => {
           to quickly and seamlessly collect payments locally from customers.
           <br />
           Payments into virtual bank accounts, mobile money payments across
-          Sub-Saharan Africa, or crypto and e-wallet payments, we got you
-          covered with our frictionless setup process and API infrastructure
-          resources.
+          Sub-Saharan Africa, or DLT and e-wallet payments, we got you covered
+          with our frictionless setup process and API infrastructure resources.
           <br />
           We are making it possible for businesses to scale into more markets.
         </p>

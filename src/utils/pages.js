@@ -3,31 +3,28 @@ const pages = [
     url: "/",
     title: "Bani | Collect and reconcile payments easily",
     description:
-      "Easily and seamlessly collect cardless payments from customers. Whether that is mobile money payments across Sub-Saharan Africa or crypto payments globally we got you covered.",
+      "Easily and seamlessly collect cardless payments from customers. Whether that is mobile money payments across Sub-Saharan Africa or DLT payments globally we got you covered.",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/usecase/fintechs-and-neobanks",
     title: "BANI FOR FINTECHS/NEOBANKS",
-    description:
-      "Inspire customer adoption rates.",
+    description: "Inspire customer adoption rates.",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/usecase/e-commerce",
     title: "BANI FOR E-COMMERCE PLATFORMS",
-    description:
-      "Helping you make customers shop with ease",
+    description: "Helping you make customers shop with ease",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/usecase/digital-creators",
     title: "BANI FOR DIGITAL CREATORS",
-    description:
-      "Speedy collection of payments from clients ",
+    description: "Speedy collection of payments from clients ",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
@@ -35,8 +32,7 @@ const pages = [
   {
     url: "/usecase/retail-stores",
     title: "BANI FOR RETAIL STORES",
-    description:
-      "We optimise transactions for you and your customers",
+    description: "We optimise transactions for you and your customers",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
@@ -44,8 +40,7 @@ const pages = [
   {
     url: "/usecase/fast-food-and-restaurants",
     title: "BANI FOR FAST FOOD AND RESTAURANTS",
-    description:
-      "The best payment experience for your customers",
+    description: "The best payment experience for your customers",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
@@ -61,13 +56,12 @@ const pages = [
 
   {
     url: "/usecase/crypto-and-digital-asset-platforms",
-    title: "BANI FOR CRYPTO AND DIGITAL ASSETS PLATFORMS",
+    title: "BANI FOR DIGITAL ASSETS PLATFORMS",
     description:
-      "Providing you with seamless crypto transactions for customers' satisfaction",
+      "Providing you with seamless digital assets transactions for customers' satisfaction",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
-
 
   {
     url: "/developers",
@@ -97,8 +91,7 @@ const pages = [
   {
     url: "/company/all-openings",
     title: "Bani | All Openings",
-    description:
-      "Job openings at Bani",
+    description: "Job openings at Bani",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
@@ -106,28 +99,32 @@ const pages = [
   {
     url: "/payments/virtual-accounts",
     title: "Bani | Virtual Accounts",
-    description: "Experience greater payment efficiency, control, and flexibility with our virtual accounts.",
+    description:
+      "Experience greater payment efficiency, control, and flexibility with our virtual accounts.",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/payments/ewallets",
     title: "Bani | E-Wallets",
-    description: "Experience the convenience of paying seamlessly on the go with your e-wallet apps.",
+    description:
+      "Experience the convenience of paying seamlessly on the go with your e-wallet apps.",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/payments/mobile-money",
     title: "Bani | Mobile Money",
-    description: "Experience payment convenience and accessibility across Africa with our mobile money service.",
+    description:
+      "Experience payment convenience and accessibility across Africa with our mobile money service.",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },
   {
     url: "/payments/crypto",
-    title: "Bani | Crypto Payments",
-    description: "Enjoy fast and secure local and cross-border transactions with our crypto payment service.",
+    title: "Bani | DLT Payments",
+    description:
+      "Enjoy fast and secure local and cross-border transactions with our DLT payment service.",
     thumbnail:
       "https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg",
   },

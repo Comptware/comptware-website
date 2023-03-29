@@ -5,7 +5,7 @@ import Card from "components/general/cards";
 const cardItems = [
   {
     title: "Security",
-    body: "Enjoy access to secure stable and non-stable coin transactions that protect you from fraud.", 
+    body: "Enjoy access to secure stable and non-stable coin transactions that protect you from fraud.",
   },
   {
     title: "Speed",
@@ -13,11 +13,11 @@ const cardItems = [
   },
   {
     title: "Low Cost",
-    body: "You’ll enjoy transactions at the lowest rates.", 
+    body: "You’ll enjoy transactions at the lowest rates.",
   },
   {
     title: "Availability",
-    body: "Enjoy crypto transactions anyday, anytime, and anywhere.",
+    body: "Enjoy digital assets transactions anyday, anytime, and anywhere.",
   },
 ];
 

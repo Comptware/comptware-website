@@ -15,7 +15,7 @@ const baniFeatures = [
   },
   {
     title: "Multiple collection channels",
-    body: "Unlock access to more local payment collection channels in Africa. Effortlessly issue virtual accounts or start accepting mobile money and cryptocurrency payments today.",
+    body: "Unlock access to more local payment collection channels in Africa. Effortlessly issue virtual accounts or start accepting mobile money and DLT payments today.",
     icon: <Channels className="stroke-current" />,
   },
   {
@@ -25,7 +25,7 @@ const baniFeatures = [
   },
   {
     title: "Lowest Charges",
-    body: "With Bani, you'll enjoy the lowest rates for bank transfer payments using our virtual accounts, mobile money payments across Africa, and cryptocurrency payments globally.",
+    body: "With Bani, you'll enjoy the lowest rates for bank transfer payments using our virtual accounts, mobile money payments across Africa, and DLT payments globally.",
     icon: <Circle className="stroke-current" />,
   },
 ];

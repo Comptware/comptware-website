@@ -39,7 +39,7 @@ const Header = () => {
         },
 
         {
-          name: "Ewallets",
+          name: "E-wallets",
           link: "/payments/ewallets",
           icon: <EwalletIcon className="scale-[0.7]" />,
         },
@@ -50,7 +50,7 @@ const Header = () => {
           icon: <MobileMoneyIcon className="scale-[0.7]" />,
         },
         {
-          name: "Crypto Payments",
+          name: "DLT Payments",
           link: "/payments/crypto",
           icon: <CryptoIcon className="scale-[0.7]" />,
         },
@@ -91,7 +91,7 @@ const Header = () => {
         },
 
         {
-          name: "Crypto and Digital Assets Platforms",
+          name: "Digital Assets Platforms",
           link: "/usecase/crypto-and-digital-asset-platforms",
           icon: <CryptoIcon className="scale-[0.7]" />,
         },
@@ -240,11 +240,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Button
-              blackBg
-              text="Contact Sales"
-              textClass="text-base"
-            />
+            <Button blackBg text="Contact Sales" textClass="text-base" />
           </a>
         </div>
 

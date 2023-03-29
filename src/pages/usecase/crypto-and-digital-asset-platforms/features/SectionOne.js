@@ -7,11 +7,12 @@ const SectionOne = () => {
     >
       <div className="mt-[1px] flex flex-col justify-center items-start text-left !min-w-[50%] !w-full md:!max-w-[50%] h-fit space-y-4">
         <h2 className="bani-heading-alt-2 text-black basier-semibold  md:pb-4 pt-0 md:capitalize">
-        Real time payments
+          Real time payments
         </h2>
 
         <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full md:w-[90%] lg:w-[85%] leading-[1.75]">
-        Your customers can make fast and secure crypto payments anytime and anywhere.
+          Your customers can make fast and secure DLT payments anytime and
+          anywhere.
         </p>
       </div>
 

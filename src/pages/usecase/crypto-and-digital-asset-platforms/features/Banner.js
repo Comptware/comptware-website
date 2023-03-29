@@ -10,13 +10,13 @@ const Banner = () => {
         <div className="flex flex-col justify-center items-start text-left md:basis-[90%] w-full h-fit z-[5] !ml-0 !mt-0">
           <div className="rounded-[100px] bg-grey-15 px-5 py-[3px] mb-4 md:mb-5">
             <h1 className="text-white text-sm md:text-xl leading-[27px] uppercase">
-              BANI FOR CRYPTO AND DIGITAL ASSETS PLATFORMS
+              BANI FOR DIGITAL ASSETS PLATFORMS
             </h1>
           </div>
 
           <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
-            Providing you with seamless crypto{" "}
-            <br className="hidden md:block"/>
+            Providing you with seamless digital assets{" "}
+            <br className="hidden md:block" />
             transactions for customers&apos; satisfaction
           </h1>
 
