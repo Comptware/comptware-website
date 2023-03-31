@@ -45,7 +45,7 @@ const SectionFour = () => {
   return (
     <div className="flex flex-col justify-start items-center w-full h-fit gap-y-10 pt-14 pb-4 md:pt-24 md:pb-1 px-5 md:px-[5%] lg:px-[8%]">
       <p className="text-grey-text basier-medium leading-none bani-base text-center">
-        TRUSTED BY THESE AMAZING BUSINESSES
+        TRUSTED BY THESE AMAZING BUSINESSES AND MORE
       </p>
 
       <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8 justify-center items-center w-[80%]">

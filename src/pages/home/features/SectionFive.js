@@ -34,7 +34,7 @@ const SectionFive = () => {
   return (
     <div className="flex flex-col justify-start items-start w-full h-fit gap-y-14 py-14 md:py-24 px-5 md:px-[5%] lg:px-[8%]">
       <div className="flex flex-col justify-start sm:items-center gap-3 w-full">
-        <h2 className="bani-heading-alt-2 text-blue basier-semibold sm:text-center">
+        <h2 className="bani-heading-alt-2 text-blue-gradient basier-semibold sm:text-center">
           Why merchants love <br className="sm:hidden" />
           Bani
         </h2>
