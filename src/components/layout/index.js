@@ -31,15 +31,18 @@ const Layout = ({ children }) => {
       )}
 
       <Header />
+      
       <section className="w-full flex flex-row flex-grow">
+
         <main
-          className={`website-content w-full pt-[95px] md:pt-[14px] md:mt-[80px] flex flex-col flex-grow bg-white`}
+          className={`website-content w-full flex flex-col bg-[#0B0000] flex-grow`}
         >
           {children}
         </main>
       </section>
+
       {/* Footer start */}
-      <GradientFooter />
+      {/* <GradientFooter /> */}
       <Footer />
       {/* Footer end */}
     </div>

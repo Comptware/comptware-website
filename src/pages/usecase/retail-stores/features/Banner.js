@@ -5,48 +5,52 @@ import ArrowRight from "assets/icons/Arrow/arrow-right-white.svg";
 
 const Banner = () => {
   return (
-    <div className="w-full h-fit bg-blue-gradient pt-[95px] -mt-[95px] overflow-hidden">
-      <div className="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-10 md:space-y-0 w-full !h-full md:h-fit md:min-h-[700px] md:max-h-[800px] md:space-x-8 usecase-banner px-5 md:px-[5%] lg:px-[8%] relative z-20 usecase-hero-section-bg -mt-[95px] pb-[60px] md:pt-[95px] md:pb-0">
+    <div className="flex flex-col md:flex-row justify-center items-center py-[131px] space-y-10 md:space-y-0 w-full h-fit min-h-[500px] md:max-h-[700px] md:space-x-8 px-5 md:px-[5%] lg:px-[8%] wallpaper relative z-20 bg-[#0B0C10]">
+      <div className="flex flex-col justify-center items-start pt-[70px] text-left md:basis-[60%] w-full h-fit z-[5] !ml-0 !mt-0">
         <div className="flex flex-col justify-center items-start text-left md:basis-[75%] w-full h-fit z-[5] !ml-0 !mt-0">
-          <div className="rounded-[100px] bg-grey-15 px-5 py-[3px] mb-4 md:mb-5">
-          <h1 className="text-white text-base md:text-xl ">
-          BANI FOR RETAIL STORES
-          </h1>
-          </div>
-         
-          <h1 className="text-grey-whitesmoke bani-heading mb-10 md:mb-14 ">
-            We optimise transactions for{" "}
-            <br className="hidden md:block" />
-            you and your customers
-          </h1>
 
-          <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2 mb-6 md:mb-0">
-            <a
-              href="https://calendly.com/bani-inc/sales/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button
-                text="Talk To Our Team"
-                onClick={() =>
-                  window?.dataLayer?.push({
-                    event: "event",
-                    eventProps: {
-                      category: "Talk To Our Team",
-                      action: "Talk To Our Team",
-                      label: "Talk To Our Team - home banner",
-                      value: 1,
-                    },
-                  })
-                }
-                iconRight={<ArrowRight className="scale-[0.9]" />}
-                height="h-[50px] md:h-[56px]"
-                whiteBg
-                textClass="text-lg text-blue stroke-blue-gradient-container"
-              />
-            </a>
+          <h1 className="text-[#ffffff] bani-heading mb-3 md:mb-5 md:text-[48px] text-[36px] sm:text-center ">
+            Empowering software solution tailored to your <span className="text-blue-gradient">business needs</span>
+          </h1>
+          <p className="text-[#818A98] font-thin bani-title mb-10 md:mb-12 text-[18px] md:text-[20px] sm:text-center">
+            Viverra sit dignissim faucibus sagittis senectus malesuada.
+            Parturient egestas egestas integer ipsum quisque id commodo.
+            Aenean nisl elementum pharetra vitae.
+          </p>
+
+
+          <div className="flex w-full sm:justify-center">
+            <div className="flex flex-col w-fit space-y-4 md:space-y-0 md:space-x-2 mb-6 md:mb-0">
+              <a
+                href="https://calendly.com/bani-inc/sales/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button
+                  text="Contact Us"
+                  onClick={() =>
+                    window?.dataLayer?.push({
+                      event: "event",
+                      eventProps: {
+                        category: "Talk To Our Team",
+                        action: "Talk To Our Team",
+                        label: "Talk To Our Team - home banner",
+                        value: 1,
+                      },
+                    })
+                  }
+                  // iconRight={<ArrowRight className="scale-[0.9]" />}
+                  height="h-[50px] md:h-[56px]"
+                  blueBg
+                  textClass="text-lg text-white stroke-blue-gradient-container"
+                />
+              </a>
+            </div>
           </div>
+
         </div>
+
+        <div className="blue-black-fade-gradient absolute min-h-[50%] sm:min-h-[40%] top-32 w-[75%] sm:w-[45%] rounded-full" />
       </div>
     </div>
   );

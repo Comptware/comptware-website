@@ -7,6 +7,12 @@ import LinkedinIcon from "assets/icons/Socials/linkedin.svg";
 import InstagramIcon from "assets/icons/Socials/instagram.svg";
 import FacebookIcon from "assets/icons/Socials/facebook.svg";
 
+import Mail from '../../assets/homepage_logos/Mail.svg'
+import Instagram from '../../assets/homepage_logos/Instagram.svg'
+import Twitter from '../../assets/homepage_logos/Twitter.svg'
+import LinkedIn from '../../assets/homepage_logos/LinkedIn.svg'
+
+
 const Footer = () => {
   const [width, setWidth] = useState(0);
 
@@ -73,90 +79,153 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="website-footer flex flex-col justify-center items-center w-full py-8 md:py-12 px-5 md:px-[5%] lg:px-[8%] bg-black space-y-8 md:space-y-12 relative overflow-hidden ">
-      <div className="flex flex-row justify-between items-center w-full">
-        <div className="relative flex flex-col md:flex-row justify-start items-start mx-auto w-full space-y-10 md:space-y-0">
-          <div className="w-[50%] h-full">
-            <Link className="!my-0" href="/">
-              <LogoWhite className="scale-[0.95]" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-between items-start w-full transition-all duration-150 ease-in-out text-white bani-base">
-            {footerLinks.map(({ title, links, socials }, i) => (
-              <div
-                className={`${
-                  socials && "col-span-2 sm:col-span-1"
-                } justify-start flex-grow items-start gap-y-12 ${
-                  title === "." ? "hidden sm:flex flex-col" : "flex flex-col"
-                }`}
-                key={title + i}
-              >
-                <p
-                  className={`basier-medium bani-title-alt ${
-                    title === "." ? "text-transparent" : "text-white"
-                  }`}
-                >
-                  {title}
-                </p>
-                {links && (
-                  <ul className=" flex flex-col justify-start items-start gap-y-5 text-grey-white bani-base-alt font-light">
-                    {links.map((lnk, ind) => (
-                      <li
-                        className="whitespace-nowrap hover:text-blue-textHover transition-all duration-[500ms] ease-in-out"
-                        key={lnk.title + ind}
-                      >
-                        {lnk.url ? (
-                          <a
-                            href={lnk.url}
-                            className="w-full"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            {lnk.title}
-                          </a>
-                        ) : lnk.link ? (
-                          <Link href={lnk.link} className="w-full">
-                            {lnk.title}
-                          </Link>
-                        ) : null}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+    <footer className="website-footer flex flex-col justify-center items-center w-full py-8 md:py-12 px-5 2xs:px-10 blg:px-7 lg:px-10 bg-[#0B0C0F] space-y-8 md:space-y-12 relative z-20 overflow-hidden ">
+      <div className="relative z-20">
+        <div className="flex flex-row justify-between items-center w-full ">
+          <div className=" flex flex-col justify-start items-start mx-auto w-full space-y-10 md:space-y-0 ">
 
-                {socials && (
-                  <div className=" flex flex-wrap justify-start items-center w-fit gap-3 transition-all duration-150 ease-in-out text-white z-[1]">
-                    {socials.map(({ url, icon }, i) => (
-                      <a
-                        key={url + i}
-                        href={url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="hover:text-blue-textHover transition-all duration-[700ms] ease-in-out"
-                      >
-                        {icon}
-                      </a>
-                    ))}
+            <div className="w-full h-full justify-center">
+              <p className='text-[50px] sm:text-[90px] lg:text-[130px] font-bold flex justify-center text-[#3388FF]'>Contact us</p>
+            </div>
+
+
+            <div className="grid grid-cols-1 blg:grid-cols-2 gap-8 justify-between items-start w-full pt-[60px] transition-all duration-150 ease-in-out text-white">
+              <div>
+                <div className='blg:h-[100vh] flex justify-between flex-col'>
+                  <div className='flex justify-center'>
+                    <p className=' text-[20px] md:text-[28px] lg:text-[36px] w-[95%] sm:w-[80%] blg:w-full text-[#393D46] text-center blg:text-start font-semibold'>Let’s make something amazing together. Start by <span className='text-[#F1F2F4]'>Saying hi</span></p>
                   </div>
-                )}
+
+                  <div className='flex-col gap-[40px] hidden blg:flex'>
+                    <div className='flex gap-[24px] text-[#BEC3D0]'>
+                      <p>SERVICES</p>
+                      <p>PRODUCT</p>
+                      <p>ABOUT US</p>
+                      <p>BLOG</p>
+                    </div>
+
+                    <div className='flex gap-[24px]'>
+                      <div className='h-[30px] w-[30px] flex justify-center items-center bg-[#F3F4F6] rounded-[30px]'>
+                        <Mail />
+                      </div>
+
+                      <div className='h-[30px] w-[30px] flex justify-center items-center bg-[#F3F4F6] rounded-[30px]'>
+                        <Twitter />
+                      </div>
+
+                      <div className='h-[30px] w-[30px] flex justify-center items-center bg-[#F3F4F6] rounded-[30px]'>
+                        <LinkedIn />
+                      </div>
+
+                      <div className='h-[30px] w-[30px] flex justify-center items-center bg-[#F3F4F6] rounded-[30px]'>
+                        <Instagram />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+
+              <div className='w-full flex justify-center'>
+                <div className='p-[20px] 2xs:p-[40px] py-10 w-[100%] sm:w-[75%] blg:w-[100%] elg:w-[85%] rounded-[50px] flex flex-col justify-center items-center gap-[44px] bg-[#16181D]'>
+                  <div className='flex flex-col gap-[36px] w-full'>
+
+
+                    <div className='flex flex-col gap-[20px] '>
+                      <p className='font-bold text-[18px] slg:text-[24px]'>What's your name </p>
+                      <input className='h-[50px] 2xs:h-[60px] blg:h-[50px] slg:h-[60px] text-black rounded-[50px] p-[12px] bg-blue-50 border-b-[#70707074] border' placeholder='Joe manuel' />
+                    </div>
+
+                    <div className='flex flex-col gap-[20px] '>
+                      <p className='font-bold text-[18px] slg:text-[24px]'>How can we reach you? </p>
+                      <input className='h-[50px] 2xs:h-[60px] blg:h-[50px] slg:h-[60px] text-black rounded-[50px] bg-blue-50 p-[12px] border-b-[#70707074] border' placeholder='Joe manuel' />
+                    </div>
+
+                    <div className='flex flex-col gap-[20px] '>
+                      <p className='font-bold text-[18px] slg:text-[24px]'>Want to tell us what you’re building? (optional) </p>
+                      <textarea className='h-[100px] 2xs:h-[150px] blg:h-[100px] slg:h-[150px] text-black rounded-[20px] bg-blue-50 p-[12px] border-b-[#70707074] border' placeholder='Joe manuel' />
+                    </div>
+
+                    <div className='flex justify-center'>
+                      <button className='h-[64px] w-[90%] rounded-[60px] bg-[#3388FF]'>Send Request</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div className='flex-col gap-[40px] flex blg:hidden items-center pt-[70px]'>
+                <div className='flex gap-[24px] text-[12px] text-[#BEC3D0]'>
+                  <p>SERVICES</p>
+                  <p>PRODUCT</p>
+                  <p>ABOUT US</p>
+                  <p>BLOG</p>
+                </div>
+
+                <div className='flex gap-[24px]'>
+                  <div className='h-[30px] w-[30px] flex justify-center items-center bg-[#F3F4F6] rounded-[30px]'>
+                    <Mail />
+                  </div>
+
+                  <div className='h-[30px] w-[30px] flex justify-center items-center bg-[#F3F4F6] rounded-[30px]'>
+                    <Twitter />
+                  </div>
+
+                  <div className='h-[30px] w-[30px] flex justify-center items-center bg-[#F3F4F6] rounded-[30px]'>
+                    <LinkedIn />
+                  </div>
+
+                  <div className='h-[30px] w-[30px] flex justify-center items-center bg-[#F3F4F6] rounded-[30px]'>
+                    <Instagram />
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
           </div>
         </div>
+
+        <div className="flex flex-row justify-between items-center w-full pt-4 md:pt-10">
+          <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base md:px-6 opacity-[0.9] leading-loose ">
+            &copy; All rights reserved. 2023, Comptware Inc.
+
+          </p>
+        </div>
+
       </div>
 
-      <div className="flex flex-row justify-between items-center w-full border-t-1/2 border-grey-fade pt-4 md:pt-10">
-        <p className="w-full h-full text-center text-grey-white font-light text-sm md:text-base md:px-6 opacity-[0.9] leading-loose ">
-          Copyright &copy; 2023 Convey Dot Africa Limited. All rights reserved.{" "}
-          <br />
-          Any unauthorized redistribution or reproduction of any copyrighted
-          materials on this website is strictly prohibited. <br />
-          Other company names are trademarks of their respective owners.
-        </p>
+
+
+      <div className="opacity-50 w-full h-full justify-center absolute min-h-[100px] bottom-0 ">
+        <div className="flex text-[#13151A] text-[50px] sm:text-[90px] lg:text-[130px] ">
+          <p>Contactus</p>
+          <p>Contactus</p>
+          <p>Contactus</p>
+          <p>Contactus</p>
+        </div>
+        <div className="flex text-[#13151A] text-[50px] sm:text-[90px] lg:text-[130px] relative bottom-[98px]">
+          <p>Contactus</p>
+          <p>Contactus</p>
+          <p>Contactus</p>
+          <p>Contactus</p>
+        </div>
+        <div className="flex text-[#13151A] text-[50px] sm:text-[90px] lg:text-[130px]  relative bottom-[198px]">
+          <p>Contactus</p>
+          <p>Contactus</p>
+          <p>Contactus</p>
+          <p>Contactus</p>
+        </div>
+
+
+
       </div>
-      <div className="blue-black-fade-gradient absolute bottom-[-50px] right-[-50px] min-h-[450px] min-w-[300px] rounded-full" />
-    </footer>
+    </footer >
   );
 };
 
 export default Footer;
+
+

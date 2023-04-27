@@ -4,43 +4,49 @@ import Button from "components/general/button/Button";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col justify-center items-start sm:items-center text-center md:text-left w-full md:w-[85%] lg:w-[80%] h-fit z-[5] min-h-[400px] max-h-[700px] website-banner-alt px-5 md:px-[5%] lg:px-[8%]">
-      <p className="text-grey-text basier-medium leading-none bani-base mb-6 md:mb-8">
-        FOR DEVELOPERS
-      </p>
+    <div className="flex flex-col md:flex-row justify-center items-center py-[150px] wallpaper space-y-10 md:space-y-0 w-full min-h-[500px] max-h-[900px] md:space-x-8 px-5 md:px-[5%] lg:px-[8%] relative z-20 bg-[#0B0C10]">
+      <div className="flex flex-col justify-center items-start mt-[70px] text-left md:basis-[60%] w-full h-fit z-[5] !ml-0 ">
+        <h1 className="text-[#ffffff] bani-heading mb-3 md:mb-5 text-[32px] 3xs:text-[36px] md:text-[48px] sm:text-center ">
+          Building for the Future. Elevating Your  <span className="text-blue-gradient">Business</span> solution
+        </h1>
+        <p className="text-[#818A98] font-thin bani-title mb-10 md:mb-12 text-[16px] 3xs:text-[18px] md:text-[20px] sm:text-center">
+        We believe that exceptional technology is key to driving business success. Our team of experts crafts solutions that are not only aesthetically pleasing, but also functional and effective
+        </p>
 
-      <h1 className="text-black bani-heading mb-5 md:mb-6 text-left sm:text-center">
-        Integrate Bani on <br className="sm:hidden"/>your platforms
-      </h1>
-      <p className="text-grey-text font-light bani-title mb-5 md:mb-14 text-left sm:text-center">
-        Welcome, Engineer! Get started integrating Bani&apos;s collections and payout
-        services on your platform. Install the free plugins or start building
-        something yourself with our API resource.
-      </p>
-      <div className="flex flex-col md:flex-row justify-between items-center w-fit space-y-4 md:space-y-0 md:space-x-2">
-        <a
-          href="https://docs.getbani.com/bani-pop/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Button
-            text="Read Our API Documentation"
-            onClick={() =>
-              window?.dataLayer?.push({
-                event: "event",
-                eventProps: {
-                  category: "Read Our API Documentation",
-                  action: "Read Our API Documentation",
-                  label: "Read Our API Documentation - developer banner",
-                  value: 3,
-                },
-              })
-            }
-            height="h-[50px] md:h-[56px]"
-            textClass="text-lg"
-          />
-        </a>
+        <div className="flex w-full sm:justify-center">
+          <div className="flex flex-col w-fit space-y-4 md:space-y-0 md:space-x-2 mb-6 md:mb-0">
+            <a
+              href="https://calendly.com/bani-inc/sales/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button
+                text="Contact us"
+                onClick={() =>
+                  window?.dataLayer?.push({
+                    event: "event",
+                    eventProps: {
+                      category: "Talk To Our Team",
+                      action: "Talk To Our Team",
+                      label: "Talk To Our Team - home banner",
+                      value: 1,
+                    },
+                  })
+                }
+                height="h-[54px]"
+                textClass="text-lg"
+              ></Button>
+            </a>
+          </div>
+        </div>
+
+
+
+
+        <div className="blue-black-fade-gradient absolute min-h-[50%] sm:min-h-[40%] top-32 w-[75%] sm:w-[45%] rounded-full" />
+
       </div>
+
     </div>
   );
 };

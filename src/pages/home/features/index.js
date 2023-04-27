@@ -13,9 +13,9 @@ const HomeList = () => {
       <Banner />
       <SectionOne />
       <SectionTwo />
-      <SectionFour />
+      {/* <SectionFour />
       <SectionFive />
-      <SectionSix />
+      <SectionSix /> */}
     </div>
   );
 };

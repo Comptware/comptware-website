@@ -2,27 +2,42 @@ import React from "react";
 
 const SectionFour = () => {
   return (
+    <div className="relative z-20 w-full">
     <div
-      className={` px-5 md:px-[5%] lg:px-[8%] h-fit flex flex-col md:flex-row items-center w-full gap-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto my-10 md:my-28`}
+      className={`bg-[#FAFAFA] flex flex-col-reverse blg:flex-row gap-[56px] blg:gap-10 w-full px-[45px] pt-[56px] blg:pt-[150px] pb-[118px] elg:px-[90px]`}
     >
    
 
-      <div className="flex flex-col justify-center items-center w-full md:min-h-[450px] h-[300px] md:h-[350px] bg-grey-dull rounded-[40px] pb-8">
-        <div
-          className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center bg-instant-confirmation mt-8`}
-        />
+   <div className="flex items-center w-full h-[400px] lg:h-[532px] ">
+          <div
+            className={`w-full bg-contain bg-no-repeat p-0 h-full bg-top Laptop  `}
+          />
+        </div>
+
+
+      <div className="mt-[44px] flex flex-col justify-center items-start text-left min-w-[90%] blg:min-w-[50%] w-full md:max-w-[50%] h-fit space-y-4 md:pl-20">
+        <div>
+          <p className="text-[12px] text-[#3388FF]">WEB DEVELOPMENT</p>
+        </div>
+
+        <div className="text-[28px] blg:text-[36px] elg:text-[48px] font-bold ">
+          <p>Build dynamic websites to <span className="text-[#3388FF]">grow</span> your business</p>
+        </div>
+
+        <div>
+          <p className="text-[#818A98]">Our experienced design team will craft intuitive, visually appealing interfaces to bring your ideas to life, driving user engagement and business growth."</p>
+        </div>
+
+        <div>
+          <button className="bg-[#3388FF] text-white w-[152px] rounded-[40px] h-[42px] ">See Projects</button>
+        </div>
+
       </div>
 
+      
+    </div>
 
-      <div className="mt-[1px] flex flex-col justify-center items-start text-left min-w-[50%] w-full md:max-w-[50%] h-fit space-y-4 md:pl-20">
-        <h2 className="bani-heading-alt-2 text-black basier-semibold text-cente  md:pb-4 pt-0 md:capitalize">
-        Instant confirmation <br className="sm:hidden" /> and <br className="hidden sm:block" /> settlement
-        </h2>
-
-        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full leading-[1.75]">
-        Customers want to make payments and leave immediately. You&apos;ll enjoy instant notification channels that will make you instantly confirm payments so that you won&apos;t delay them.
-        </p>
-      </div>
+    <div className="business-hero-section bg-[#fafafa3e] absolute min-h-[100px] bottom-0 w-full" />
     </div>
   );
 };

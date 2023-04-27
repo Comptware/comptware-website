@@ -31,7 +31,7 @@ const Button = ({
   ${fullWidth ? "w-full" : ""}
   whitespace-nowrap ${
     isOutline
-      ? `bg-transparent ${
+      ? `bg-white ${
           isDisabled
             ? "bg-white/[.2]"
             : " hover:bg-blue-clear hover:border-blue-border"

@@ -2,28 +2,46 @@ import React from "react";
 
 const SectionTwo = () => {
   return (
-    <div
-      className={` px-5 md:px-[5%] lg:px-[8%] h-fit flex flex-col md:flex-row items-center w-full gap-8 transition-all duration-300 ease-in-out max-w-9xl mx-auto my-10 md:my-28`}
-    >
-   
+    <div className="w-full relative z-20">
+      <div
+        className={`bg-[#FAFAFA] flex flex-col-reverse blg:flex-row gap-10 w-full px-[45px] pt-[56px] blg:pt-[150px] pb-[118px] elg:px-[90px]`}
+      >
+        <div className="flex justify-center items-center w-full md:min-h-[530px] gap-5 slg:h-[200px] p-5 md:h-[350px] bg-[#3A64F8] pb-8">
+          <div
+            className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center phone-hero-section-bg`}
+          />
+          <div
+            className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center phone-hero-section-bg `}
+          />
 
-      <div className="flex flex-col justify-center items-center w-full md:min-h-[450px] h-[300px] md:h-[350px] bg-grey-dull rounded-[40px] pb-8">
-        <div
-          className={`w-full bg-contain bg-no-repeat p-0 h-full pb-[calc(100% * 3 / 4)] bg-center bg-invoicing md:mr-[-100px] lg:mr-[-180px]`}
-        />
+        </div>
+
+        <div className="blg:mt-[44px] flex flex-col justify-center items-start text-left min-w-[90%] blg:min-w-[50%] w-full md:max-w-[50%] h-fit space-y-4 ">
+          <div>
+            <p className="text-[12px] text-[#3388FF]">PRODUCT DESIGN</p>
+          </div>
+
+          <div className="text-[28px] blg:text-[36px] elg:text-[48px] font-bold ">
+            <p>Simpler interfaces for your <span className="text-[#3388FF]">business</span> vision</p>
+          </div>
+
+          <div>
+            <p className="text-[#818A98]">Our experienced design team will craft intuitive, visually appealing interfaces to bring your ideas to life, driving user engagement and business growth."</p>
+          </div>
+
+          <div>
+            <button className="bg-[#3388FF] text-white w-[152px] rounded-[40px] h-[42px] ">See Projects</button>
+          </div>
+
+        </div>
+
+
+
       </div>
 
-
-      <div className="mt-[1px] flex flex-col justify-center items-start text-left min-w-[50%] w-full md:max-w-[50%] h-fit space-y-4 md:pl-20">
-        <h2 className="bani-heading-alt-2 text-black basier-semibold text-cente md:pb-4 pt-0 md:capitalize">
-        Invoicing
-        </h2>
-
-        <p className="text-grey-text font-light text-lg md:text-[24px] text-left pb-5 md:pb-10 w-full leading-[1.75]">
-        We help you provide prompt invoices. You can receive payment more quickly and improve cash flow. You will also track payments due more effectively and manage your finances more efficiently.
-        </p>
-      </div>
+      <div className="business-hero-section bg-[#fafafa3e] absolute min-h-[100px] bottom-0 w-full" />
     </div>
+
   );
 };
 

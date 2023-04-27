@@ -617,9 +617,32 @@ div::-webkit-scrollbar-thumb {
   filter: blur(95px);
 }
 
+.purple-black-fade-gradient {
+  background: linear-gradient(88.49deg, #e600ff 75.08%, #d83af8 52.89%, #ac15bd 106.56%);
+  opacity: 0.4;
+  filter: blur(95px); 
+  background-size: contain;
+}
+
+.brown-black-fade-gradient {
+  background: linear-gradient(88.49deg, #ffc633 10.08%, #e86b4a 52.89%, #ffc633 106.56%);
+  opacity: 0.4;
+  filter: blur(60px); 
+  background-size: contain;
+}
+
+.blue-purple-fade-gradient {
+  background: linear-gradient(88.49deg, #000aff 10.08%, #7400ff 52.89%, #7400ff 106.56%);
+  opacity: 0.4;
+  filter: blur(60px); 
+  background-size: contain;
+}
+
 .blue-grey-gradient {
   background: linear-gradient(305.24deg, rgba(182, 182, 214, 0.31) -11.16%, #FDFDFD 102.29%);
 }
+
+
 
 /* Hamburger styles */
 .hamburger_btn {
@@ -722,7 +745,6 @@ div::-webkit-scrollbar-thumb {
   resize: both;
 }
 
-
 @media (max-width: 767px) {
   .usecase-hero-section-bg {
     background-image: url(../assets/icons/Usecase/banner-vector-mobile.svg);
@@ -730,6 +752,7 @@ div::-webkit-scrollbar-thumb {
     background-repeat: no-repeat;
   }
 }
+
 
 .divider-fade {
   height: 2px;
@@ -750,4 +773,156 @@ div::-webkit-scrollbar-thumb {
 .no-scrollbar::-webkit-scrollbar,
 .no-scrollbar::-webkit-scrollbar-thumb {
   display: none;
+}
+
+.wallpaper{
+  background-image: url(../assets//homepage_logos//wallpaper.png);
+  background-repeat: no-repeat;
+}
+
+/* home page css */
+.phones-homepage-hero-sections {
+background-image: url(../assets/homepage_logos/Phones\ \(2\).png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 319px;
+}
+
+.phones-homepage-hero-sections-xs {
+  background-image: url(../assets/homepage_logos/Phones\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 215px;
+  }
+
+  .phone-hero-section-bg-home-xs {
+    background-image: url(../assets/service/Fones_xs.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+   height: 215px;
+  }
+
+.phone-hero-section-bg-home {
+  background-image: url(../assets/service/Fones_xs.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+ height: 319px;
+}
+
+.phone-hero-section-bg-tab {
+  background-image: url(../assets/homepage_logos/Tab.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+ height: 319px;
+}
+
+.phone-hero-section-bg-tab-xs {
+  background-image: url(../assets/homepage_logos/Tab.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+ height: 215px;
+}
+
+.rectangle-bg {
+  background-image: url(../assets/homepage_logos/Rectangle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gridBg {
+  background-image: url(../assets/homepage_logos/gridBg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gridBg3 {
+  background-image: url(../assets/homepage_logos/gridBg3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gridBg4 {
+  background-image: url(../assets/homepage_logos/gridBg4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.wave {
+  background-image: url(../assets/homepage_logos/Wave.png);
+  background-repeat: no-repeat;
+
+}
+
+
+/* service page css */
+.phone-hero-section-bg {
+  background-image: url(../assets/service/Fones_xs.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 10px 0px 20px;
+ height: 430px;
+}
+
+@media (max-width: 767px) {
+  .phone-hero-section-bg {
+    background-image: url(../assets/service/Fones_xs.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 10px 0px 20px;
+   height: 350px;
+  }
+}
+
+.business-hero-section{
+  background-image: url(../assets/service/interfaceBg.png);
+  background-repeat: no-repeat;
+}
+
+.mobileScreens{
+  background-image: url(../assets/service/mobileScreen.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.endBg{
+  background-image: url(../assets/service/endBg.png);
+  background-repeat: no-repeat;
+  background-color: #FFF7F5;
+}
+
+.footerBg{
+  background-image: url(../assets/service/footerBg.png);
+  background-repeat: no-repeat;
+}
+
+.Android {
+  background-image: url(../assets/service/Android.png);
+  background-repeat: no-repeat;
+}
+
+.Iphone {
+  background-image: url(../assets/service/Iphone.png);
+  background-repeat: no-repeat;
+}
+
+.Laptop {
+  background-image: url(../assets/service/Laptop.png);
+  background-repeat: no-repeat;
+}
+
+/* About Us  */
+
+.OwnerPic {
+  background-image: url(../assets/about_us/Owner.png);
+  background-repeat: no-repeat;
+  height: 460px;
+}
+
+
+
+
+.box{
+  height:150px;
+  width:100px;
+  background:linear-gradient(rgba(255, 230, 7, 0.807),transparent);
+  background-size: contain;
+  /* background-color:orange this your primary color */
 }

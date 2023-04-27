@@ -17,7 +17,7 @@ const HomeList = () => {
         <SectionThree />
         <SectionFour />
         <SectionFive />
-        <SectionSix />
+        {/*<SectionSix /> */}
       </div>
   );
 };
