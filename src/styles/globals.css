@@ -642,6 +642,13 @@ div::-webkit-scrollbar-thumb {
   background: linear-gradient(305.24deg, rgba(182, 182, 214, 0.31) -11.16%, #FDFDFD 102.29%);
 }
 
+.optimized_purple_gradient {
+  background: linear-gradient(88.49deg, #3A64F8 10.08%, #3D67FD 52.89%, #BB39F9 106.56%);
+  opacity: 0.4;
+  filter: blur(95px); 
+  background-size: contain;
+}
+
 
 
 /* Hamburger styles */
@@ -776,51 +783,52 @@ div::-webkit-scrollbar-thumb {
 }
 
 .wallpaper{
-  background-image: url(../assets//homepage_logos//wallpaper.png);
+  background-image: url(../assets//homepage_logos/wallpaper.png);
   background-repeat: no-repeat;
 }
+
 
 /* home page css */
 .phones-homepage-hero-sections {
 background-image: url(../assets/homepage_logos/Phones\ \(2\).png);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 319px;
+  height: 300px;
 }
 
 .phones-homepage-hero-sections-xs {
   background-image: url(../assets/homepage_logos/Phones\ \(2\).png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 215px;
+    height: 185px;
   }
 
   .phone-hero-section-bg-home-xs {
     background-image: url(../assets/service/Fones_xs.svg);
     background-repeat: no-repeat;
     background-size: contain;
-   height: 215px;
+   height: 185px;
   }
 
 .phone-hero-section-bg-home {
   background-image: url(../assets/service/Fones_xs.svg);
   background-repeat: no-repeat;
   background-size: contain;
- height: 319px;
+ height: 300px;
 }
 
 .phone-hero-section-bg-tab {
   background-image: url(../assets/homepage_logos/Tab.png);
   background-repeat: no-repeat;
   background-size: contain;
- height: 319px;
+ height: 300px;
 }
 
 .phone-hero-section-bg-tab-xs {
   background-image: url(../assets/homepage_logos/Tab.png);
   background-repeat: no-repeat;
   background-size: contain;
- height: 215px;
+ height: 185px;
 }
 
 .rectangle-bg {
@@ -843,6 +851,12 @@ background-image: url(../assets/homepage_logos/Phones\ \(2\).png);
 
 .gridBg4 {
   background-image: url(../assets/homepage_logos/gridBg4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.Frame {
+  background-image: url(../assets/homepage_logos/Frame.png);
   background-repeat: no-repeat;
   background-size: contain;
 }

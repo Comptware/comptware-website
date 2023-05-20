@@ -15,12 +15,12 @@ const SectionFour = () => {
         </div>
 
 
-      <div className="mt-[44px] flex flex-col justify-center items-start text-left min-w-[90%] blg:min-w-[50%] w-full md:max-w-[50%] h-fit space-y-4 md:pl-20">
+      <div className="mt-[44px] flex flex-col justify-center items-start text-left min-w-[90%] blg:min-w-[50%] w-full md:max-w-[50%] h-fit space-y-4">
         <div>
           <p className="text-[12px] text-[#3388FF]">WEB DEVELOPMENT</p>
         </div>
 
-        <div className="text-[28px] blg:text-[36px] elg:text-[48px] font-bold ">
+        <div className="text-[28px] blg:text-[32px] elg:text-[48px] font-bold ">
           <p>Build dynamic websites to <span className="text-[#3388FF]">grow</span> your business</p>
         </div>
 

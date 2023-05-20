@@ -54,9 +54,9 @@ const SectionOne = () => {
 
           <div className='flex flex-col justify-between bg-black w-full h-[470px] elg:h-[606px] text-white relative z-20'>
             <div className="px-[32px] py-[48px] flex flex-col gap-[24px]">
-              <p className="font-bold text-[24px] slg:text-[32px] elg:text-[44px]">We offer a wide array of services</p>
+              <p className="font-bold text-[24px] slg:text-[32px] elg:text-[40px]">We offer a wide array of services</p>
 
-              <div className="flex justify-center relative z-20">
+              <div className="flex justify-center top-5 elg:top-10 relative z-20">
                 <Art />
 
               </div>

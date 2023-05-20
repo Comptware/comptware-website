@@ -347,7 +347,7 @@ const SectionOne = () => {
 
             {collargig.map(items =>
               <div className={`w-full flex flex-col gap-[12px] xs:gap-[30px] blg:gap-[30px] sm:gap-[40px] lg:gap-[32px] elg:gap-10 ${items.bg_color} h-[470px] xs:h-[650px] lg:h-[696px] p-[20px] xs:p-[50px] md:p-[30px] lg:p-[50px]`}>
-                <p className="font-semibold text-[14px] xs:text-[16px]">{items.header}</p>
+                <p className={`font-semibold text-[14px] ${items.title_color} xs:text-[16px]`}>{items.header}</p>
 
                 <div className="hidden xs:flex blg:hidden slg:flex gap-[12px]">
                   <div
@@ -438,7 +438,7 @@ const SectionOne = () => {
               </div>
             </div>
             
-            <div className="purple-black-fade-gradient  absolute min-h-[50%]  right-0 bottom-0 sm:min-h-[100%] min-w-[40%] " />
+            <div className="purple-black-fade-gradient absolute min-h-[50%]  right-7 bottom-14 sm:min-h-[85%] min-w-[40%] " />
             
           </div>
 

@@ -43,7 +43,7 @@ const Banner = () => {
 
 
 
-        <div className="blue-black-fade-gradient absolute min-h-[50%] sm:min-h-[40%] top-32 w-[75%] sm:w-[45%] rounded-full" />
+        <div className="blue-black-fade-gradient absolute min-h-[50%] sm:min-h-[40%] top-36 w-[75%] sm:w-[45%] rounded-full" />
 
       </div>
 

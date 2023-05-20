@@ -125,28 +125,28 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className='w-full flex justify-center'>
+              <div className='w-full flex justify-center slg:h-[750px]'>
                 <div className='p-[20px] 2xs:p-[40px] py-10 w-[100%] sm:w-[75%] blg:w-[100%] elg:w-[85%] rounded-[50px] flex flex-col justify-center items-center gap-[44px] bg-[#16181D]'>
                   <div className='flex flex-col gap-[36px] w-full'>
 
 
                     <div className='flex flex-col gap-[20px] '>
                       <p className='font-bold text-[18px] slg:text-[24px]'>What's your name </p>
-                      <input className='h-[50px] 2xs:h-[60px] blg:h-[50px] slg:h-[60px] text-black rounded-[50px] p-[12px] bg-blue-50 border-b-[#70707074] border' placeholder='Joe manuel' />
+                      <input className='h-[50px] 2xs:h-[50px] blg:h-[50px] slg:h-[55px] text-black rounded-[50px] p-[12px] bg-blue-50 border-b-[#70707074] border' placeholder='Joe manuel' />
                     </div>
 
                     <div className='flex flex-col gap-[20px] '>
                       <p className='font-bold text-[18px] slg:text-[24px]'>How can we reach you? </p>
-                      <input className='h-[50px] 2xs:h-[60px] blg:h-[50px] slg:h-[60px] text-black rounded-[50px] bg-blue-50 p-[12px] border-b-[#70707074] border' placeholder='Joe manuel' />
+                      <input className='h-[50px] 2xs:h-[50px] blg:h-[50px] slg:h-[55px] text-black rounded-[50px] bg-blue-50 p-[12px] border-b-[#70707074] border' placeholder='Joe manuel' />
                     </div>
 
                     <div className='flex flex-col gap-[20px] '>
                       <p className='font-bold text-[18px] slg:text-[24px]'>Want to tell us what you’re building? (optional) </p>
-                      <textarea className='h-[100px] 2xs:h-[150px] blg:h-[100px] slg:h-[150px] text-black rounded-[20px] bg-blue-50 p-[12px] border-b-[#70707074] border' placeholder='Joe manuel' />
+                      <textarea className='h-[90px] 2xs:h-[150px] blg:h-[100px] slg:h-[150px] text-black rounded-[20px] bg-blue-50 p-[12px] border-b-[#70707074] border' placeholder='Joe manuel' />
                     </div>
 
                     <div className='flex justify-center'>
-                      <button className='h-[64px] w-[90%] rounded-[60px] bg-[#3388FF]'>Send Request</button>
+                      <button className='h-[50px] slg:h-[64px] w-[90%] rounded-[60px] bg-[#3388FF]'>Send Request</button>
                     </div>
 
                   </div>
@@ -198,8 +198,7 @@ const Footer = () => {
       </div>
 
 
-
-      <div className="opacity-50 w-full h-full justify-center absolute min-h-[100px] bottom-0 ">
+      <div className="opacity-50 w-full h-full justify-center absolute min-h-[100px] sm:bottom-0 ">
         <div className="flex text-[#13151A] text-[50px] sm:text-[90px] lg:text-[130px] ">
           <p>Contactus</p>
           <p>Contactus</p>
@@ -219,9 +218,11 @@ const Footer = () => {
           <p>Contactus</p>
         </div>
 
-
-
       </div>
+
+
+
+      
     </footer >
   );
 };

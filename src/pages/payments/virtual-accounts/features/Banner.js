@@ -5,11 +5,11 @@ import Lottie from "lottie-react";
 const collargigs = [
 
   { header: 'COLLARGIG', bg_color: 'bg-[#FFF6D7]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#908C7F]', title_color: 'text-[#997700]' },
-  { header: 'COLLARGIG', bg_color: 'bg-[#3872B3]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#E4E5E7', title_color: 'text-[#EFF4FA]' },
-  { header: 'COLLARGIG', bg_color: 'bg-[#E7E6F9]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#908C7F]', title_color: 'text-[#997700]' },
-  { header: 'COLLARGIG', bg_color: 'bg-[#3872B3]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#E4E5E7]', title_color: 'text-[#EFF4FA]' },
+  { header: 'COLLARGIG', bg_color: 'bg-[#3872B3]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#E4E5E7]', title_color: 'text-[#E4E5E7]' },
+  { header: 'COLLARGIG', bg_color: 'bg-[#3872B3]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#E4E5E7]', title_color: 'text-[#E4E5E7]' },
   { header: 'COLLARGIG', bg_color: 'bg-[#FFF6D7]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#908C7F]', title_color: 'text-[#997700]' },
-  { header: 'COLLARGIG', bg_color: 'bg-[#3872B3]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#E4E5E7', title_color: 'text-[#EFF4FA]' },
+  { header: 'COLLARGIG', bg_color: 'bg-[#FFF6D7]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#908C7F]', title_color: 'text-[#997700]' },
+  { header: 'COLLARGIG', bg_color: 'bg-[#3872B3]', title: 'WEB DESIGN, APP DESIGN, DEVELOPMENT', body: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc pellentesque penatibus ut dignissim. Tortor pretium vivamus placerat auctor ut. Senectus id rutrum est enim odio rutrum ultrices accumsan. Adipiscing in fringilla pharetra aliquet sed. Euismod sed ', text_color: 'text-[#E4E5E7]', title_color: 'text-[#EFF4FA]' },
 
 ]
 
@@ -33,7 +33,7 @@ const Banner = () => {
 
       </div>
 
-      <div className="flex bg-[#FFFFFF] flex-col justify-start items-center h-fit w-full space-y-7 sticky-boundary sm:mb-[0px] px-5 2xs:px-10 lg:px-[40px]">
+      <div className="flex bg-[#FFFFFF] flex-col justify-start items-center h-fit w-full space-y-7 sticky-boundary sm:mb-[0px] 4xs:px-5 2xs:px-10 lg:px-[40px]">
         <div className="flex flex-col  justify-between items-center w-full h-fit sm:mb-[0px]">
 
           <div>
@@ -42,8 +42,8 @@ const Banner = () => {
             <div className="grid grid-cols-1 blg:grid-cols-2 gap-[32px] w-full pt-[103px] relative z-20 bottom-48 blg:bottom-64">
 
               {collargigs.map(items =>
-                <div className={`w-full flex flex-col gap-[12px] xs:gap-[30px] blg:gap-[30px] sm:gap-[40px] lg:gap-[32px] elg:gap-10 ${items.bg_color} h-[470px] xs:h-[650px] lg:h-[696px] p-[20px] xs:p-[50px] md:p-[30px] lg:p-[50px]`}>
-                  <p className="font-semibold text-[14px] xs:text-[16px]">{items.header}</p>
+                <div className={`w-full flex flex-col gap-[24px] 3xs:gap-[40px] xs:gap-[30px] blg:gap-[36px] sm:gap-[40px] lg:gap-[32px] elg:gap-10 ${items.bg_color} h-[490px] xs:h-[650px] lg:h-[696px] p-[20px] xs:p-[50px] md:p-[30px] lg:p-[50px]`}>
+                  <p className={`font-semibold text-[14px] ${items.title_color} xs:text-[16px]`}>{items.header}</p>
 
                   <div className="hidden xs:flex blg:hidden slg:flex gap-[12px]">
                     <div
@@ -117,9 +117,9 @@ const Banner = () => {
 
           <div className="w-full pb-[120px] gap-[64px] flex flex-col slg:hidden ">
             <div className="flex flex-col">
-              <p className="text-[12px] text-[#3388FF]"> Check out our other <span className="text-[#3388FF]">Projects</span></p>
+              <p className="text-[12px] text-[#3388FF]"> More Work</p>
 
-              <p className="text-[48px] font-bold">Other <span className="text-[#3388FF]">Projects</span></p>
+              <p className="text-[32px] sm:text-[48px] font-bold">Other <span className="text-[#3388FF]">Projects</span></p>
 
             </div>
 

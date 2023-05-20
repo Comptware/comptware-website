@@ -26,7 +26,7 @@ const Button = ({
   const btnClass = `
   flex justify-center items-center
   ${height || "h-[40px] md:h-[44px]"} outline-none bani-base
-  rounded-[50px] md:rounded-[60px] px-8 py-2 basier-medium
+  rounded-[50px] md:rounded-[60px] px-[44px] py-2 basier-medium
   transition-all duration-[700ms] ease-in-out cursor-pointer
   ${fullWidth ? "w-full" : ""}
   whitespace-nowrap ${

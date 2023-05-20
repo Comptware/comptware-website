@@ -76,6 +76,8 @@ import React, {
     },
   ];
   const delay = 3500;
+
+  
   const SectionThree = () => {
     const sliderRef = useRef(null);
     const scrollXContainerRef = useRef(null);
@@ -216,25 +218,25 @@ import React, {
               },
               // when window width is >= 640px
               640: {
-                slidesPerView: 1.7,
+                slidesPerView: 1.4,
               },
               // when window width is >= 768px
               768: {
-                slidesPerView: 1.6,
+                slidesPerView: 1.5,
               },
   
               // when window width is >= 840px
               840: {
-                slidesPerView: 1.9,
+                slidesPerView: 1.8,
               },
   
               // when window width is >= 1024px
               1024: {
-                slidesPerView: 2.2,
+                slidesPerView: 2.1,
               },
               // when window width is >= 1200px
               1200: {
-                slidesPerView: 2.7,
+                slidesPerView: 2.5,
               },
             }}
             className="!pb-4"

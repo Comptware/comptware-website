@@ -193,68 +193,69 @@ const SectionTwo = () => {
       </div>
 
       <div
-        className="flex sm:hidden w-full gap-3 py-3 px-3 md:px-0 no-scrollbar overflow-x-auto scroll-smooth snap-mandatory snap-x"
-        ref={scrollXContainerRef}
-        onScroll={(e) => handleActiveSlideUpdate()}
-      >
-        {businessTypes.map((item, i) => (
-          <div key={item.title} ref={(el) => (cardsRef.current[i] = el)}>
-            <Card details={item} type="works" />
-          </div>
-        ))}
-      </div>
-
-      <div className="hidden sm:flex w-full py-3 works-swiper px-0">
-        <Swiper
-          ref={sliderRef}
-
-          slidesPerView={2}
-          breakpoints={{
-            // when window width is <= 640px
-            0: {
-              slidesPerView: 1,
-            },
-            // when window width is >= 640px
-            640: {
-              slidesPerView: 1.7,
-            },
-            // when window width is >= 768px
-            768: {
-              slidesPerView: 1.6,
-            },
-
-            // when window width is >= 840px
-            840: {
-              slidesPerView: 1.9,
-            },
-
-            // when window width is >= 1024px
-            1024: {
-              slidesPerView: 2.2,
-            },
-            // when window width is >= 1200px
-            1200: {
-              slidesPerView: 2.7,
-            },
-          }}
-          className="!pb-4"
-          // autoplay={{
-          //   delay: 2000,
-          //   disableOnInteraction: false,
-          // }}
-          speed={4000}
-          modules={[Autoplay, Pagination, Navigation]}
-          pagination={{ clickable: true, el: ".clients-swiper-pagination" }}
-          onSlideChange={(e) => !isMobile && setActiveSlideIndex(e.activeIndex)}
+          className="flex sm:hidden w-full gap-3 py-3 px-3 md:px-0 no-scrollbar overflow-x-auto scroll-smooth snap-mandatory snap-x"
+          ref={scrollXContainerRef}
+          onScroll={(e) => handleActiveSlideUpdate()}
         >
-          {businessTypes.map((item) => (
-            <SwiperSlide key={item.title}>
+          {businessTypes.map((item, i) => (
+            <div key={item.title} ref={(el) => (cardsRef.current[i] = el)}>
               <Card details={item} type="works" />
-            </SwiperSlide>
+            </div>
           ))}
-        </Swiper>
-      </div>
-
+        </div>
+  
+        <div className="hidden sm:flex w-full gap py-3 works-swiper px-0">
+          <Swiper
+            ref={sliderRef}
+  
+            slidesPerView={2}
+            breakpoints={{
+              // when window width is <= 640px
+              0: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 1.4,
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 1.5,
+              },
+  
+              // when window width is >= 840px
+              840: {
+                slidesPerView: 1.8,
+              },
+  
+              // when window width is >= 1024px
+              1024: {
+                slidesPerView: 2.1,
+              },
+              // when window width is >= 1200px
+              1200: {
+                slidesPerView: 2.5,
+              },
+            }}
+            className="!pb-4"
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            speed={4000}
+            modules={[Autoplay, Pagination, Navigation]}
+            pagination={{ clickable: true, el: ".clients-swiper-pagination" }}
+            onSlideChange={(e) => !isMobile && setActiveSlideIndex(e.activeIndex)}
+          >
+            {businessTypes.map((item) => (
+              <SwiperSlide key={item.title}>
+                <Card details={item} type="works" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+  
+  
     </div>
   );
 };

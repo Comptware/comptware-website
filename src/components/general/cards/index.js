@@ -23,7 +23,8 @@ const Card = ({ details, type }) => {
       className={`${containerClass} hover:text-blue text-black transition-all duration-[500ms] ease-in-out  flex flex-col items-start text-left w-full rounded-[30px] bg-white relative overflow-hidden `}
     >
       {type === "works" && (
-        <div className="blue-fade-gradient absolute top-[-100px] right-[-100px] min-h-[200px] min-w-[200px] rounded-full" />
+        // <div className="blue-fade-gradient absolute top-[-100px] right-[-100px] min-h-[200px] min-w-[200px] rounded-full" />
+        <div/>
       )}
       <div className="flex flex-col justify-start items-start gap-6 sm:gap-5 mb-4 sm:mb-3">
         <div className="scale-[0.9] sm:scale-[0.8]">{icon}</div>
