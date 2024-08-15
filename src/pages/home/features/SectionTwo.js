@@ -198,7 +198,7 @@ const SectionTwo = () => {
           onScroll={(e) => handleActiveSlideUpdate()}
         >
           {businessTypes.map((item, i) => (
-            <div key={item.title} ref={(el) => (cardsRef.current[i] = el)}>
+            <div key={i} ref={(el) => (cardsRef.current[i] = el)}>
               <Card details={item} type="works" />
             </div>
           ))}
@@ -247,8 +247,8 @@ const SectionTwo = () => {
             pagination={{ clickable: true, el: ".clients-swiper-pagination" }}
             onSlideChange={(e) => !isMobile && setActiveSlideIndex(e.activeIndex)}
           >
-            {businessTypes.map((item) => (
-              <SwiperSlide key={item.title}>
+            {businessTypes.map((item, index) => (
+              <SwiperSlide key={index}>
                 <Card details={item} type="works" />
               </SwiperSlide>
             ))}

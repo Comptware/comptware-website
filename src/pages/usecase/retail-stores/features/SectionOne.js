@@ -33,8 +33,8 @@ const SectionOne = () => {
 
           <div className='flex flex-col text-[12px] p-[5px] sm:text-[16px] gap-[56px] items-center justify-center'>
 
-            {firstRow.map(items =>
-              <div className="w-[100%] elg:w-[85%] flex flex-col items-center gap-[12px]">
+            {firstRow.map((items, index) =>
+              <div key={index} className="w-[100%] elg:w-[85%] flex flex-col items-center gap-[12px]">
 
                 <div className={`h-[40px] w-[40px] rounded-[30px] ${items.color} flex justify-center items-center`}>
                   <items.Image />
@@ -71,8 +71,8 @@ const SectionOne = () => {
 
           <div className='flex flex-col text-[12px] sm:text-[16px] p-[5px] gap-[56px] items-center justify-center'>
 
-            {secondRow.map(items =>
-              <div className="w-[100%] elg:w-[85%] flex flex-col items-center gap-[12px]">
+            {secondRow.map((items, index) =>
+              <div key={index} className="w-[100%] elg:w-[85%] flex flex-col items-center gap-[12px]">
 
                 <div className={`h-[40px] w-[40px] rounded-[30px] ${items.color} flex justify-center items-center`}>
                   <items.Image />
@@ -117,8 +117,8 @@ const SectionOne = () => {
         <div className="flex justify-center">
           <div className='flex flex-col w-[75%] 2xs:w-[45%] text-[12px] sm:text-[16px] gap-[56px] items-center'>
 
-            {firstRow.map(items =>
-              <div className="w-[100%] elg:w-[85%] flex flex-col items-start 2xs:items-center gap-[12px]">
+            {firstRow.map((items, index) =>
+              <div key={index} className="w-[100%] elg:w-[85%] flex flex-col items-start 2xs:items-center gap-[12px]">
 
                 <div className={`h-[40px] w-[40px] rounded-[30px] ${items.color} flex justify-center items-center`}>
                   <items.Image />
@@ -140,8 +140,8 @@ const SectionOne = () => {
         <div className="flex justify-center">
           <div className='flex flex-col w-[75%] 2xs:w-[45%] text-[12px] sm:text-[16px] gap-[56px] items-start 2xs:items-center'>
 
-            {secondRow.map(items =>
-              <div className="w-[100%] elg:w-[85%] flex flex-col items-start 2xs:items-center gap-[12px]">
+            {secondRow.map((items, index) =>
+              <div key={index} className="w-[100%] elg:w-[85%] flex flex-col items-start 2xs:items-center gap-[12px]">
 
                 <div className={`h-[40px] w-[40px] rounded-[30px] ${items.color} flex justify-center items-center`}>
                   <items.Image />

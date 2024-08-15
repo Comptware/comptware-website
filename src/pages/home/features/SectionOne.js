@@ -10,7 +10,7 @@ import { collargig, grid, product, the_grid } from "utils/bannerGrid";
 import blog from "../../../assets/homepage_logos/blog.png";
 import Frame from '../../../assets/homepage_logos/Frame.svg'
 import Fones from '../../../assets/homepage_logos/Fones.svg'
-import Fones_xs from '../../../assets/homepage_logos/fones.svg'
+import Fones_xs from '../../../assets/homepage_logos/Fones_xs.svg'
 
 
 
@@ -208,9 +208,9 @@ const SectionOne = () => {
 
 
             <div className="flex gap-[21px]">
-              {grid.map(items =>
+              {grid.map((items, index) =>
 
-                <div className={`w-[31%] flex flex-col justify-between border-200 h-[450px] pb-[27px] ${items.bg_color} rounded-[24px] pt-[40px] px-[30px] ${items.backgrounds}`}>
+                <div key={index} className={`w-[31%] flex flex-col justify-between border-200 h-[450px] pb-[27px] ${items.bg_color} rounded-[24px] pt-[40px] px-[30px] ${items.backgrounds}`}>
                   <div className=" flex flex-col justify-end">
                     <div className="flex justify-end">
                       <items.Image />
@@ -290,9 +290,9 @@ const SectionOne = () => {
 
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] justify-items-center">
-              {the_grid.map(items =>
+              {the_grid.map((items, index) =>
 
-                <div className={`w-[335px] slg:w-[400px] flex flex-col justify-between border-200 h-[450px] pb-[27px] ${items.bg_color} rounded-[24px] pt-[40px] px-[30px] ${items.backgrounds}`}>
+                <div key={index} className={`w-[335px] slg:w-[400px] flex flex-col justify-between border-200 h-[450px] pb-[27px] ${items.bg_color} rounded-[24px] pt-[40px] px-[30px] ${items.backgrounds}`}>
                   <div className="flex flex-col justify-end">
                     <div className="flex justify-end">
                       <items.Image />
@@ -345,8 +345,8 @@ const SectionOne = () => {
 
           <div className="grid grid-cols-1 blg:grid-cols-2 gap-[32px] w-full pt-[103px]">
 
-            {collargig.map(items =>
-              <div className={`w-full flex flex-col gap-[12px] xs:gap-[30px] blg:gap-[30px] sm:gap-[40px] lg:gap-[32px] elg:gap-10 ${items.bg_color} h-[470px] xs:h-[650px] lg:h-[696px] p-[20px] xs:p-[50px] md:p-[30px] lg:p-[50px]`}>
+            {collargig.map((items, index) =>
+              <div key={index} className={`w-full flex flex-col gap-[12px] xs:gap-[30px] blg:gap-[30px] sm:gap-[40px] lg:gap-[32px] elg:gap-10 ${items.bg_color} h-[470px] xs:h-[650px] lg:h-[696px] p-[20px] xs:p-[50px] md:p-[30px] lg:p-[50px]`}>
                 <p className={`font-semibold text-[14px] ${items.title_color} xs:text-[16px]`}>{items.header}</p>
 
                 <div className="hidden xs:flex blg:hidden slg:flex gap-[12px]">
@@ -424,8 +424,8 @@ const SectionOne = () => {
             <div className="w-full elg:w-[60%] flex justify-center elg:justify-end z-20">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
 
-                {product.map(items =>
-                  <div className={`w-[312px] h-[342px] rounded-[16px] py-[36px] flex flex-col gap-[24px] px-[20px] ${items.bg_color}`}>
+                {product.map((items, index) =>
+                  <div key={index} className={`w-[312px] h-[342px] rounded-[16px] py-[36px] flex flex-col gap-[24px] px-[20px] ${items.bg_color}`}>
                     <items.Image />
 
                     <div className="gap-[10px] flex flex-col">

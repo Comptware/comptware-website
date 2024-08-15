@@ -50,8 +50,8 @@ const SectionOne = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[70px] md:gap-[30px] lg:gap-[15px] elg:gap-[70px]">
 
-              {table.map(items =>
-                <div className="flex flex-col gap-4 w-[320px]">
+              {table.map((items, index) =>
+                <div key={index} className="flex flex-col gap-4 w-[320px]">
                   <div className="border-b py-[32px] border-[#7d7e825f] border-200">
                     
                     <items.Image />

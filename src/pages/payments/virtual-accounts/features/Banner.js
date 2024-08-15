@@ -41,8 +41,8 @@ const Banner = () => {
 
             <div className="grid grid-cols-1 blg:grid-cols-2 gap-[32px] w-full pt-[103px] relative z-20 bottom-48 blg:bottom-64">
 
-              {collargigs.map(items =>
-                <div className={`w-full flex flex-col gap-[24px] 3xs:gap-[40px] xs:gap-[30px] blg:gap-[36px] sm:gap-[40px] lg:gap-[32px] elg:gap-10 ${items.bg_color} h-[490px] xs:h-[650px] lg:h-[696px] p-[20px] xs:p-[50px] md:p-[30px] lg:p-[50px]`}>
+              {collargigs.map((items, index) =>
+                <div key={index} className={`w-full flex flex-col gap-[24px] 3xs:gap-[40px] xs:gap-[30px] blg:gap-[36px] sm:gap-[40px] lg:gap-[32px] elg:gap-10 ${items.bg_color} h-[490px] xs:h-[650px] lg:h-[696px] p-[20px] xs:p-[50px] md:p-[30px] lg:p-[50px]`}>
                   <p className={`font-semibold text-[14px] ${items.title_color} xs:text-[16px]`}>{items.header}</p>
 
                   <div className="hidden xs:flex blg:hidden slg:flex gap-[12px]">

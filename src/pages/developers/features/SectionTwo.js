@@ -18,8 +18,8 @@ const SectionTwo = () => {
           <div className="w-full elg:w-[60%] flex justify-center elg:justify-end z-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
 
-              {product.map(items =>
-                <div className={`w-[312px] h-[342px] rounded-[16px] py-[36px] flex flex-col gap-[24px] px-[20px] ${items.bg_color}`}>
+              {product.map((items, index) =>
+                <div key={index} className={`w-[312px] h-[342px] rounded-[16px] py-[36px] flex flex-col gap-[24px] px-[20px] ${items.bg_color}`}>
                   <items.Image />
 
                   <div className="gap-[10px] flex flex-col">
