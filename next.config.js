@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const withImages = require("next-images");
+const path = require('path');
 module.exports = {
   reactStrictMode: true,
 };
@@ -11,8 +12,11 @@ module.exports = {
       issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
     })
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, './'),
+    };
 
     return config
   },
 }
-
