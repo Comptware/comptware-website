@@ -2,7 +2,7 @@ import app_logo from '../assets/homepage_logos/app_logo.svg'
 import expert_logo from '../assets/homepage_logos/expert_logo.svg'
 import web_logo from '../assets/homepage_logos/web_logo.svg'
 import Pdesign_logo from "assets/homepage_logos/Pdesign_logo.svg";
-import phones from "../assets/homepage_logos/phones.png";
+import phones from "../assets/homepage_logos/Phones.png";
 // import tab from "../assets/homepage_logos/tab.png";
 import diversity from '../assets/homepage_logos/diversity.svg'
 import flexibility from '../assets/homepage_logos/flexibility.svg'
