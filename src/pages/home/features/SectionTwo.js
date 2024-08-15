@@ -21,7 +21,7 @@ import Slide_pic from '../../../assets/homepage_logos/Slide_pic.svg'
 import ArrowRight from "assets/icons/Arrow/arrow-right-black.svg";
 import Card from "components/general/cards";
 import SliderPagination from "components/general/siderPagination";
-import Hypin from '../../../assets/homepage_logos/hypin.svg'
+import Hypin from '../../../assets/homepage_logos/Hypin.svg'
 
 const businessTypes = [
   {

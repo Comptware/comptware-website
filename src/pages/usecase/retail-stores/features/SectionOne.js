@@ -1,8 +1,8 @@
 import React from "react";
-import Service1 from '../../../../assets/homepage_logos/service1.svg'
-import Service2 from '../../../../assets/homepage_logos/service2.svg'
-import Service3 from '../../../../assets/homepage_logos/service3.svg'
-import Service4 from '../../../../assets/homepage_logos/service4.svg'
+import Service1 from '../../../../assets/homepage_logos/Service1.svg'
+import Service2 from '../../../../assets/homepage_logos/Service2.svg'
+import Service3 from '../../../../assets/homepage_logos/Service3.svg'
+import Service4 from '../../../../assets/homepage_logos/Service4.svg'
 
 import Art from '../../../../assets/service/Art.svg'
 

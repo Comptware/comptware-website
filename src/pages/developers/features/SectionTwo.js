@@ -1,6 +1,6 @@
 import React from 'react'
 import { product } from 'utils/bannerGrid'
-import Owner from '../../../assets/about_us/owner.png'
+import Owner from '../../../assets/about_us/Owner.png'
 
 const SectionTwo = () => {
 

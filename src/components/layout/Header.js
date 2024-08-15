@@ -21,7 +21,7 @@ import Dropdown from "./Dropdown";
 import Hamburger from "./hamburger";
 import Reload from '../../assets/homepage_logos/reload.svg'
 import AA from '../../assets/homepage_logos/aA.svg'
-import Lock from '../../assets/homepage_logos/lock.svg'
+import Lock from '../../assets/homepage_logos/Lock.svg'
 import ABB from '../../assets/PNG/Comptware-06-06.png'
 
 
