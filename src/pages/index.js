@@ -5,51 +5,53 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bani</title>
+        <title>Comptware | Software Solutions for Modern Businesses</title>
         <meta
           name="description"
-          content="Receive, confirm, and track all online and in-store payments easily and instantly."
+          content="Innovative software development solutions spanning mobile, web, and cloud technologies. Transform your digital vision into reality."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Bani | Collect and reconcile payments easily"
+          content="Comptware | Cutting-Edge Software Development"
         />
         <meta
           property="og:description"
-          content="Receive, confirm, and track all online and in-store payments easily and instantly."
+          content="Innovative software development solutions spanning mobile, web, and cloud technologies. Transform your digital vision into reality."
         />
-        <meta
+        {/* Uncomment and replace with your actual meta image when available */}
+        {/* <meta
           property="og:image"
-          content="https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg"
-        />
+          content="https://comptware.com/meta-image.jpg"
+        /> */}
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@bani" />
-        <meta name="twitter:creator" content="@bani" />
+        <meta name="twitter:site" content="@comptware" />
+        <meta name="twitter:creator" content="@comptware" />
         <meta
           name="twitter:title"
-          content="Bani | Collect and reconcile payments easily"
+          content="Comptware | Cutting-Edge Software Development"
         />
         <meta
           name="twitter:description"
-          content="Receive, confirm, and track all online and in-store payments easily and instantly."
+          content="Innovative software development solutions spanning mobile, web, and cloud technologies. Transform your digital vision into reality."
         />
-        <meta
+        {/* Uncomment and replace with your actual meta image when available */}
+        {/* <meta
           name="twitter:image"
-          content="https://bani-assets.s3.eu-west-2.amazonaws.com/static/image/meta/bani-meta.jpg"
-        />
+          content="https://comptware.com/meta-image.jpg"
+        /> */}
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
         <meta
           name="twitter:image:alt"
-          content="An image of Bani logo, Collect and reconcile payments easily and a Bani payment banner all against a white background."
+          content="Comptware: Innovative software development solutions for modern businesses"
         />
 
         <meta name="twitter" content="summary_large_image" />
         <meta
-          name="“google-site-verification”"
-          content="“QY1LVF8oeP3LDr28S-i2_BFQq1kYB0Dr6d6URTLQFtQ”"
+          name="google-site-verification"
+          content="your-google-site-verification-code-here"
         />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
         <link rel="icon" href="/favicon.ico" />
