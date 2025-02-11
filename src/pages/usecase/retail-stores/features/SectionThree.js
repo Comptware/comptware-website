@@ -18,12 +18,12 @@ const SectionThree = () => {
           </div>
 
           <div>
-            <p className="text-[#818A98]">Our experienced design team will craft intuitive, visually appealing interfaces to bring your ideas to life, driving user engagement and business growth."</p>
+            <p className="text-[#818A98]">Transform your vision into reality with our mobile app development services. Our skilled design team creates sleek, user-friendly interfaces that bring your ideas to life, ensuring seamless user experiences and boosting engagement for both Android and IOS.</p>
           </div>
 
-          <div>
+          {/* <div>
             <button className="bg-[#3388FF] text-white w-[152px] rounded-[40px] h-[42px] ">See Projects</button>
-          </div>
+          </div> */}
 
         </div>
 

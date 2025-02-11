@@ -143,7 +143,6 @@ const SectionOne = () => {
               Engineering unique <span className="text-[#3388FF]">visual experiences</span> for your business
             </p>
 
-            <p className="text-[#81BA98] w-[90%] sm:w-[45%] text-center">Lorem lacus eu ac malesuada ultricies ut arcu cras et. Elementum viverra tellus tincidunt. Arcu nec sed tincidunt  luctus iaculis.</p>
           </div>
 
 
@@ -156,10 +155,10 @@ const SectionOne = () => {
 
                   <div className="pt-[80px] w-[400px] flex flex-col gap-[16px]">
                     <p className="font-bold text-[32px]">Engineering Cutting-Edge Technology</p>
-                    <p className="">Lorem lacus eu ac malesuada ultricies ut arcu cras Elementum viverra tellus tincidunt. Arcu nec sed tincidunt  luctus iaculis.</p>
+                    <p className="">Transform your innovative ideas into robust, scalable solutions. Our engineering team specializes in creating high-performance mobile and desktop applications using the latest frameworks like Flutter, React Native, and Electron JS. We turn complex technical challenges into seamless, user-friendly experiences that drive your business forward.</p>
                   </div>
 
-                  <div className="flex gap-[7px]">
+                  {/* <div className="flex gap-[7px]">
                     <Button
                       text="See More"
                       height="h-[42px] w-[152px] bg-white text-[#032343]"
@@ -169,7 +168,7 @@ const SectionOne = () => {
                     <div className="h-[43px] w-[43px] rounded-[49px] border border-[#65707B]">
 
                     </div>
-                  </div>
+                  </div> */}
 
                 </div>
 
@@ -181,24 +180,11 @@ const SectionOne = () => {
 
                     <div>
                       <p className="font-bold text-[#71588D] text-[32px]">Product Design</p>
-                      <p className="text-[#A6A4A8] leading-[23px]">Lorem lacus eu ac malesuada ultricies ut arcu cras Elementum viverra tellus tincidunt. Arcu nec sed tincidunt  luctus iaculis.</p>
+                      <p className="text-[#A6A4A8] leading-[23px]">Craft exceptional digital products that captivate users and solve real-world problems. Our design approach blends intuitive user interfaces with cutting-edge functionality, ensuring your mobile and web applications not only look stunning but also deliver unparalleled user experiences across multiple platforms.</p>
                     </div>
                   </div>
 
-                  <div className="flex gap-[7px]">
-
-                    <Button
-                      text="Learn More"
-                      height="h-[42px] w-[152px] text-white bg-[#7400FF]"
-                      textClass="text-lg text-white"
-                    />
-
-
-
-                    <div className="h-[43px] w-[43px] rounded-[49px] border border-[#65707B]">
-
-                    </div>
-                  </div>
+                  
 
                 </div>
               </div>
@@ -222,17 +208,7 @@ const SectionOne = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-[7px]">
-
-                    <button className={`h-[42px] w-[152px] font-semibold ${items.text_color} ${items.color} text-lg rounded-[40px]`} >
-                      Learn More
-                    </button>
-
-
-                    <div className="h-[43px] w-[43px] rounded-[49px] border border-[#65707B]">
-
-                    </div>
-                  </div>
+                 
 
                 </div>
               )}
@@ -247,19 +223,7 @@ const SectionOne = () => {
 
                 <div className="pt-[80px] w-[400px] flex flex-col gap-[16px]">
                   <p className="font-bold text-[32px]">Engineering Cutting-Edge Technology</p>
-                  <p className="">Lorem lacus eu ac malesuada ultricies ut arcu cras Elementum viverra tellus tincidunt. Arcu nec sed tincidunt  luctus iaculis.</p>
-                </div>
-
-                <div className="flex gap-[7px]">
-                  <Button
-                    text="See More"
-                    height="h-[42px] w-[152px] bg-white text-[#032343]"
-                    textClass="text-lg"
-                  />
-
-                  <div className="h-[43px] w-[43px] rounded-[49px] border border-[#65707B]">
-
-                  </div>
+                  <p className="">Transform your innovative ideas into robust, scalable solutions. Our engineering team specializes in creating high-performance mobile and desktop applications using the latest frameworks like Flutter, React Native, and Electron JS. We turn complex technical challenges into seamless, user-friendly experiences that drive your business forward.</p>
                 </div>
 
               </div>
@@ -270,20 +234,10 @@ const SectionOne = () => {
               <div className="w-[335px] py-[35px] text-white bg-[#3388FF] rounded-[20px] px-[24px] h-[354px] flex flex-col justify-between">
                 <div className="flex flex-col gap-[14px]">
                   <p className={`font-bold text-[26px]`}>Engineering Cutting-Edge Technology</p>
-                  <p className={`leading-[23px]`}>Lorem lacus eu ac malesuada ultricies ut arcu cras Elementum viverra tellus </p>
+                  <p className={`leading-[23px]`}>Transform your innovative ideas into robust, scalable solutions. Our engineering team specializes in creating high-performance mobile and desktop applications using the latest frameworks like Flutter, React Native, and Electron JS. We turn complex technical challenges into seamless, user-friendly experiences that drive your business forward.</p>
                 </div>
 
-                <div className="flex gap-[7px]">
-
-                  <button className={`h-[42px] w-[152px] font-semibold bg-white text-[#032343] text-lg rounded-[40px]`} >
-                    Learn More
-                  </button>
-
-
-                  <div className="h-[43px] w-[43px] rounded-[49px] border border-[#65707B]">
-
-                  </div>
-                </div>
+                
 
               </div>
             </div>
@@ -304,18 +258,6 @@ const SectionOne = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-[7px]">
-
-                    <button className={`h-[42px] w-[152px] font-semibold ${items.text_color} ${items.color} text-lg rounded-[40px]`} >
-                      Learn More
-                    </button>
-
-
-                    <div className="h-[43px] w-[43px] rounded-[49px] border border-[#65707B]">
-
-                    </div>
-                  </div>
-
                 </div>
               )}
 
@@ -326,7 +268,7 @@ const SectionOne = () => {
           </div>
 
         </div>
-
+{/* 
         <div className='w-full px-[20x] 3xs:px-[40px] md:px-[60px] lg:px-[90px] pb-[90px] sm:pb-[200px]'>
           <div className="p-5 3xs:p-0  flex flex-col w-full h-fit gap-y-[16px]">
             <div className="w-full text-[#3388FF] text-[12px]">
@@ -412,7 +354,7 @@ const SectionOne = () => {
             </div>
 
           </div>
-        </div>
+        </div> */}
 
         <div className="xs:px-[30px] flex justify-start w-full pb-[90x] md:pb-[120px] lg:pb-[170px]">
           <div className="w-full h-[1730px] md:h-[1050px] blg:h-[1150px] slg:h-[1140px] elg:h-[914px] rounded-[20px] 2xs:rounded-[50px] gap-[60px] elg:gap-0 bg-[#3A64F8] p-[20px] 2xs:p-[40px] blg:p-[70px] flex flex-col elg:flex-row wave relative z-20">
@@ -446,7 +388,7 @@ const SectionOne = () => {
 
         </div>
 
-        <div className="flex flex-col items-center pb-[74px]">
+        {/* <div className="flex flex-col items-center pb-[74px]">
           <div className="w-[95%] 2xs:w-[75%] md:w-[55%] slg:w-[40%] flex flex-col items-center gap-[36px] pb-[57px] md:pb-[70px]">
             <div className="flex flex-col gap-[16px]">
               <div className="text-[28px] md:text-[38px] blg:text-[48px] text-center text-[#161717] font-bold">
@@ -516,7 +458,7 @@ const SectionOne = () => {
 
           </div>
 
-        </div>
+        </div> */}
 
 
         {/* 

@@ -8,7 +8,7 @@ import Art from '../../../../assets/service/Art.svg'
 
 const firstRow = [
 
-  { Image: Service1, title: 'Let’s help you build faster', content: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc cance tum pellentesque penatibus ut dignissim. ', color: 'bg-[#3388FF]' },
+  { Image: Service1, title: 'Let’s help you build faster', content: 'We provide cutting-edge solutions to accelerate your development process, ensuring your projects are delivered on time and with precision. Our team is dedicated to helping you achieve your goals efficiently. ', color: 'bg-[#3388FF]' },
   { Image: Service2, title: 'Quality assurance', content: 'Thorough testing of software to ensure it meets customer requirements and has high levels of reliability and security.', color: 'bg-[#F66F4C]' },
 
 ]
@@ -16,7 +16,7 @@ const firstRow = [
 const secondRow = [
 
   { Image: Service3, title: 'Maintenance and support', content: 'Ongoing support and maintenance of software applications to ensure optimal performance and reliability.', color: 'bg-[#821AFF]' },
-  { Image: Service4, title: 'Data management and Analytics', content: 'Egestas tempus nisi nunc aenean dignissim massa aliquet fringilla tortor. Nunc cance tum pellentesque penatibus ut dignissim. ', color: 'bg-[#05407A]' }
+  { Image: Service4, title: 'Data management and Analytics', content: 'We provide advanced data management and analytics solutions to help you make informed decisions. Our tools and expertise ensure your data is organized, accessible, and actionable, driving your business forward.', color: 'bg-[#05407A]' }
 
 ]
 

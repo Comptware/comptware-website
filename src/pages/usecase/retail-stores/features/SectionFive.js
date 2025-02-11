@@ -19,7 +19,7 @@ const SectionFive = () => {
         </div>
 
         <div className="text-center">
-          <p className="text-[#818A98]">Ipsum ut condimentum porta sed habitasse at tempus accumsan porttitor. Nec tempus mattis aliquet vivamus. Pellentesque tincidunt id turpis ante orci eget senectus est. Id tristique habitasse malesuada </p>
+          <p className="text-[#818A98]">Our team of seasoned consultants, including software engineers, front-end and back-end developers, DevOps specialists, QA engineers, and data scientists, is here to guide you through every stage of your business journey. Whether you're looking to innovate, optimize, or expand, we provide tailored strategies and insights to help you achieve your goals and stay ahead in a competitive market.</p>
         </div>
 
 

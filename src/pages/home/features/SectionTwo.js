@@ -117,31 +117,31 @@ const SectionTwo = () => {
     }
   }
 
-  React.useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        handleCustomScroll(
-          activeSlideIndex === businessTypes.length - 1
-            ? 0
-            : activeSlideIndex + 1
-        ),
-      delay
-    );
+  // React.useEffect(() => {
+  //   resetTimeout();
+  //   timeoutRef.current = setTimeout(
+  //     () =>
+  //       handleCustomScroll(
+  //         activeSlideIndex === businessTypes.length - 1
+  //           ? 0
+  //           : activeSlideIndex + 1
+  //       ),
+  //     delay
+  //   );
 
-    return () => {
-      resetTimeout();
-    };
-  }, [cardsRef?.current[0]?.getBoundingClientRect()?.x]);
+  //   return () => {
+  //     resetTimeout();
+  //   };
+  // }, [cardsRef?.current[0]?.getBoundingClientRect()?.x]);
 
   useEffect(() => {
-    setWidth(window?.innerWidth);
-    function handleResize() {
-      setWidth(window?.innerWidth);
-    }
+    // setWidth(window?.innerWidth);
+    // function handleResize() {
+    //   setWidth(window?.innerWidth);
+    // }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
+    // return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleActiveSlideUpdate = () => {
@@ -155,7 +155,7 @@ const SectionTwo = () => {
 
   return (
     <div className="flex flex-col justify-start items-start w-full h-fit gap-y-10 md:gap-y-14 py-14 md:py-24 bg-[#EBF3FF]">
-      <div className="flex flex-col justify-start items-start gap-8 md:gap-10 md:items-center w-full px-5 md:px-[5%] lg:px-[8%]">
+      {/* <div className="flex flex-col justify-start items-start gap-8 md:gap-10 md:items-center w-full px-5 md:px-[5%] lg:px-[8%]">
 
         <p className='text-[12px] text-[#3388FF]'>WHY US?</p>
 
@@ -189,8 +189,8 @@ const SectionTwo = () => {
             pages={businessTypes}
             className="ml-auto sm:hidden"
           />
-        </div> */}
-      </div>
+        </div> 
+      </div> 
 
       <div
           className="flex sm:hidden w-full gap-3 py-3 px-3 md:px-0 no-scrollbar overflow-x-auto scroll-smooth snap-mandatory snap-x"
@@ -254,7 +254,7 @@ const SectionTwo = () => {
             ))}
           </Swiper>
         </div>
-  
+  */}
   
     </div>
   );

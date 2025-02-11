@@ -25,12 +25,12 @@ const SectionFour = () => {
         </div>
 
         <div>
-          <p className="text-[#818A98]">Our experienced design team will craft intuitive, visually appealing interfaces to bring your ideas to life, driving user engagement and business growth."</p>
+          <p className="text-[#818A98]">Our expert team specializes in creating responsive, high-performance websites tailored to your business needs. From concept to launch, we design intuitive and visually stunning interfaces that captivate your audience and drive growth.</p>
         </div>
 
-        <div>
+        {/* <div>
           <button className="bg-[#3388FF] text-white w-[152px] rounded-[40px] h-[42px] ">See Projects</button>
-        </div>
+        </div> */}
 
       </div>
 

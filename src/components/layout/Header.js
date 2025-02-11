@@ -19,19 +19,18 @@ import TravelIcon from "assets/icons/header/travel.svg";
 import Button from "../general/button/Button";
 import Dropdown from "./Dropdown";
 import Hamburger from "./hamburger";
-import Reload from '../../assets/homepage_logos/reload.svg'
-import AA from '../../assets/homepage_logos/aA.svg'
-import Lock from '../../assets/homepage_logos/Lock.svg'
-import ABB from '../../assets/PNG/Comptware-06-06.png'
-
-
+import Reload from "../../assets/homepage_logos/reload.svg";
+import AA from "../../assets/homepage_logos/aA.svg";
+import Lock from "../../assets/homepage_logos/Lock.svg";
+import ABB from "../../assets/PNG/Comptware-06-06.png";
+import ComptwareWhiteLogo from "../../assets/logos/Comptware-06-07-svg.svg";
+import Image from "next/image";
 
 const Header = () => {
   const location = useRouter();
   const [activeNav, setActiveNav] = useState("");
   const [sidenavOpen, setSidenavOpen] = useState(false);
   const [navbarBg, setNavbarBg] = useState(false);
-
 
   const headerLinks = [
     {
@@ -245,7 +244,6 @@ const Header = () => {
     },
   ];
 
-
   const changeNavbarBg = () => {
     if (window.scrollY >= 50) {
       setNavbarBg(true);
@@ -276,16 +274,17 @@ const Header = () => {
   return (
     <header
       style={{
-        backgroundColor: `${"#0000004d"}`
+        backgroundColor: `${"#0000004d"}`,
       }}
-      className={` ${pathIsUsecase ? "" : ""
-        } transition-colors duration-500 ease-in-out flex flex-col justify-center gap-5 website-header w-full h-[130px] sm:h-[94px] px-5 md:px-[5%] lg:px-[4%] z-50 drop-shadow-[0_0_30px_rgba] max-w-9xl mx-auto`}
+      className={` ${
+        pathIsUsecase ? "" : ""
+      } transition-colors duration-500 ease-in-out flex flex-col justify-center gap-5 website-header w-full h-[130px] sm:h-[94px] px-5 md:px-[5%] lg:px-[4%] z-50 drop-shadow-[0_0_30px_rgba] max-w-9xl mx-auto`}
     >
       <div className="w-full flex sm:hidden">
         <div className="h-[30px] w-full rounded-[10px] bg-[#ffffff2e] px-[10px] flex justify-between items-center">
           <AA />
 
-          <div className='flex items-center gap-[5px] text-[16px] text-white'>
+          <div className="flex items-center gap-[5px] text-[16px] text-white">
             <Lock />
             <p>Comptware.com</p>
           </div>
@@ -297,61 +296,19 @@ const Header = () => {
       <div className="flex flex-row justify-between items-center w-full">
         {/* <div className="relative flex justify-between items-center mx-auto w-full"> */}
         <Link
-          className={`!my-0 z-[99999] ${sidenavOpen ? "bg-blacck" : "w-fit"
-            }`}
+          className={`!my-0 z-[99999] ${sidenavOpen ? "bg-black" : "w-fit"}`}
           href="/"
         >
-          <p className="font-bold text-[16px] sm:text-[22px] text-white">COMPTWARE</p>
-  
+          <ComptwareWhiteLogo />
         </Link>
-
-        <div
-          className={`hidden slg:flex justify-end items-center px-10 pt-[9px] pb-[3px] w-fit space-x-5 transition-all duration-150 ease-in-out  rounded-[87px] ${navbarBgIsBlueGradient ? "header-nav-section" : "bg-[#ffffff43]"
-            }`}
-        >
-          {headerLinks.map(({ title, link, links, slug }) => (
-            <div
-              className="relative w-full h-full"
-              key={title}
-              onMouseEnter={() => {
-                setActiveNav(title);
-              }}
-              onMouseLeave={() => setActiveNav("")}
-            >
-              <Link
-                href={link}
-                className={`flex justify-center items-center ${navbarBgIsBlueGradient
-                  ? "hover:text-grey-light text-white stroke-red"
-                  : "hover:text-blue text-grey-text"
-                  } bani-base font-light space-x-1.5 mb-[6px] py-1  px-2.5 icon-text transition-all duration-300 ease-in-out
-                 
-                 ${pathIsNotBase &&
-                  (link.includes(pathname) || pathname.includes(slug)) &&
-                  `border-[0.8px] rounded-full active-nav ${headerLinksActiveClass} ${links ? "" : ""
-                  }  `
-                  }`}
-              >
-                <span className={`text-current whitespace-nowrap text-white`}>
-                  {title}
-                </span>
-                {/* {links && (
-                  <ArrowDownIcon className="scale-[0.85] transition-all duration-300 ease-in-out" />
-                )} */}
-              </Link>
-              {/* {links && activeNav === title && (
-                <Dropdown
-                  links={links}
-                  path={pathname}
-                  onClick={() => setActiveNav("")}
-                />
-              )} */}
-            </div>
-          ))}
-        </div>
 
         <div className="flex items-center">
           <div className="hidden slg:flex z-[999] flex-row justify-start items-center space-x-2 ">
-            <a href="https://app.bani.africa" target="_blank" rel="noreferrer">
+            <a
+              href="https://calendly.com/paul-comptware"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button
                 text="Contact Us"
                 isOutline={!navbarBgIsBlueGradient}
@@ -359,10 +316,9 @@ const Header = () => {
                 textClass="text-base"
               />
             </a>
-
           </div>
 
-          <div className="bg-white w-[77px] h-[35px] rounded-[8px] relative right-3 slg:hidden">
+          {/* <div className="bg-white w-[77px] h-[35px] rounded-[8px] relative right-3 slg:hidden">
             <Hamburger
               handlecClick={() => {
                 setSidenavOpen(!sidenavOpen);
@@ -370,30 +326,30 @@ const Header = () => {
               className={sidenavOpen ? "ham_crossed" : ""}
               navbarBgIsBlueGradient={navbarBgIsBlueGradient}
             />
-          </div>
+          </div> */}
 
           {/* </div> */}
 
           {/* <div className="hidden slg:flex">.</div> */}
         </div>
 
-
-
-
         {/* Mobile side nav */}
         <div
-          className={`flex flex-col justify-start items-start slg:hidden bg-[#292E3D] px-5 sm:px-10 py-5 z-[999] fixed m-auto top-0 bottom-14 left-0 right-0 h-[409px] w-[95%] rounded-[16px] transition-all duration-150 ease-in-out overflow-y-scroll ${sidenavOpen ? "translate-x-0 flex" : "-translate-x-[150%]"
-            }`}
+          className={`flex flex-col justify-start items-start slg:hidden bg-[#292E3D] px-5 sm:px-10 py-5 z-[999] fixed m-auto top-0 bottom-14 left-0 right-0 h-[409px] w-[95%] rounded-[16px] transition-all duration-150 ease-in-out overflow-y-scroll ${
+            sidenavOpen ? "translate-x-0 flex" : "-translate-x-[150%]"
+          }`}
         >
           {headerLinks_xs.map(({ title, link, links, notPage }) => (
             <div
-              className={`flex flex-col justify-center border-b-1/2 border-[#353C4F] items-center w-full ${links ? "border-b-1/2 border-[#353C4F]" : ""
-                }`}
+              className={`flex flex-col justify-center border-b-1/2 border-[#353C4F] items-center w-full ${
+                links ? "border-b-1/2 border-[#353C4F]" : ""
+              }`}
               key={title}
             >
               <div
-                className={`flex justify-start items-center hover:text-blue text-white text-base font-light space-x-14 mb-6 ${pathIsNotBase && link.includes(pathname) && "!text-blue"
-                  }`}
+                className={`flex justify-start items-center hover:text-blue text-white text-base font-light space-x-14 mb-6 ${
+                  pathIsNotBase && link.includes(pathname) && "!text-blue"
+                }`}
                 onClick={() => {
                   setActiveNav(activeNav ? "" : title);
                 }}
@@ -403,7 +359,6 @@ const Header = () => {
                     {title}
                   </span>
                 </Link>
-
               </div>
               {links &&
                 activeNav === title &&
@@ -412,8 +367,9 @@ const Header = () => {
                     <Link
                       href={link}
                       key={name}
-                      className={`flex justify-start items-center p-4 hover:text-blue text-white text-base font-light whitespace-nowrap ${pathIsNotBase && link.includes(pathname) && "!text-blue"
-                        }`}
+                      className={`flex justify-start items-center p-4 hover:text-blue text-white text-base font-light whitespace-nowrap ${
+                        pathIsNotBase && link.includes(pathname) && "!text-blue"
+                      }`}
                       onClick={() => {
                         setActiveNav("");
                         setSidenavOpen(false);
@@ -446,11 +402,8 @@ const Header = () => {
                 )}
             </div>
           ))}
-
-
         </div>
         {/* Mobile side nav */}
-
       </div>
     </header>
   );

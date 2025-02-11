@@ -84,12 +84,12 @@ const Footer = () => {
         <div className="flex flex-row justify-between items-center w-full ">
           <div className=" flex flex-col justify-start items-start mx-auto w-full space-y-10 md:space-y-0 ">
 
-            <div className="w-full h-full justify-center">
+            {/* <div className="w-full h-full justify-center">
               <p className='text-[50px] sm:text-[90px] lg:text-[130px] font-bold flex justify-center text-[#3388FF]'>Contact us</p>
-            </div>
+            </div> */}
 
 
-            <div className="grid grid-cols-1 blg:grid-cols-2 gap-8 justify-between items-start w-full pt-[60px] transition-all duration-150 ease-in-out text-white">
+            {/* <div className="grid grid-cols-1 blg:grid-cols-2 gap-8 justify-between items-start w-full pt-[60px] transition-all duration-150 ease-in-out text-white">
               <div>
                 <div className='blg:h-[100vh] flex justify-between flex-col'>
                   <div className='flex justify-center'>
@@ -182,7 +182,7 @@ const Footer = () => {
               </div>
 
 
-            </div>
+            </div> */}
 
 
           </div>
@@ -197,7 +197,7 @@ const Footer = () => {
 
       </div>
 
-
+{/* 
       <div className="opacity-50 w-full h-full justify-center absolute min-h-[100px] sm:bottom-0 ">
         <div className="flex text-[#13151A] text-[50px] sm:text-[90px] lg:text-[130px] ">
           <p>Contactus</p>
@@ -218,7 +218,7 @@ const Footer = () => {
           <p>Contactus</p>
         </div>
 
-      </div>
+      </div> */}
 
 
 

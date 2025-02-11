@@ -29,9 +29,9 @@ const SectionTwo = () => {
             <p className="text-[#818A98]">Our experienced design team will craft intuitive, visually appealing interfaces to bring your ideas to life, driving user engagement and business growth."</p>
           </div>
 
-          <div>
+          {/* <div>
             <button className="bg-[#3388FF] text-white w-[152px] rounded-[40px] h-[42px] ">See Projects</button>
-          </div>
+          </div> */}
 
         </div>
 
