@@ -1,9 +1,9 @@
 import React from "react";
 import Lottie from "lottie-react";
 import Button from "components/general/button/Button";
-import BH from "public/logos/BH.svg";
-import FC from "public/logos/FC.svg";
-import Baloosh from "public/logos/balosh-logo.svg";
+// import BH from "public/logos/BH.svg";
+// import FC from "public/logos/FC.svg";
+// import Baloosh from "public/logos/balosh-logo.svg";
 
 const Banner = () => {
   return (
@@ -53,7 +53,7 @@ const Banner = () => {
             WE’VE WORKED WITH SOME OF YOUR FAVORITE BRANDS
           </p>
 
-          <div className="hidden sm:flex gap-[40px]">
+          {/* <div className="hidden sm:flex gap-[40px]">
             <BH />
             <FC />
             <Baloosh />
@@ -64,7 +64,7 @@ const Banner = () => {
           <BH />
             <FC />
             <Baloosh />
-          </div>
+          </div> */}
         </div>
 
         <div className="blue-black-fade-gradient absolute min-h-[50%] sm:min-h-[40%] top-32 w-[75%] sm:w-[60%] rounded-full" />
