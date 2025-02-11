@@ -1,14 +1,9 @@
 import React from "react";
 import Lottie from "lottie-react";
 import Button from "components/general/button/Button";
-import Airbnb from "../../../assets/homepage_logos/Airbnb.svg";
-import Google from "../../../assets/homepage_logos/Google.svg";
-import Hubspot from "../../../assets/homepage_logos/Hubspot.svg";
-import Microsoft from "../../../assets/homepage_logos/Microsoft.svg";
-import Walmart from "../../../assets/homepage_logos/Walmart.svg";
-import BH from "../../../assets/logos/BH.svg";
-import FC from "../../../assets/logos/FC.svg";
-import Baloosh from "../../../assets/logos/balosh-logo.svg";
+import BH from "public/logos/BH.svg";
+import FC from "public/logos/FC.svg";
+import Baloosh from "public/logos/balosh-logo.svg";
 
 const Banner = () => {
   return (
