@@ -4,8 +4,7 @@ import Banner from "./Banner";
 import SectionOne from "./SectionOne";
 import SectionTwo from "./SectionTwo";
 import SectionFour from "./SectionFour";
-import SectionFive from "./SectionFive";
-import SectionSix from "./SectionSix";
+import SectionThree from "./SectionThree";
 
 const HomeList = () => {
   return (
@@ -13,9 +12,8 @@ const HomeList = () => {
       <Banner />
       <SectionOne />
       <SectionTwo />
-      {/* <SectionFour />
-      <SectionFive />
-      <SectionSix /> */}
+      <SectionThree />
+      <SectionFour />
     </div>
   );
 };

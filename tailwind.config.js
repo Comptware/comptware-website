@@ -71,7 +71,7 @@ module.exports = {
       },
       colors: {
         blue: {
-          DEFAULT: "#5444F2",
+          DEFAULT: "#3388FF",
           disabled: "#CECBF7",
           hover: "#1921C8",
           "outline-hover": "#eeedfe",
@@ -165,57 +165,13 @@ module.exports = {
         xs: "540px",
         blg: "815px",
         slg: "980px ",
-        elg: "1200px"
+        elg: "1200px",
       },
       margin: {
         "-85px": "-85px",
         "-60px": "-60px",
       },
-      backgroundImage: {
-        "company-banner": "url('../assets/images/company-banner.jpeg')",
-        "virtual-accounts":
-          "url('../assets/icons/PaymentTypes/virtual-accounts.svg')",
-        crypto: "url('../assets/icons/PaymentTypes/crypto.svg')",
-        "e-wallets": "url('../assets/icons/PaymentTypes/e-wallets.svg')",
-        "mobile-money-png":
-          "url('../assets/icons/PaymentTypes/mobile-money.png')",
-        "section-one-usecase":
-          "url('../assets/icons/Usecase/retail-stores/section-one.svg')",
-        invoicing: "url('../assets/icons/Usecase/retail-stores/invoicing.svg')",
-        "multiple-payment":
-          "url('../assets/icons/Usecase/retail-stores/multiple-payment.svg')",
-        "branch-setup":
-          "url('../assets/icons/Usecase/retail-stores/branch-setup.svg')",
-        "instant-confirmation":
-          "url('../assets/icons/Usecase/retail-stores/instant-confirmation.svg')",
-        integrate:
-          "url('../assets/icons/Usecase/fintechs-and-neobanks/integrate.svg')",
-        "phone-in-hand":
-          "url('../assets/icons/Usecase/fintechs-and-neobanks/phone-in-hand.svg')",
-        flags: "url('../assets/icons/Usecase/fintechs-and-neobanks/flags.svg')",
-        "fast-payment":
-          "url('../assets/icons/Usecase/travel-agencies-and-airlines/fast-payment.svg')",
-        "dynamic-pricing":
-          "url('../assets/icons/Usecase/travel-agencies-and-airlines/dynamic-pricing.svg')",
-        settlement:
-          "url('../assets/icons/Usecase/crypto-and-digital-asset-platforms/settlement.svg')",
-        "payment-link":
-          "url('../assets/icons/Usecase/digital-creators/payment-link.svg')",
-        "low-cost": "url('../assets/icons/Usecase/low-cost.svg')",
-
-        ffstores: "url('../assets/icons/Trustees/ffstores.svg')",
-        mood: "url('../assets/icons/Trustees/mood.svg')",
-        clarks: "url('../assets/icons/Trustees/clarks.svg')",
-        swatch: "url('../assets/icons/Trustees/swatch.svg')",
-        aldo: "url('../assets/icons/Trustees/aldo.svg')",
-        converse: "url('../assets/icons/Trustees/converse.svg')",
-        foodcourt: "url('../assets/icons/Trustees/foodcourt.svg')",
-        levis: "url('../assets/icons/Trustees/levis.svg')",
-        charles: "url('../assets/icons/Trustees/charles.svg')",
-        dune: "url('../assets/icons/Trustees/dune.svg')",
-        tommyhf: "url('../assets/icons/Trustees/tommyhf.svg')",
-        hinge: "url('../assets/icons/Trustees/hinge.svg')",
-      },
+      backgroundImage: {},
       keyframes: {
         slide: {
           "0%": { transform: "translateY(40px)" },

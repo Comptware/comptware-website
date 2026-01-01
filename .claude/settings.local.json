@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if exist package-lock.json del package-lock.json)",
+      "Bash(yarn start)",
+      "Bash(rm:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(yarn build)",
+      "Bash(yarn add framer-motion)",
+      "Bash(git checkout:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

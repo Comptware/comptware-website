@@ -5,7 +5,6 @@ import Head from "next/head";
 
 import Footer from "./Footer";
 import Header from "./Header";
-import GradientFooter from "./PatternCard";
 import { getPageByPath } from "utils/pages";
 
 const Layout = ({ children }) => {
@@ -31,9 +30,8 @@ const Layout = ({ children }) => {
       )}
 
       <Header />
-      
-      <section className="w-full flex flex-row flex-grow">
 
+      <section className="w-full flex flex-row flex-grow">
         <main
           className={`website-content w-full flex flex-col bg-[#0B0000] flex-grow`}
         >
