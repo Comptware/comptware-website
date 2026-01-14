@@ -10,7 +10,7 @@ export const testimonials = [
   },
   {
     id: 2,
-    name: "Teni Akinola",
+    name: "Kitan",
     title: "Head of Operations",
     company: "Aftoria",
     photo: null,
@@ -19,7 +19,7 @@ export const testimonials = [
   },
   {
     id: 3,
-    name: "Jude Okoye",
+    name: "Dapo",
     title: "Product Lead",
     company: "All Access",
     photo: null,
