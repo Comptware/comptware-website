@@ -10,20 +10,20 @@ export const testimonials = [
   },
   {
     id: 2,
-    name: "Dele Mike Aliko",
-    title: "CEO",
-    company: "Labintha Africa",
+    name: "Teni Akinola",
+    title: "Head of Operations",
+    company: "Aftoria",
     photo: null,
     testimonial:
-      "Tortor donec turpis nulla non. Feugiat lobortis ac amet risus porttior. Ultrices enim mauris a mattis. Odio condimentum at aliquet odio quisque ut purus.",
+      "Working with Comptware felt like adding a senior product team overnight. They cleaned up our onboarding flow, tightened the analytics, and shipped an upgrade that actually reduced support tickets within two weeks.",
   },
   {
     id: 3,
-    name: "Dele Mike Aliko",
-    title: "CEO",
-    company: "Labintha Africa",
+    name: "Jude Okoye",
+    title: "Product Lead",
+    company: "All Access",
     photo: null,
     testimonial:
-      "Tortor donec turpis nulla non. Feugiat lobortis ac amet risus porttitor. Ultrices enim mauris a mattis. Odio condimentum at aliquet odio quisque ut purus.",
+      "Comptware brought clarity and speed to our roadmap. They handled the handoff with our internal team smoothly and delivered a polished release that our customers noticed immediately.",
   },
 ];
